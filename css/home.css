@@ -202,3 +202,100 @@
 
     line-height:1.7;
 }
+/* ==========================
+    FEATURED DECORATORS
+========================== */
+
+.featured-decorators{
+
+    padding:90px 8%;
+
+    background:#ffffff;
+}
+
+.decorator-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+}
+
+.decorator-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.decorator-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.decorator-card img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+}
+
+.decorator-card h3{
+
+    margin-top:20px;
+
+    color:#6C63FF;
+
+    font-size:26px;
+}
+
+.rating{
+
+    font-size:20px;
+
+    margin:15px 0;
+}
+
+.decorator-card p{
+
+    margin:10px 0;
+
+    color:#555;
+}
+
+.profile-btn{
+
+    display:inline-block;
+
+    margin:25px 0;
+
+    padding:12px 30px;
+
+    background:#6C63FF;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.3s;
+}
+
+.profile-btn:hover{
+
+    background:#00BFA6;
+}

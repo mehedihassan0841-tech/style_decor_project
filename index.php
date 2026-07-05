@@ -83,5 +83,85 @@
     </div>
 
 </section>
+<!-- Featured Decorators Section -->
+
+  <section class="featured-decorators">
+
+    <div class="section-title">
+        <h2>Featured Decorators</h2>
+        <p>Meet our experienced decorators for your dream event.</p>
+    </div>
+
+    <div class="decorator-container">
+
+        <!-- Decorator 1 -->
+
+        <div class="decorator-card">
+
+            <img src="images/decorators/decorator1.jpg" alt="Decorator">
+
+            <h3>Sarah Ahmed</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p><strong>Experience:</strong> 8 Years</p>
+
+            <p><strong>Location:</strong> Dhaka</p>
+
+            <p><strong>Speciality:</strong> Wedding Decoration</p>
+
+            <a href="#" class="profile-btn">View Profile</a>
+
+        </div>
+
+        <!-- Decorator 2 -->
+
+        <div class="decorator-card">
+
+            <img src="images/decorators/decorator2.jpg" alt="Decorator">
+
+            <h3>Hasan Mahmud</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐☆
+            </div>
+
+            <p><strong>Experience:</strong> 6 Years</p>
+
+            <p><strong>Location:</strong> Chattogram</p>
+
+            <p><strong>Speciality:</strong> Interior Design</p>
+
+            <a href="#" class="profile-btn">View Profile</a>
+
+        </div>
+
+        <!-- Decorator 3 -->
+
+        <div class="decorator-card">
+
+            <img src="images/decorators/decorator3.jpg" alt="Decorator">
+
+            <h3>Nusrat Jahan</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p><strong>Experience:</strong> 10 Years</p>
+
+            <p><strong>Location:</strong> Sylhet</p>
+
+            <p><strong>Speciality:</strong> Birthday Decoration</p>
+
+            <a href="#" class="profile-btn">View Profile</a>
+
+        </div>
+
+    </div>
+
+</section>
 
 <?php include("includes/footer.php"); ?>
