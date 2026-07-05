@@ -1,21 +1,19 @@
-/* ===========================
-        HERO SECTION
-=========================== */
+/* ========================= */
+
+body{
+
+    margin:0;
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f8f9fc;
+}
+
+/* HERO */
 
 .hero{
 
-    width:100%;
     height:90vh;
-
-    background:
-    linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.55)
-    ),
-    url("../images/banner/hero.jpg");
-
-    background-size:cover;
-    background-position:center;
 
     display:flex;
 
@@ -25,30 +23,34 @@
 
     text-align:center;
 
-    position:relative;
+    color:white;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+    url("../images/banner/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
 }
 
 .hero-content{
 
-    color:white;
-
     width:80%;
 
     max-width:900px;
-
-    z-index:10;
 }
 
-.hero-content h1{
+.hero h1{
 
     font-size:60px;
 
     margin-bottom:20px;
-
-    font-weight:700;
 }
 
-.hero-content p{
+.hero p{
 
     font-size:22px;
 
@@ -70,43 +72,37 @@
 
 .btn-primary{
 
-    text-decoration:none;
-
     background:#6C63FF;
 
     color:white;
 
-    padding:16px 38px;
+    padding:15px 35px;
+
+    text-decoration:none;
 
     border-radius:40px;
 
     transition:.3s;
-
-    font-weight:600;
 }
 
 .btn-primary:hover{
 
-    background:#574bff;
-
-    transform:translateY(-3px);
+    background:#584cf7;
 }
 
 .btn-secondary{
-
-    text-decoration:none;
 
     border:2px solid white;
 
     color:white;
 
-    padding:16px 38px;
+    padding:15px 35px;
+
+    text-decoration:none;
 
     border-radius:40px;
 
     transition:.3s;
-
-    font-weight:600;
 }
 
 .btn-secondary:hover{
@@ -115,15 +111,12 @@
 
     color:#6C63FF;
 }
-/* ==========================
-      CATEGORY SECTION
-========================== */
+
+/* CATEGORY */
 
 .categories{
 
     padding:90px 8%;
-
-    background:#f8f9fc;
 }
 
 .section-title{
@@ -137,19 +130,17 @@
 
     font-size:42px;
 
-    color:#222;
-
     margin-bottom:15px;
+
+    color:#222;
 }
 
 .section-title p{
 
     color:#666;
-
-    font-size:18px;
 }
 
-.category-container{
+.category-grid{
 
     display:grid;
 
@@ -160,27 +151,25 @@
 
 .category-card{
 
-    background:#fff;
-
-    padding:35px;
+    background:white;
 
     border-radius:18px;
+
+    padding:35px;
 
     text-align:center;
 
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 
-    transition:.35s;
+    transition:.3s;
 }
 
 .category-card:hover{
 
     transform:translateY(-10px);
-
-    box-shadow:0 20px 35px rgba(0,0,0,.15);
 }
 
-.icon{
+.category-icon{
 
     font-size:55px;
 
@@ -189,113 +178,79 @@
 
 .category-card h3{
 
-    font-size:24px;
+    color:#6C63FF;
 
     margin-bottom:15px;
-
-    color:#6C63FF;
 }
 
 .category-card p{
 
     color:#666;
 
-    line-height:1.7;
+    line-height:1.6;
 }
-/* ==========================
-    FEATURED DECORATORS
-========================== */
+/* ===========================
+   FEATURED DECORATORS
+=========================== */
 
 .featured-decorators{
-
-    padding:90px 8%;
-
-    background:#ffffff;
+    padding:80px 8%;
+    background:#fff;
 }
 
 .decorator-container{
-
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-    gap:35px;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
 }
 
 .decorator-card{
-
     background:#fff;
-
-    border-radius:20px;
-
+    border-radius:15px;
     overflow:hidden;
-
-    text-align:center;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-    transition:.35s;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    transition:.3s;
 }
 
 .decorator-card:hover{
-
     transform:translateY(-10px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
 .decorator-card img{
-
     width:100%;
-
-    height:300px;
-
+    height:250px;
     object-fit:cover;
 }
 
 .decorator-card h3{
-
-    margin-top:20px;
-
+    padding-top:15px;
     color:#6C63FF;
-
-    font-size:26px;
+    text-align:center;
 }
 
 .rating{
-
-    font-size:20px;
-
-    margin:15px 0;
+    text-align:center;
+    color:#FFD700;
+    margin:10px 0;
 }
 
 .decorator-card p{
-
-    margin:10px 0;
-
+    padding:0 20px;
     color:#555;
 }
 
 .profile-btn{
-
-    display:inline-block;
-
-    margin:25px 0;
-
-    padding:12px 30px;
-
+    display:block;
+    width:160px;
+    margin:20px auto;
+    text-align:center;
+    padding:12px;
     background:#6C63FF;
-
-    color:white;
-
+    color:#fff;
     text-decoration:none;
-
     border-radius:30px;
-
-    transition:.3s;
 }
 
 .profile-btn:hover{
-
     background:#00BFA6;
 }

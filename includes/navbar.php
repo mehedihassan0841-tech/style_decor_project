@@ -5,12 +5,14 @@
         <!-- Logo -->
 
         <a href="index.php" class="logo">
+
             <span class="style">Style</span><span class="decor">Decor</span>
+
         </a>
 
-        <!-- Navigation -->
+        <!-- Menu -->
 
-        <ul class="nav-links">
+        <ul class="nav-menu">
 
             <li><a href="index.php" class="active">Home</a></li>
 
@@ -26,7 +28,7 @@
 
         <!-- Buttons -->
 
-        <div class="nav-buttons">
+        <div class="nav-btn">
 
             <a href="login.php" class="login-btn">Login</a>
 

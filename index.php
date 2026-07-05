@@ -1,24 +1,23 @@
 <?php include("includes/header.php"); ?>
 <?php include("includes/navbar.php"); ?>
 
-<!-- Hero Section -->
-<section class="hero">
+<!-- ================= HERO SECTION ================= -->
 
-    <div class="hero-overlay"></div>
+<section class="hero">
 
     <div class="hero-content">
 
         <h1>Design Your Dream Event</h1>
 
         <p>
-            Find the best decorators for Wedding, Birthday,
+            Book the best decorators for Wedding, Birthday,
             Interior Design, Home Decoration and Restaurant Decoration.
         </p>
 
         <div class="hero-buttons">
 
             <a href="services.php" class="btn-primary">
-                Hire a Decorator
+                Explore Services
             </a>
 
             <a href="register.php" class="btn-secondary">
@@ -30,131 +29,81 @@
     </div>
 
 </section>
-<!-- Categories Section -->
+
+
+<!-- ================= CATEGORIES ================= -->
 
 <section class="categories">
 
     <div class="section-title">
 
-        <h2>Browse Categories</h2>
+        <h2>Our Categories</h2>
 
-        <p>Choose the perfect decoration service for your special occasion.</p>
+        <p>Choose your preferred decoration service.</p>
 
     </div>
 
-    <div class="category-container">
+    <div class="category-grid">
 
         <div class="category-card">
-            <div class="icon">💍</div>
+            <div class="category-icon">💍</div>
             <h3>Wedding</h3>
-            <p>Luxury wedding decoration with elegant themes.</p>
+            <p>Luxury wedding decoration.</p>
         </div>
 
         <div class="category-card">
-            <div class="icon">🎂</div>
+            <div class="category-icon">🎂</div>
             <h3>Birthday</h3>
-            <p>Creative birthday decoration for all age groups.</p>
+            <p>Creative birthday decoration.</p>
         </div>
 
         <div class="category-card">
-            <div class="icon">🏠</div>
-            <h3>Home Decoration</h3>
-            <p>Transform your home with stylish decoration.</p>
+            <div class="category-icon">🏠</div>
+            <h3>Home</h3>
+            <p>Modern home decoration.</p>
         </div>
 
         <div class="category-card">
-            <div class="icon">🛋️</div>
-            <h3>Interior Design</h3>
-            <p>Modern and elegant interior decoration services.</p>
+            <div class="category-icon">🛋</div>
+            <h3>Interior</h3>
+            <p>Elegant interior design.</p>
         </div>
 
         <div class="category-card">
-            <div class="icon">🍽️</div>
+            <div class="category-icon">🍽</div>
             <h3>Restaurant</h3>
-            <p>Beautiful restaurant decoration for every occasion.</p>
+            <p>Restaurant decoration.</p>
         </div>
 
         <div class="category-card">
-            <div class="icon">🎉</div>
+            <div class="category-icon">🎉</div>
             <h3>Others</h3>
-            <p>Custom decoration services for any special event.</p>
+            <p>Custom event decoration.</p>
         </div>
 
     </div>
 
 </section>
-<!-- Featured Decorators Section -->
-
-  <section class="featured-decorators">
+<section class="featured-decorators">
 
     <div class="section-title">
         <h2>Featured Decorators</h2>
-        <p>Meet our experienced decorators for your dream event.</p>
+        <p>Meet our experienced decorators.</p>
     </div>
 
     <div class="decorator-container">
 
-        <!-- Decorator 1 -->
-
         <div class="decorator-card">
 
-            <img src="images/decorators/decorator1.jpg" alt="Decorator">
+            <img src="images/decorators/decorator1.jpg">
 
             <h3>Sarah Ahmed</h3>
 
-            <div class="rating">
-                ⭐⭐⭐⭐⭐
-            </div>
+            <div class="rating">★★★★★</div>
 
-            <p><strong>Experience:</strong> 8 Years</p>
+            <p>Experience : 8 Years</p>
 
-            <p><strong>Location:</strong> Dhaka</p>
-
-            <p><strong>Speciality:</strong> Wedding Decoration</p>
-
-            <a href="#" class="profile-btn">View Profile</a>
-
-        </div>
-
-        <!-- Decorator 2 -->
-
-        <div class="decorator-card">
-
-            <img src="images/decorators/decorator2.jpg" alt="Decorator">
-
-            <h3>Hasan Mahmud</h3>
-
-            <div class="rating">
-                ⭐⭐⭐⭐☆
-            </div>
-
-            <p><strong>Experience:</strong> 6 Years</p>
-
-            <p><strong>Location:</strong> Chattogram</p>
-
-            <p><strong>Speciality:</strong> Interior Design</p>
-
-            <a href="#" class="profile-btn">View Profile</a>
-
-        </div>
-
-        <!-- Decorator 3 -->
-
-        <div class="decorator-card">
-
-            <img src="images/decorators/decorator3.jpg" alt="Decorator">
-
-            <h3>Nusrat Jahan</h3>
-
-            <div class="rating">
-                ⭐⭐⭐⭐⭐
-            </div>
-
-            <p><strong>Experience:</strong> 10 Years</p>
-
-            <p><strong>Location:</strong> Sylhet</p>
-
-            <p><strong>Speciality:</strong> Birthday Decoration</p>
+            <p>Location : Dhaka</p>
 
             <a href="#" class="profile-btn">View Profile</a>
 
