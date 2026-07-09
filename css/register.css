@@ -1,0 +1,396 @@
+/* ===================================
+        REGISTER PAGE
+=================================== */
+
+.register-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 8%;
+
+    background:linear-gradient(135deg,#6C63FF,#00BFA6);
+
+}
+
+.register-container{
+
+    width:100%;
+
+    max-width:1300px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.register-left{
+
+    color:#fff;
+
+}
+
+.register-left h1{
+
+    font-size:55px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    line-height:1.2;
+
+}
+
+.register-left p{
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+    opacity:.95;
+
+}
+
+.feature-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:18px;
+
+}
+
+.feature-item i{
+
+    color:#FFD43B;
+
+    font-size:22px;
+
+}
+.register-right{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.register-card{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.18);
+
+}
+
+.register-card h2{
+
+    text-align:center;
+
+    font-size:34px;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.register-card p{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-bottom:35px;
+
+}
+.input-group{
+
+    position:relative;
+
+    margin-bottom:22px;
+
+}
+
+.input-group i:first-child{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#6C63FF;
+
+}
+
+.input-group input,
+.input-group select{
+
+    width:100%;
+
+    padding:16px 18px 16px 50px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    border-color:#6C63FF;
+
+    box-shadow:0 0 10px rgba(108,99,255,.20);
+
+}
+/* ===============================
+        PASSWORD ICON
+================================ */
+
+.password-group{
+
+    position:relative;
+
+}
+
+.toggle-password{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+.toggle-password:hover{
+
+    color:#6C63FF;
+
+}
+
+/* ===============================
+        BUTTON
+================================ */
+
+.register-submit-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#6C63FF,#00BFA6);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    margin-top:10px;
+
+}
+
+.register-submit-btn i{
+
+    margin-right:8px;
+
+}
+
+.register-submit-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(108,99,255,.30);
+
+}
+
+/* ===============================
+        LOGIN LINK
+================================ */
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#666;
+
+}
+
+.login-link a{
+
+    color:#6C63FF;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-link a:hover{
+
+    color:#00BFA6;
+
+}
+
+/* ===============================
+        CARD HOVER
+================================ */
+
+.register-card{
+
+    transition:.4s;
+
+}
+
+.register-card:hover{
+
+    transform:translateY(-8px);
+
+}
+#password-message{
+
+    display:block;
+
+    margin-top:-10px;
+
+    margin-bottom:18px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+#password-strength{
+
+    display:block;
+
+    margin-top:-10px;
+
+    margin-bottom:18px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ===============================
+        RESPONSIVE
+================================ */
+
+@media(max-width:991px){
+
+    .register-container{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .register-left{
+
+        text-align:center;
+
+    }
+
+    .register-left h1{
+
+        font-size:42px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .register-section{
+
+        padding:40px 5%;
+
+    }
+
+    .register-card{
+
+        padding:30px 22px;
+
+    }
+
+    .register-left h1{
+
+        font-size:34px;
+
+    }
+
+    .register-left p{
+
+        font-size:16px;
+
+    }
+
+}

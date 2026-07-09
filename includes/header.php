@@ -1,3 +1,13 @@
+<?php
+
+if(session_status() === PHP_SESSION_NONE){
+
+    session_start();
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +42,7 @@
 <link rel="stylesheet" href="css/animation.css?v=2">
 <link rel="stylesheet" href="css/responsive.css?v=2">
 <link rel="stylesheet" href="css/footer.css?v=2">
+<link rel="stylesheet" href="css/register.css?v=1">
 
 </head>
 
