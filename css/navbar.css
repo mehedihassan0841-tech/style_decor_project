@@ -1,125 +1,169 @@
-/* ==========================
+/* ===========================
         NAVBAR
-========================== */
+=========================== */
 
 .navbar{
+
     width:100%;
-    position:sticky;
-    top:0;
-    left:0;
-    z-index:1000;
+
     background:#ffffff;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .navbar .container{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    height:80px;
+
+    height:90px;
 }
 
 /* Logo */
 
 .logo{
-    font-size:30px;
+
+    font-size:34px;
+
     font-weight:700;
 }
 
-.logo .style{
+.logo-style{
+
     color:#6C63FF;
 }
 
-.logo .decor{
+.logo-decor{
+
     color:#00BFA6;
 }
 
 /* Menu */
 
 .nav-menu{
+
     display:flex;
+
     align-items:center;
+
     gap:35px;
 }
 
 .nav-menu li{
+
     list-style:none;
 }
 
-.nav-menu a{
+.nav-menu li a{
+
     color:#333;
+
     font-size:16px;
+
     font-weight:500;
+
     transition:.3s;
+
     position:relative;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active{
+.nav-menu li a:hover{
+
     color:#6C63FF;
 }
 
-.nav-menu a::after{
+.nav-menu li a.active{
+
+    color:#6C63FF;
+}
+
+.nav-menu li a::after{
+
     content:"";
+
     position:absolute;
-    left:0;
-    bottom:-6px;
+
     width:0;
+
     height:2px;
+
+    left:0;
+
+    bottom:-8px;
+
     background:#6C63FF;
+
     transition:.3s;
 }
 
-.nav-menu a:hover::after,
-.nav-menu a.active::after{
+.nav-menu li a:hover::after{
+
+    width:100%;
+}
+
+.nav-menu li a.active::after{
+
     width:100%;
 }
 
 /* Buttons */
 
-.nav-btn{
+.nav-buttons{
+
     display:flex;
+
     gap:15px;
 }
 
-.login-btn,
-.register-btn{
-    padding:10px 24px;
-    border-radius:30px;
+.login-btn{
+
+    padding:12px 28px;
+
+    border:2px solid #6C63FF;
+
+    color:#6C63FF;
+
+    border-radius:35px;
+
     font-weight:600;
+
     transition:.3s;
 }
 
-.login-btn{
-    border:2px solid #6C63FF;
-    color:#6C63FF;
-}
-
 .login-btn:hover{
+
     background:#6C63FF;
+
     color:#fff;
 }
 
 .register-btn{
+
+    padding:12px 28px;
+
     background:#6C63FF;
+
     color:#fff;
+
+    border-radius:35px;
+
+    font-weight:600;
+
+    transition:.3s;
 }
 
 .register-btn:hover{
+
     background:#00BFA6;
-}
-.nav-menu{
-    display:flex !important;
-    flex-direction:row !important;
-    list-style:none !important;
-}
-
-.nav-menu li{
-    display:block !important;
-}
-
-.navbar .container{
-    display:flex !important;
-    justify-content:space-between !important;
-    align-items:center !important;
 }

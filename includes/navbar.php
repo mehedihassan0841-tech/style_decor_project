@@ -6,11 +6,11 @@
 
         <a href="index.php" class="logo">
 
-            <span class="style">Style</span><span class="decor">Decor</span>
+            <span class="logo-style">Style</span><span class="logo-decor">Decor</span>
 
         </a>
 
-        <!-- Menu -->
+        <!-- Navigation -->
 
         <ul class="nav-menu">
 
@@ -28,7 +28,7 @@
 
         <!-- Buttons -->
 
-        <div class="nav-btn">
+        <div class="nav-buttons">
 
             <a href="login.php" class="login-btn">Login</a>
 

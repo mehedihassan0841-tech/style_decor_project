@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>StyleDecor</title>
+    <title>StyleDecor | Event Decoration Platform</title>
 
     <!-- Google Font -->
 
@@ -22,23 +22,16 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- CSS -->
+    <!-- CSS Files -->
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/navbar.css">
-
-    <link rel="stylesheet" href="css/home.css">
-
-    <link rel="stylesheet" href="css/footer.css">
-
-    <link rel="stylesheet" href="css/forms.css">
-
-    <link rel="stylesheet" href="css/dashboard.css">
-
-    <link rel="stylesheet" href="css/animation.css">
-
-    <link rel="stylesheet" href="css/responsive.css">
+   <link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/navbar.css?v=2">
+<link rel="stylesheet" href="css/home.css?v=2">
+<link rel="stylesheet" href="css/forms.css?v=2">
+<link rel="stylesheet" href="css/dashboard.css?v=2">
+<link rel="stylesheet" href="css/animation.css?v=2">
+<link rel="stylesheet" href="css/responsive.css?v=2">
+<link rel="stylesheet" href="css/footer.css?v=2">
 
 </head>
 

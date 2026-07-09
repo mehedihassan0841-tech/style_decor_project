@@ -1,75 +1,101 @@
 /* ==========================
-        GOOGLE FONT
+        GLOBAL CSS
 ========================== */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
 }
 
 html{
+
     scroll-behavior:smooth;
 }
 
 body{
+
     font-family:'Poppins',sans-serif;
-    background:#f8f9fc;
+
+    background:#f7f8fc;
+
     color:#222;
+
     overflow-x:hidden;
 }
 
 .container{
+
     width:90%;
+
     max-width:1300px;
+
     margin:auto;
 }
 
-/* ==========================
-        LINKS
-========================== */
-
 a{
+
     text-decoration:none;
 }
 
 ul{
+
     list-style:none;
 }
 
 img{
-    max-width:100%;
+
+    width:100%;
+
     display:block;
 }
 
-/* ==========================
-        BUTTON
-========================== */
+section{
 
-.btn{
-    display:inline-block;
-    padding:14px 32px;
-    border-radius:40px;
-    transition:.3s;
-    font-weight:600;
+    padding:90px 0;
 }
 
-/* ==========================
-      SECTION TITLE
-========================== */
-
 .section-title{
+
     text-align:center;
+
     margin-bottom:60px;
 }
 
 .section-title h2{
+
     font-size:42px;
+
     color:#222;
+
     margin-bottom:15px;
 }
 
 .section-title p{
+
     color:#666;
+
     font-size:18px;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+/* Button */
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
 }
