@@ -50,7 +50,11 @@ if (
 
 ) {
 
-    die("All fields are required.");
+    $_SESSION["error"] = "Please fill all required fields.";
+
+header("Location: ../register.php");
+
+exit();
 
 }
 
@@ -60,7 +64,11 @@ if (
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-    die("Invalid Email Address.");
+   $_SESSION["error"] = "Invalid Email Address.";
+
+header("Location: ../register.php");
+
+exit();
 
 }
 
@@ -70,7 +78,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 if (!preg_match('/^01[3-9][0-9]{8}$/', $phone)) {
 
-    die("Invalid Phone Number.");
+    $_SESSION["error"] = "Invalid Phone Number.";
+
+header("Location: ../register.php");
+
+exit();
 
 }
 
@@ -80,17 +92,33 @@ if (!preg_match('/^01[3-9][0-9]{8}$/', $phone)) {
 
 if (strlen($password) < 8) {
 
-    die("Password must be at least 8 characters.");
+    $_SESSION["error"] = "Password must be at least 8 characters.";
+
+    header("Location: ../register.php");
+
+    exit();
 
 }
+ else {
 
+    $_SESSION["error"] = "Registration Failed.";
+
+    header("Location: ../register.php");
+
+    exit();
+
+}
 // ==============================
 // Password Match
 // ==============================
 
 if ($password != $confirm_password) {
 
-    die("Password doesn't match.");
+    $_SESSION["error"] = "Passwords do not match.";
+
+header("Location: ../register.php");
+
+exit();
 
 }
 
@@ -98,9 +126,13 @@ if ($password != $confirm_password) {
 // Role Validation
 // ==============================
 
-if ($role != "Customer" && $role != "Decorator") {
+if ($role != "customer" && $role != "decorator") {
 
-    die("Invalid Role.");
+    $_SESSION["error"] = "Invalid Role Selected.";
+
+    header("Location: ../register.php");
+
+    exit();
 
 }
 // ==============================

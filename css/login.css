@@ -1,0 +1,245 @@
+/* ===========================
+   Login Section
+=========================== */
+
+.login-page-section{
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#f8fbff,#eef4ff);
+    padding:80px 20px;
+
+}
+
+.login-page-container{
+
+    max-width:1200px;
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/* ===========================
+   Left
+=========================== */
+
+.login-page-left{
+
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:#fff;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+.login-page-left h1{
+
+    font-size:40px;
+    margin-bottom:20px;
+
+}
+
+.login-page-left p{
+
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:35px;
+
+}
+
+.login-page-left img{
+
+    width:100%;
+    max-width:380px;
+
+}
+
+/* ===========================
+   Right
+=========================== */
+
+.login-page-right{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+
+}
+
+.login-form-card{
+
+    width:100%;
+    max-width:430px;
+
+}
+
+.login-form-card h2{
+
+    font-size:32px;
+    color:#1e293b;
+    margin-bottom:10px;
+
+}
+
+.login-form-card p{
+
+    color:#666;
+    margin-bottom:30px;
+
+}
+
+/* ===========================
+   Input
+=========================== */
+
+.login-form-card .login-input-group{
+
+    position:relative;
+    margin-bottom:20px;
+
+}
+
+.login-form-card .login-input-group i:first-child{
+
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#888;
+
+}
+
+.login-input-group input{
+
+    width:100%;
+    padding:15px 50px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+.login-input-group input:focus{
+
+    border-color:#2563eb;
+
+}
+
+.login-form-card .toggle-password{
+
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+
+}
+
+/* ===========================
+   Remember
+=========================== */
+
+.login-remember-area{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:14px;
+
+}
+
+.login-remember-area a{
+
+    text-decoration:none;
+    color:#2563eb;
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.login-submit-btn{
+
+    width:100%;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    
+
+    margin-top:10px;
+
+
+
+}
+
+.login-submit-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.login-form-footer{
+
+    margin-top:25px;
+    text-align:center;
+
+}
+
+.login-form-footer a{
+
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.login-page-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+
+.login-page-left{
+
+padding:40px;
+
+}
+
+.login-page-right{
+
+padding:40px 25px;
+
+}
+
+}

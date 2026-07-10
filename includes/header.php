@@ -43,6 +43,7 @@ if(session_status() === PHP_SESSION_NONE){
 <link rel="stylesheet" href="css/responsive.css?v=2">
 <link rel="stylesheet" href="css/footer.css?v=2">
 <link rel="stylesheet" href="css/register.css?v=1">
+<link rel="stylesheet" href="css/login.css?v=1">
 
 </head>
 

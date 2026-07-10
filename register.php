@@ -140,9 +140,9 @@ if(isset($_SESSION["success"])){
 
                             <option value="">Select Role</option>
 
-                            <option value="Customer">Customer</option>
+                            <option value="customer">Customer</option>
 
-                            <option value="Decorator">Decorator</option>
+                            <option value="decorator">Decorator</option>
 
                         </select>
 
@@ -214,5 +214,6 @@ if(isset($_SESSION["success"])){
     </div>
 
 </section>
+<script src="js/register.js"></script>
 
 <?php include("includes/footer.php"); ?>
