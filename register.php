@@ -80,11 +80,12 @@ if(isset($_SESSION["success"])){
 
                         <i class="fas fa-user"></i>
 
-                        <input
-                            type="text"
-                            name="full_name"
-                            placeholder="Full Name"
-                            required>
+                      <input
+                     type="text"
+                      name="full_name"
+                      placeholder="Full Name"
+                      value="<?= $_SESSION['old']['full_name'] ?? '' ?>"
+                     required>
 
                     </div>
 
@@ -94,11 +95,12 @@ if(isset($_SESSION["success"])){
 
                         <i class="fas fa-envelope"></i>
 
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email Address"
-                            required>
+                       <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    value="<?= $_SESSION['old']['email'] ?? '' ?>"
+    required>
 
                     </div>
 
@@ -108,11 +110,12 @@ if(isset($_SESSION["success"])){
 
                         <i class="fas fa-phone"></i>
 
-                        <input
-                            type="text"
-                            name="phone"
-                            placeholder="Phone Number"
-                            required>
+                       <input
+    type="text"
+    name="phone"
+    placeholder="Phone Number"
+    value="<?= $_SESSION['old']['phone'] ?? '' ?>"
+    required>
 
                     </div>
 
@@ -122,11 +125,12 @@ if(isset($_SESSION["success"])){
 
                         <i class="fas fa-location-dot"></i>
 
-                        <input
-                            type="text"
-                            name="address"
-                            placeholder="Address"
-                            required>
+                       <input
+    type="text"
+    name="address"
+    placeholder="Address"
+    value="<?= $_SESSION['old']['address'] ?? '' ?>"
+    required>
 
                     </div>
 
@@ -140,9 +144,15 @@ if(isset($_SESSION["success"])){
 
                             <option value="">Select Role</option>
 
-                            <option value="customer">Customer</option>
+                           <option value="customer"
+<?= (($_SESSION['old']['role'] ?? '') == 'customer') ? 'selected' : '' ?>>
+Customer
+</option>
 
-                            <option value="decorator">Decorator</option>
+<option value="decorator"
+<?= (($_SESSION['old']['role'] ?? '') == 'decorator') ? 'selected' : '' ?>>
+Decorator
+</option>
 
                         </select>
 

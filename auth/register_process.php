@@ -34,6 +34,16 @@ $address = htmlspecialchars($address);
 // Default Values
 $status = "pending";
 $profile_image = "default.png";
+// Store old form data
+$_SESSION["old"] = [
+
+    "full_name" => $full_name,
+    "email"     => $email,
+    "phone"     => $phone,
+    "address"   => $address,
+    "role"      => $role
+
+];
 // ==============================
 // Empty Validation
 // ==============================

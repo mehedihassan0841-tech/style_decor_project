@@ -15,7 +15,6 @@
                 for your dream events.
             </p>
 
-            <img src="images/login-illustration.png" alt="Login">
 
         </div>
 
@@ -23,6 +22,25 @@
         <div class="login-page-right">
 
             <div class="login-form-card">
+                <?php
+
+if(isset($_SESSION["error"])){
+
+    echo '<div class="alert-error">'.$_SESSION["error"].'</div>';
+
+    unset($_SESSION["error"]);
+
+}
+
+if(isset($_SESSION["success"])){
+
+    echo '<div class="alert-success">'.$_SESSION["success"].'</div>';
+
+    unset($_SESSION["success"]);
+
+}
+
+?>
 
                 <h2>Login</h2>
 
