@@ -109,15 +109,7 @@ if (strlen($password) < 8) {
     exit();
 
 }
- else {
 
-    $_SESSION["error"] = "Registration Failed.";
-
-    header("Location: ../register.php");
-
-    exit();
-
-}
 // ==============================
 // Password Match
 // ==============================
@@ -227,10 +219,30 @@ $stmt->bind_param(
 
 if ($stmt->execute()) {
 
+    // নতুন User ID
+    $user_id = $conn->insert_id;
+
+    // যদি Decorator হয় তাহলে Profile Table-এ Row তৈরি করবে
+    if ($role == "decorator") {
+
+        $verification_status = "pending";
+
+        $sql2 = "INSERT INTO decorator_profiles
+        (user_id, verification_status)
+        VALUES (?, ?)";
+
+        $stmt2 = $conn->prepare($sql2);
+
+        $stmt2->bind_param("is", $user_id, $verification_status);
+
+        $stmt2->execute();
+
+        $stmt2->close();
+    }
+
     $_SESSION["success"] = "Registration Successful! Please Login.";
 
     header("Location: ../login.php");
-
     exit();
 
 } else {

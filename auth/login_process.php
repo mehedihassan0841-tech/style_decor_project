@@ -120,6 +120,7 @@ $_SESSION["user_role"] = $user["role"];
 $_SESSION["profile_image"] = $user["profile_image"];
 
 $_SESSION["login_success"] = "Welcome back, " . $user["full_name"] . "!";
+$_SESSION["user_status"] = $user["status"];
 // ==============================
 // Role Based Redirect
 // ==============================

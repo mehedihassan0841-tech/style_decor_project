@@ -39,6 +39,7 @@ if(session_status() === PHP_SESSION_NONE){
 <link rel="stylesheet" href="css/home.css?v=2">
 <link rel="stylesheet" href="css/forms.css?v=2">
 <link rel="stylesheet" href="css/dashboard.css?v=2">
+<link rel="stylesheet" href="../css/customer_dashboard.css?v=2">
 <link rel="stylesheet" href="css/animation.css?v=2">
 <link rel="stylesheet" href="css/responsive.css?v=2">
 <link rel="stylesheet" href="css/footer.css?v=2">
