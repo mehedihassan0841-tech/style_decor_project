@@ -32,7 +32,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <!-- Dashboard CSS -->
 
-    <link rel="stylesheet" href="../css/decorator_dashboard.css?v=999">
+<link rel="stylesheet" href="../css/decorator_dashboard.css?v=21">
 
 </head>
 

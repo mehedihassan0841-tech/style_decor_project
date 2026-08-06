@@ -16,6 +16,32 @@ if ($_SESSION["user_role"] != "decorator") {
 
 include("../includes/decorator_header.php");
 include("../includes/decorator_sidebar.php");
+require_once("../config/database.php");
+
+$decorator_id = $_SESSION["user_id"];
+
+/* Total Services */
+
+$total_service = mysqli_fetch_assoc(
+
+mysqli_query($conn,"SELECT COUNT(*) AS total FROM decorator_services WHERE decorator_id='$decorator_id'")
+
+)["total"];
+
+/* Pending Bookings */
+
+$pending_booking = mysqli_fetch_assoc(
+
+mysqli_query($conn,"
+SELECT COUNT(*) AS total
+FROM bookings b
+INNER JOIN decorator_services ds
+ON b.service_id=ds.id
+WHERE ds.decorator_id='$decorator_id'
+AND b.booking_status='Pending'
+")
+
+)["total"];
 
 ?>
 
@@ -61,7 +87,7 @@ include("../includes/decorator_sidebar.php");
 
                 <h3>Total Services</h3>
 
-                <h2>0</h2>
+                <h2><?php echo $total_service; ?></h2>
 
             </div>
 
@@ -71,7 +97,7 @@ include("../includes/decorator_sidebar.php");
 
                 <h3>Pending Bookings</h3>
 
-                <h2>0</h2>
+                <h2><?php echo $pending_booking; ?></h2>
 
             </div>
 
@@ -125,7 +151,7 @@ include("../includes/decorator_sidebar.php");
 
                 </a>
 
-                <a href="bookings.php" class="action-card">
+                <a href="booking.php" class="action-card">
 
                     <i class="fas fa-calendar-alt"></i>
 

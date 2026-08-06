@@ -76,7 +76,7 @@
 
         <li>
 
-            <a href="bookings.php">
+            <a href="booking.php">
 
                 <i class="fas fa-calendar-check"></i>
 

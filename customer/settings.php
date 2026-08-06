@@ -23,56 +23,156 @@ include("../includes/customer_sidebar.php");
 
     <div class="dashboard-main">
 
-       <div class="page-header">
 
-    <h1>Account Settings</h1>
+        <div class="page-header">
 
-    <p>
-        Manage your account settings.
-    </p>
+            <h1>Account Settings</h1>
 
-</div>
-<div class="settings-card">
-
-    <div class="setting-item">
-
-        <div>
-
-            <h3>Change Password</h3>
-
-            <p>Update your account password.</p>
+            <p>
+                Manage your account preferences and security settings.
+            </p>
 
         </div>
 
-        <a href="change_password.php" class="browse-btn">
 
-            Change
 
-        </a>
+        <div class="settings-grid">
 
-    </div>
 
-    <hr>
 
-    <div class="setting-item">
+            <div class="setting-card">
 
-        <div>
+                <div class="setting-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
 
-            <h3>Profile Picture</h3>
+                <h3>Change Password</h3>
 
-            <p>Upload your profile picture.</p>
+                <p>
+                    Update your password and keep your account secure.
+                </p>
+
+                <a href="change_password.php" class="setting-btn">
+                    Change Password
+                </a>
+
+            </div>
+
+
+
+
+
+            <div class="setting-card">
+
+                <div class="setting-icon">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+
+                <h3>Profile Picture</h3>
+
+                <p>
+                    Upload or change your profile photo.
+                </p>
+
+                <a href="change_photo.php" class="setting-btn">
+                    Upload Photo
+                </a>
+
+            </div>
+
+
+
+
+
+            <div class="setting-card">
+
+                <div class="setting-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <h3>Personal Information</h3>
+
+                <p>
+                    Update your name, phone number and personal details.
+                </p>
+
+                <a href="profile.php" class="setting-btn">
+                    Edit Profile
+                </a>
+
+            </div>
+
+
+
+
+
+            <div class="setting-card">
+
+                <div class="setting-icon">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+
+                <h3>Notifications</h3>
+
+                <p>
+                    Manage booking alerts and account notifications.
+                </p>
+
+                <a href="#" class="setting-btn">
+                    Manage
+                </a>
+
+            </div>
+
+
+
+
+
+            <div class="setting-card">
+
+                <div class="setting-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>Privacy & Security</h3>
+
+                <p>
+                    Control your account privacy and security options.
+                </p>
+
+                <a href="#" class="setting-btn">
+                    Settings
+                </a>
+
+            </div>
+
+
+
+
+
+            <div class="setting-card">
+
+                <div class="setting-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <h3>Help & Support</h3>
+
+                <p>
+                    Need help? Contact our support team anytime.
+                </p>
+
+                <a href="#" class="setting-btn">
+                    Contact
+                </a>
+
+            </div>
+
+
+
 
         </div>
 
-        <a href="change_photo.php" class="browse-btn">
-
-            Upload
-
-        </a>
-
-    </div>
-
-</div>
 
     </div>
 

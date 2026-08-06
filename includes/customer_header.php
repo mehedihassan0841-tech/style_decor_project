@@ -31,7 +31,8 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <!-- Dashboard CSS -->
 
-    <link rel="stylesheet" href="../css/customer_dashboard.css?v=1">
+ <!-- Dashboard CSS -->
+<link rel="stylesheet" href="../css/customer_dashboard.css?v=5">
 
 </head>
 

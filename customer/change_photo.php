@@ -68,48 +68,67 @@ include("../includes/customer_sidebar.php");
 
         ?>
 
-        <div class="password-card">
+        <div class="customer-photo-panel">
 
-            <form action="update_photo.php"
-                  method="POST"
-                  enctype="multipart/form-data">
 
-                <div style="text-align:center; margin-bottom:25px;">
+    <form action="update_photo.php"
+          method="POST"
+          enctype="multipart/form-data">
 
-                    <img
-                        src="../uploads/profile/<?php echo $user["profile_image"]; ?>"
-                        alt="Profile"
-                        style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid #ddd;">
 
-                </div>
 
-                <div class="profile-item">
+        <div class="customer-photo-preview">
 
-                    <label>Select New Photo</label>
 
-                    <input
-                        type="file"
-                        name="profile_image"
-                        accept=".jpg,.jpeg,.png"
-                        required>
+            <img
+            src="../uploads/profile/<?php echo $user["profile_image"]; ?>"
+            alt="Profile">
 
-                </div>
-
-                <button
-                    type="submit"
-                    class="edit-profile-btn">
-
-                    <i class="fas fa-upload"></i>
-
-                    Upload Photo
-
-                </button>
-
-            </form>
 
         </div>
 
-    </div>
+
+
+
+
+        <div class="customer-photo-field">
+
+
+            <label>
+                Select New Photo
+            </label>
+
+
+            <input
+            type="file"
+            name="profile_image"
+            accept=".jpg,.jpeg,.png"
+            required>
+
+
+        </div>
+
+
+
+
+
+        <button
+        type="submit"
+        class="customer-photo-upload-btn">
+
+
+            <i class="fas fa-cloud-arrow-up"></i>
+
+            Upload Photo
+
+
+        </button>
+
+
+
+
+    </form>
+
 
 </div>
 

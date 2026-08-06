@@ -62,9 +62,9 @@
             </li>
 
             <li>
-                <a href="reviews.php">
+                <a href="give_review.php">
                     <i class="fas fa-star"></i>
-                    <span>Reviews</span>
+                    <span>Give Review</span>
                 </a>
             </li>
 

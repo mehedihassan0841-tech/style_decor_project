@@ -21,7 +21,45 @@ if ($_SESSION["user_role"] != "customer") {
 include("../includes/customer_header.php");
 
 include("../includes/customer_sidebar.php");
+require_once("../config/database.php");
 
+$customer_id = $_SESSION["user_id"];
+
+/* Total Bookings */
+$total_booking = mysqli_fetch_assoc(
+    mysqli_query($conn,"SELECT COUNT(*) AS total FROM bookings WHERE client_id='$customer_id'")
+)['total'];
+
+/* Pending */
+$pending_booking = mysqli_fetch_assoc(
+    mysqli_query($conn,"SELECT COUNT(*) AS total FROM bookings WHERE client_id='$customer_id' AND booking_status='Pending'")
+)['total'];
+
+/* Completed */
+$completed_booking = mysqli_fetch_assoc(
+    mysqli_query($conn,"SELECT COUNT(*) AS total FROM bookings WHERE client_id='$customer_id' AND booking_status='Completed'")
+)['total'];
+
+/* Wishlist */
+$wishlist = mysqli_fetch_assoc(
+    mysqli_query($conn,"SELECT COUNT(*) AS total FROM wishlist WHERE customer_id='$customer_id'")
+)['total'];
+$recent_booking = mysqli_query($conn,"
+SELECT
+b.booking_code,
+b.event_date,
+b.booking_status,
+ds.category,
+dp.company_name
+FROM bookings b
+INNER JOIN decorator_services ds
+ON b.service_id = ds.id
+INNER JOIN decorator_profiles dp
+ON ds.decorator_id = dp.user_id
+WHERE b.client_id='$customer_id'
+ORDER BY b.id DESC
+LIMIT 5
+");
 ?>
 
 <div class="dashboard-content">
@@ -112,7 +150,7 @@ Customer Dashboard
 
         <div class="stat-info">
 
-            <h2>12</h2>
+            <h2><?php echo $total_booking; ?></h2>
 
             <p>Total Bookings</p>
 
@@ -130,7 +168,7 @@ Customer Dashboard
 
         <div class="stat-info">
 
-            <h2>3</h2>
+            <h2><?php echo $pending_booking; ?></h2>
 
             <p>Pending</p>
 
@@ -148,7 +186,7 @@ Customer Dashboard
 
         <div class="stat-info">
 
-            <h2>9</h2>
+            <h2><?php echo $completed_booking; ?></h2>
 
             <p>Completed</p>
 
@@ -166,7 +204,7 @@ Customer Dashboard
 
         <div class="stat-info">
 
-            <h2>7</h2>
+           <h2><?php echo $wishlist; ?></h2>
 
             <p>Wishlist</p>
 
@@ -206,35 +244,71 @@ Customer Dashboard
 
         <tbody>
 
-            <tr>
+           <?php if(mysqli_num_rows($recent_booking)>0){ ?>
 
-                <td>#BK001</td>
-                <td>Dream Decor</td>
-                <td>Wedding</td>
-                <td>15 Aug 2026</td>
-                <td><span class="status pending">Pending</span></td>
+<?php while($row=mysqli_fetch_assoc($recent_booking)){ ?>
 
-            </tr>
+<tr>
 
-            <tr>
+<td><?php echo $row["booking_code"]; ?></td>
 
-                <td>#BK002</td>
-                <td>Royal Events</td>
-                <td>Birthday</td>
-                <td>20 Aug 2026</td>
-                <td><span class="status approved">Approved</span></td>
+<td><?php echo htmlspecialchars($row["company_name"]); ?></td>
 
-            </tr>
+<td><?php echo htmlspecialchars($row["category"]); ?></td>
 
-            <tr>
+<td><?php echo date("d M Y",strtotime($row["event_date"])); ?></td>
 
-                <td>#BK003</td>
-                <td>Elegant Decor</td>
-                <td>Engagement</td>
-                <td>28 Aug 2026</td>
-                <td><span class="status completed">Completed</span></td>
+<td>
 
-            </tr>
+<?php
+
+$status=$row["booking_status"];
+
+$class="pending";
+
+if($status=="Accepted"){
+    $class="approved";
+}
+
+if($status=="Completed"){
+    $class="completed";
+}
+
+if($status=="Rejected"){
+    $class="rejected";
+}
+
+if($status=="Cancelled"){
+    $class="cancelled";
+}
+
+?>
+
+<span class="status <?php echo $class; ?>">
+
+<?php echo $status; ?>
+
+</span>
+
+</td>
+
+</tr>
+
+<?php } ?>
+
+<?php }else{ ?>
+
+<tr>
+
+<td colspan="5" style="text-align:center;padding:30px;">
+
+No bookings found.
+
+</td>
+
+</tr>
+
+<?php } ?>
 
         </tbody>
 

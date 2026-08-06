@@ -43,101 +43,135 @@ include("../includes/customer_sidebar.php");
             unset($_SESSION["error"]);
         }
         ?>
-        <div class="password-card">
+    <div class="customer-password-panel">
 
-    <form action="update_password.php" method="POST">
 
-        <div class="profile-item">
+<form action="update_password.php" method="POST">
 
-            <label>Current Password</label>
 
-            <div class="input-group password-group">
 
-    <i class="fas fa-lock"></i>
+<div class="customer-password-field">
 
-    <input
-        type="password"
-        id="current_password"
-        name="current_password"
-        placeholder="Current Password"
-        required>
+<label>Current Password</label>
 
-    <span class="toggle-password">
 
-        <i class="fas fa-eye"></i>
+<div class="customer-password-input-wrapper">
 
-    </span>
+
+<i class="fas fa-lock"></i>
+
+
+<input
+type="password"
+id="current_password"
+name="current_password"
+placeholder="Current Password"
+required>
+
+
+<span class="toggle-password">
+
+<i class="fas fa-eye"></i>
+
+</span>
+
 
 </div>
 
-        </div>
-
-        <div class="profile-item">
-
-            <label>New Password</label>
-
-            <div class="input-group password-group">
-
-    <i class="fas fa-lock"></i>
-
-    <input
-        type="password"
-        id="new_password"
-        name="new_password"
-        placeholder="New Password"
-        required>
-
-    <span class="toggle-password">
-
-        <i class="fas fa-eye"></i>
-
-    </span>
 
 </div>
 
-        </div>
 
-        <div class="profile-item">
 
-            <label>Confirm Password</label>
 
-            <div class="input-group password-group">
 
-    <i class="fas fa-lock"></i>
+<div class="customer-password-field">
 
-    <input
-        type="password"
-        id="confirm_password"
-        name="confirm_password"
-        placeholder="Confirm Password"
-        required>
+<label>New Password</label>
 
-    <span class="toggle-password">
 
-        <i class="fas fa-eye"></i>
+<div class="customer-password-input-wrapper">
 
-    </span>
+
+<i class="fas fa-lock"></i>
+
+
+<input
+type="password"
+id="new_password"
+name="new_password"
+placeholder="New Password"
+required>
+
+
+<span class="toggle-password">
+
+<i class="fas fa-eye"></i>
+
+</span>
+
 
 </div>
 
-        </div>
 
-        <button
-            type="submit"
-            class="edit-profile-btn">
-
-            Change Password
-
-        </button>
-
-    </form>
+</div>
 
 
-</div> <!-- password-card -->
 
-</div> <!-- dashboard-main -->
 
-</div> <!-- dashboard-content -->
+
+<div class="customer-password-field">
+
+<label>Confirm Password</label>
+
+
+<div class="customer-password-input-wrapper">
+
+
+<i class="fas fa-lock"></i>
+
+
+<input
+type="password"
+id="confirm_password"
+name="confirm_password"
+placeholder="Confirm Password"
+required>
+
+
+<span class="toggle-password">
+
+<i class="fas fa-eye"></i>
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<button
+type="submit"
+class="customer-password-submit">
+
+
+Change Password
+
+
+</button>
+
+
+
+
+</form>
+
+
+</div>
 
 
 <script src="../js/register.js"></script>
