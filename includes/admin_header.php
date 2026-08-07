@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../css/admin_service.css?v=1">
 <link rel="stylesheet" href="../css/admin_booking.css?v=1">
 <link rel="stylesheet" href="../css/admin_review.css?v=2">
-<link rel="stylesheet" href="../css/admin_reports.css?v=2">
+<link rel="stylesheet" href="../css/admin_reports.css?v=5">
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 <link rel="stylesheet"

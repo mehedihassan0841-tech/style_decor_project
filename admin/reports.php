@@ -742,9 +742,26 @@ include("../includes/admin_sidebar.php");
 
                         <?php
                         $rank = 1;
+
+                        $max_decorator_revenue = max(
+                            array_column($top_decorators, "revenue")
+                        );
                         ?>
 
                         <?php foreach($top_decorators as $decorator){ ?>
+
+                            <?php
+
+                            $decorator_revenue = (float)$decorator["revenue"];
+
+                            $decorator_percentage = 0;
+
+                            if($max_decorator_revenue > 0){
+                                $decorator_percentage =
+                                    ($decorator_revenue / $max_decorator_revenue) * 100;
+                            }
+
+                            ?>
 
                             <div class="reports-decorator-row">
 
@@ -769,51 +786,35 @@ include("../includes/admin_sidebar.php");
                                         bookings
                                     </span>
 
+                                    <div class="reports-decorator-performance">
+
+                                        <div class="reports-decorator-performance-track">
+
+                                            <div
+                                                class="reports-decorator-performance-fill"
+                                                style="width:<?php echo $decorator_percentage; ?>%;"
+                                            ></div>
+
+                                        </div>
+
+                                        <span>
+                                            <?php echo round($decorator_percentage); ?>%
+                                        </span>
+
+                                    </div>
+
                                 </div>
 
-                               <div class="reports-decorator-revenue">
+                                <div class="reports-decorator-revenue">
 
-    ৳<?php
-    echo number_format(
-        $decorator["revenue"]
-    );
-    ?>
+                                    ৳<?php
+                                    echo number_format(
+                                        $decorator["revenue"]
+                                    );
+                                    ?>
 
-</div>
+                                </div>
 
-<?php
-
-$decorator_revenue = (float)$decorator["revenue"];
-
-$max_decorator_revenue = !empty($top_decorators)
-    ? max(array_column($top_decorators, "revenue"))
-    : 0;
-
-$decorator_percentage = 0;
-
-if($max_decorator_revenue > 0){
-    $decorator_percentage =
-        ($decorator_revenue / $max_decorator_revenue) * 100;
-}
-
-?>
-
-<div class="reports-decorator-performance">
-
-    <div class="reports-decorator-performance-track">
-
-        <div
-            class="reports-decorator-performance-fill"
-            style="width:<?php echo $decorator_percentage; ?>%;"
-        ></div>
-
-    </div>
-
-    <span>
-        <?php echo round($decorator_percentage); ?>%
-    </span>
-
-</div>
                             </div>
 
                             <?php
