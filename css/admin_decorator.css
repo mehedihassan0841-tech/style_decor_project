@@ -1,8 +1,8 @@
 /*=========================================
-        CUSTOMER PAGE
+        DECORATOR PAGE
 =========================================*/
 
-.customer-page-wrapper{
+.decorator-page-wrapper{
 
 margin-left:280px;
 
@@ -14,7 +14,7 @@ min-height:100vh;
 
 }
 
-.customer-page-content{
+.decorator-page-content{
 
 width:100%;
 
@@ -28,7 +28,7 @@ margin:auto;
         HEADER
 =========================================*/
 
-.customer-page-header{
+.decorator-page-header{
 
 display:flex;
 
@@ -40,7 +40,7 @@ margin-bottom:35px;
 
 }
 
-.customer-page-title h1{
+.decorator-page-title h1{
 
 font-size:34px;
 
@@ -56,13 +56,13 @@ gap:14px;
 
 }
 
-.customer-page-title h1 i{
+.decorator-page-title h1 i{
 
 color:#16a34a;
 
 }
 
-.customer-page-title p{
+.decorator-page-title p{
 
 margin-top:8px;
 
@@ -72,7 +72,7 @@ color:#64748b;
 
 }
 
-.customer-add-btn{
+.decorator-add-btn{
 
 display:inline-flex;
 
@@ -98,7 +98,7 @@ box-shadow:0 15px 35px rgba(34,197,94,.25);
 
 }
 
-.customer-add-btn:hover{
+.decorator-add-btn:hover{
 
 transform:translateY(-3px);
 
@@ -108,7 +108,7 @@ transform:translateY(-3px);
         SUMMARY CARD
 =========================================*/
 
-.customer-summary-grid{
+.decorator-summary-grid{
 
 display:grid;
 
@@ -120,7 +120,7 @@ margin-bottom:35px;
 
 }
 
-.customer-summary-card{
+.decorator-summary-card{
 
 background:#fff;
 
@@ -142,7 +142,7 @@ border:1px solid #edf2f7;
 
 }
 
-.customer-summary-card:hover{
+.decorator-summary-card:hover{
 
 transform:translateY(-5px);
 
@@ -150,7 +150,7 @@ box-shadow:0 20px 40px rgba(15,23,42,.12);
 
 }
 
-.customer-summary-icon{
+.decorator-summary-icon{
 
 width:70px;
 
@@ -172,7 +172,7 @@ color:#fff;
 
 }
 
-.customer-summary-text h2{
+.decorator-summary-text h2{
 
 font-size:30px;
 
@@ -182,7 +182,7 @@ margin-bottom:6px;
 
 }
 
-.customer-summary-text p{
+.decorator-summary-text p{
 
 font-size:14px;
 
@@ -194,13 +194,13 @@ color:#64748b;
         SEARCH
 =========================================*/
 
-.customer-search-wrapper{
+.decorator-search-wrapper{
 
 margin-bottom:30px;
 
 }
 
-.customer-search-box{
+.decorator-search-box{
 
 background:#fff;
 
@@ -220,7 +220,7 @@ border:1px solid #e2e8f0;
 
 }
 
-.customer-search-box i{
+.decorator-search-box i{
 
 font-size:18px;
 
@@ -230,7 +230,7 @@ margin-right:15px;
 
 }
 
-.customer-search-box input{
+.decorator-search-box input{
 
 width:100%;
 
@@ -245,10 +245,10 @@ background:transparent;
 }
 
 /*=========================================
-        CUSTOMER TABLE
+        DECORATOR TABLE
 =========================================*/
 
-.customer-table-wrapper{
+.decorator-table-wrapper{
 
 background:#ffffff;
 
@@ -262,7 +262,7 @@ box-shadow:0 12px 35px rgba(15,23,42,.08);
 
 }
 
-.customer-table{
+.decorator-table{
 
 width:100%;
 
@@ -270,13 +270,13 @@ border-collapse:collapse;
 
 }
 
-.customer-table thead{
+.decorator-table thead{
 
 background:linear-gradient(135deg,#16a34a,#22c55e);
 
 }
 
-.customer-table thead th{
+.decorator-table thead th{
 
 padding:20px;
 
@@ -292,7 +292,7 @@ letter-spacing:.3px;
 
 }
 
-.customer-table tbody tr{
+.decorator-table tbody tr{
 
 transition:.35s;
 
@@ -300,19 +300,19 @@ border-bottom:1px solid #eef2f7;
 
 }
 
-.customer-table tbody tr:last-child{
+.decorator-table tbody tr:last-child{
 
 border-bottom:none;
 
 }
 
-.customer-table tbody tr:hover{
+.decorator-table tbody tr:hover{
 
 background:#f8fffb;
 
 }
 
-.customer-table td{
+.decorator-table td{
 
 padding:18px 20px;
 
@@ -328,7 +328,7 @@ vertical-align:middle;
         PROFILE IMAGE
 =========================================*/
 
-.customer-table-photo{
+.decorator-table-photo{
 
 width:58px;
 
@@ -346,17 +346,17 @@ transition:.35s;
 
 }
 
-.customer-table tbody tr:hover .customer-table-photo{
+.decorator-table tbody tr:hover .decorator-table-photo{
 
 transform:scale(1.08);
 
 }
 
 /*=========================================
-        CUSTOMER INFO
+        DECORATOR INFO
 =========================================*/
 
-.customer-info h4{
+.decorator-info h4{
 
 font-size:16px;
 
@@ -368,7 +368,7 @@ margin-bottom:5px;
 
 }
 
-.customer-info span{
+.decorator-info span{
 
 font-size:13px;
 
@@ -380,7 +380,7 @@ color:#64748b;
         STATUS
 =========================================*/
 
-.customer-status{
+.decorator-status{
 
 display:inline-flex;
 
@@ -398,7 +398,7 @@ font-weight:600;
 
 }
 
-.customer-status.active{
+.decorator-status.active{
 
 background:#dcfce7;
 
@@ -406,7 +406,7 @@ color:#15803d;
 
 }
 
-.customer-status.blocked{
+.decorator-status.blocked{
 
 background:#fee2e2;
 
@@ -418,7 +418,7 @@ color:#dc2626;
         ACTION BUTTONS
 =========================================*/
 
-.customer-action-group{
+.decorator-action-group{
 
 display:flex;
 
@@ -426,9 +426,9 @@ gap:10px;
 
 }
 
-.customer-view-btn,
+.decorator-view-btn,
 
-.customer-delete-btn{
+.decorator-delete-btn{
 
 width:42px;
 
@@ -448,7 +448,7 @@ transition:.35s;
 
 }
 
-.customer-view-btn{
+.decorator-view-btn{
 
 background:#dbeafe;
 
@@ -456,7 +456,7 @@ color:#2563eb;
 
 }
 
-.customer-view-btn:hover{
+.decorator-view-btn:hover{
 
 background:#2563eb;
 
@@ -466,7 +466,7 @@ transform:translateY(-3px);
 
 }
 
-.customer-delete-btn{
+.decorator-delete-btn{
 
 background:#fee2e2;
 
@@ -474,7 +474,7 @@ color:#dc2626;
 
 }
 
-.customer-delete-btn:hover{
+.decorator-delete-btn:hover{
 
 background:#dc2626;
 
@@ -488,15 +488,15 @@ transform:translateY(-3px);
         PREMIUM ANIMATIONS
 =========================================*/
 
-.customer-summary-card,
-.customer-table-wrapper,
-.customer-search-box{
+.decorator-summary-card,
+.decorator-table-wrapper,
+.decorator-search-box{
 
-animation:customerFade .5s ease;
+animation:decoratorFade .5s ease;
 
 }
 
-@keyframes customerFade{
+@keyframes decoratorFade{
 
 from{
 
@@ -520,7 +520,7 @@ transform:translateY(0);
         TABLE HEADER
 =========================================*/
 
-.customer-table thead th{
+.decorator-table thead th{
 
 position:sticky;
 
@@ -534,13 +534,13 @@ z-index:5;
         ROW HOVER
 =========================================*/
 
-.customer-table tbody tr{
+.decorator-table tbody tr{
 
 position:relative;
 
 }
 
-.customer-table tbody tr::after{
+.decorator-table tbody tr::after{
 
 content:"";
 
@@ -562,13 +562,13 @@ transition:.30s;
 
 }
 
-.customer-table tbody tr:hover::after{
+.decorator-table tbody tr:hover::after{
 
 opacity:1;
 
 }
 
-.customer-table tbody tr:hover{
+.decorator-table tbody tr:hover{
 
 box-shadow:0 8px 25px rgba(34,197,94,.08);
 
@@ -578,13 +578,13 @@ box-shadow:0 8px 25px rgba(34,197,94,.08);
         SEARCH
 =========================================*/
 
-.customer-search-box{
+.decorator-search-box{
 
 transition:.35s;
 
 }
 
-.customer-search-box:focus-within{
+.decorator-search-box:focus-within{
 
 border-color:#22c55e;
 
@@ -592,7 +592,7 @@ box-shadow:0 0 0 4px rgba(34,197,94,.10);
 
 }
 
-.customer-search-box input::placeholder{
+.decorator-search-box input::placeholder{
 
 color:#94a3b8;
 
@@ -602,13 +602,13 @@ color:#94a3b8;
         CARD HOVER
 =========================================*/
 
-.customer-summary-icon{
+.decorator-summary-icon{
 
 transition:.35s;
 
 }
 
-.customer-summary-card:hover .customer-summary-icon{
+.decorator-summary-card:hover .decorator-summary-icon{
 
 transform:rotate(-10deg) scale(1.08);
 
@@ -618,7 +618,7 @@ transform:rotate(-10deg) scale(1.08);
         BUTTON SHINE
 =========================================*/
 
-.customer-add-btn{
+.decorator-add-btn{
 
 position:relative;
 
@@ -626,7 +626,7 @@ overflow:hidden;
 
 }
 
-.customer-add-btn::before{
+.decorator-add-btn::before{
 
 content:"";
 
@@ -656,13 +656,13 @@ transform:skewX(-25deg);
 
 }
 
-.customer-add-btn:hover::before{
+.decorator-add-btn:hover::before{
 
-animation:customerShine .8s linear;
+animation:decoratorShine .8s linear;
 
 }
 
-@keyframes customerShine{
+@keyframes decoratorShine{
 
 100%{
 
@@ -676,13 +676,13 @@ left:180%;
         TABLE PHOTO
 =========================================*/
 
-.customer-table-photo{
+.decorator-table-photo{
 
 cursor:pointer;
 
 }
 
-.customer-table-photo:hover{
+.decorator-table-photo:hover{
 
 box-shadow:0 15px 35px rgba(34,197,94,.28);
 
@@ -692,13 +692,13 @@ box-shadow:0 15px 35px rgba(34,197,94,.28);
         STATUS
 =========================================*/
 
-.customer-status{
+.decorator-status{
 
 transition:.30s;
 
 }
 
-.customer-status:hover{
+.decorator-status:hover{
 
 transform:scale(1.06);
 
@@ -708,15 +708,15 @@ transform:scale(1.06);
         ACTION BUTTON
 =========================================*/
 
-.customer-view-btn,
-.customer-delete-btn{
+.decorator-view-btn,
+.decorator-delete-btn{
 
 box-shadow:0 8px 18px rgba(15,23,42,.08);
 
 }
 
-.customer-view-btn:hover,
-.customer-delete-btn:hover{
+.decorator-view-btn:hover,
+.decorator-delete-btn:hover{
 
 box-shadow:0 14px 28px rgba(15,23,42,.15);
 
@@ -726,13 +726,13 @@ box-shadow:0 14px 28px rgba(15,23,42,.15);
         CUSTOM SCROLLBAR
 =========================================*/
 
-.customer-table-wrapper::-webkit-scrollbar{
+.decorator-table-wrapper::-webkit-scrollbar{
 
 height:8px;
 
 }
 
-.customer-table-wrapper::-webkit-scrollbar-thumb{
+.decorator-table-wrapper::-webkit-scrollbar-thumb{
 
 background:#22c55e;
 
@@ -740,17 +740,17 @@ border-radius:50px;
 
 }
 
-.customer-table-wrapper::-webkit-scrollbar-track{
+.decorator-table-wrapper::-webkit-scrollbar-track{
 
 background:#edf2f7;
 
 }
 /*=========================================
-        CUSTOMER DETAILS
+        DECORATOR DETAILS
 =========================================*/
 
 /*=========================================
-        CUSTOMER DETAILS PAGE
+        DECORATOR DETAILS PAGE
 =========================================*/
 
 .admin-content{
@@ -766,10 +766,10 @@ min-height:100vh;
 }
 
 /*=========================================
-        CUSTOMER HEADER
+        DECORATOR HEADER
 =========================================*/
 
-.customer-details-top{
+.decorator-details-top{
 
 display:flex;
 
@@ -789,13 +789,13 @@ border-radius:24px 24px 0 0;
         LEFT SIDE
 =========================================*/
 
-.customer-profile-left{
+.decorator-profile-left{
 
 flex-shrink:0;
 
 }
 
-.customer-profile-left img{
+.decorator-profile-left img{
 
 width:130px;
 
@@ -813,7 +813,7 @@ transition:.35s;
 
 }
 
-.customer-profile-left img:hover{
+.decorator-profile-left img:hover{
 
 transform:scale(1.05);
 
@@ -823,13 +823,13 @@ transform:scale(1.05);
         RIGHT SIDE
 =========================================*/
 
-.customer-profile-right{
+.decorator-profile-right{
 
 flex:1;
 
 }
 
-.customer-profile-right h2{
+.decorator-profile-right h2{
 
 font-size:34px;
 
@@ -841,7 +841,7 @@ margin-bottom:12px;
 
 }
 
-.customer-id{
+.decorator-id{
 
 display:inline-flex;
 
@@ -863,7 +863,7 @@ margin-bottom:18px;
 
 }
 
-.customer-id i{
+.decorator-id i{
 
 font-size:16px;
 
@@ -872,7 +872,7 @@ font-size:16px;
         INFORMATION GRID
 =========================================*/
 
-.customer-details-grid{
+.decorator-details-grid{
 
 display:grid;
 
@@ -888,7 +888,7 @@ padding:30px;
         INFO CARD
 =========================================*/
 
-.customer-info-card{
+.decorator-info-card{
 
 display:flex;
 
@@ -910,7 +910,7 @@ box-shadow:0 8px 22px rgba(15,23,42,.05);
 
 }
 
-.customer-info-card:hover{
+.decorator-info-card:hover{
 
 transform:translateY(-6px);
 
@@ -924,7 +924,7 @@ box-shadow:0 18px 35px rgba(34,197,94,.15);
         ICON
 =========================================*/
 
-.customer-info-icon{
+.decorator-info-icon{
 
 width:58px;
 
@@ -950,7 +950,7 @@ transition:.35s;
 
 }
 
-.customer-info-card:hover .customer-info-icon{
+.decorator-info-card:hover .decorator-info-icon{
 
 transform:rotate(-8deg) scale(1.08);
 
@@ -960,13 +960,13 @@ transform:rotate(-8deg) scale(1.08);
         TEXT
 =========================================*/
 
-.customer-info-text{
+.decorator-info-text{
 
 flex:1;
 
 }
 
-.customer-info-text label{
+.decorator-info-text label{
 
 display:block;
 
@@ -984,7 +984,7 @@ letter-spacing:.5px;
 
 }
 
-.customer-info-text p{
+.decorator-info-text p{
 
 font-size:17px;
 
@@ -1002,10 +1002,10 @@ margin:0;
 
 
 /*=========================================
-        CUSTOMER BACK BUTTON
+        DECORATOR BACK BUTTON
 =========================================*/
 
-.customer-details-footer{
+.decorator-details-footer{
 
 display:flex;
 
@@ -1020,7 +1020,7 @@ border-top:1px solid #e2e8f0;
 }
 
 
-.customer-back-btn{
+.decorator-back-btn{
 
 display:inline-flex;
 
@@ -1051,7 +1051,7 @@ box-shadow:0 8px 20px rgba(15,23,42,.08);
 }
 
 
-.customer-back-btn i{
+.decorator-back-btn i{
 
 font-size:16px;
 
@@ -1062,7 +1062,7 @@ transition:.35s;
 
 /* Hover */
 
-.customer-back-btn:hover{
+.decorator-back-btn:hover{
 
 background:#22c55e;
 
@@ -1075,17 +1075,17 @@ box-shadow:0 15px 30px rgba(34,197,94,.25);
 }
 
 
-.customer-back-btn:hover i{
+.decorator-back-btn:hover i{
 
 transform:translateX(-6px);
 
 }
 
 /*=========================================
-        CUSTOMER STATUS BADGE
+        DECORATOR STATUS BADGE
 =========================================*/
 
-.customer-status{
+.decorator-status{
 
 display:inline-flex;
 
@@ -1112,7 +1112,7 @@ transition:.35s;
 
 /* Approved */
 
-.customer-status.approved{
+.decorator-status.approved{
 
 background:linear-gradient(135deg,#dcfce7,#bbf7d0);
 
@@ -1125,7 +1125,7 @@ box-shadow:0 8px 20px rgba(34,197,94,.18);
 }
 
 
-.customer-status.approved::before{
+.decorator-status.approved::before{
 
 content:"✓";
 
@@ -1154,7 +1154,7 @@ font-weight:800;
 
 /* Hover */
 
-.customer-status.approved:hover{
+.decorator-status.approved:hover{
 
 transform:translateY(-3px);
 
@@ -1162,10 +1162,10 @@ box-shadow:0 14px 30px rgba(34,197,94,.25);
 
 }
 /*=========================================
-        CUSTOMER STATUS BADGE
+        DECORATOR STATUS BADGE
 =========================================*/
 
-.customer-status{
+.decorator-status{
 
 display:inline-flex;
 
@@ -1194,7 +1194,7 @@ transition:.35s ease;
         APPROVED
 =========================================*/
 
-.customer-status.approved{
+.decorator-status.approved{
 
 background:linear-gradient(135deg,#dcfce7,#bbf7d0);
 
@@ -1207,7 +1207,7 @@ box-shadow:0 8px 20px rgba(34,197,94,.18);
 }
 
 
-.customer-status.approved::before{
+.decorator-status.approved::before{
 
 content:"✓";
 
@@ -1236,7 +1236,7 @@ font-size:13px;
         PENDING
 =========================================*/
 
-.customer-status.pending{
+.decorator-status.pending{
 
 background:linear-gradient(135deg,#fef9c3,#fde68a);
 
@@ -1249,7 +1249,7 @@ box-shadow:0 8px 20px rgba(234,179,8,.18);
 }
 
 
-.customer-status.pending::before{
+.decorator-status.pending::before{
 
 content:"!";
 
@@ -1281,7 +1281,7 @@ font-weight:800;
 =========================================*/
 
 /* ৩টির বেশি row শুরুতে hide থাকবে */
-.customer-table tr.extra-customer{
+.decorator-table tr.extra-decorator{
 
 display:none;
 
@@ -1289,7 +1289,7 @@ display:none;
 
 
 /* Show More হলে row দেখাবে */
-.customer-table tr.extra-customer.show{
+.decorator-table tr.extra-decorator.show{
 
 display:table-row;
 
@@ -1355,12 +1355,12 @@ box-shadow:0 18px 35px rgba(34,197,94,.35);
         STATUS HOVER
 =========================================*/
 
-.customer-status:hover{
+.decorator-status:hover{
 
 transform:translateY(-3px) scale(1.03);
 
 }
-.customer-search-btn{
+.decorator-search-btn{
 
 padding:12px 22px;
 
@@ -1382,8 +1382,250 @@ margin-left:15px;
 
 }
 
-.customer-search-btn:hover{
+.decorator-search-btn:hover{
 
 background:#15803d;
+
+}
+
+/*=========================================
+        DECORATOR DETAILS PAGE
+=========================================*/
+
+.decorator-details-page{
+
+display:flex;
+justify-content:center;
+padding:20px;
+
+}
+
+.decorator-details-card{
+
+width:100%;
+max-width:1100px;
+background:#ffffff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 20px 45px rgba(15,23,42,.08);
+border:1px solid #e5e7eb;
+
+}
+
+/*=========================================
+        PROFILE HEADER
+=========================================*/
+
+.decorator-profile-section{
+
+display:flex;
+align-items:center;
+gap:35px;
+padding:35px 40px;
+background:linear-gradient(135deg,#22c55e,#15803d);
+
+}
+
+.decorator-profile-left{
+
+flex-shrink:0;
+
+}
+
+.decorator-profile-left img{
+
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #fff;
+background:#fff;
+box-shadow:0 15px 35px rgba(0,0,0,.18);
+transition:.35s;
+
+}
+
+.decorator-profile-left img:hover{
+
+transform:scale(1.05);
+
+}
+
+.decorator-profile-right{
+
+flex:1;
+
+}
+
+.decorator-profile-right h2{
+
+font-size:34px;
+color:#fff;
+font-weight:700;
+margin-bottom:15px;
+
+}
+
+.decorator-id{
+
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:10px 18px;
+background:rgba(255,255,255,.18);
+border-radius:40px;
+color:#fff;
+margin-bottom:18px;
+font-size:15px;
+
+}
+
+/*=========================================
+        STATUS
+=========================================*/
+
+.decorator-status{
+
+display:inline-block;
+padding:8px 18px;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+
+}
+
+.decorator-status.active{
+
+background:#dcfce7;
+color:#15803d;
+
+}
+
+.decorator-status.blocked{
+
+background:#fee2e2;
+color:#dc2626;
+
+}
+
+/*=========================================
+        GRID
+=========================================*/
+
+.decorator-info-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+padding:35px;
+
+}
+
+/*=========================================
+        INFO CARD
+=========================================*/
+
+.decorator-info-card{
+
+display:flex;
+align-items:center;
+gap:18px;
+padding:20px;
+background:#fff;
+border-radius:18px;
+border:1px solid #e5e7eb;
+box-shadow:0 10px 25px rgba(15,23,42,.05);
+transition:.35s;
+
+}
+
+.decorator-info-card:hover{
+
+transform:translateY(-6px);
+border-color:#22c55e;
+box-shadow:0 18px 35px rgba(34,197,94,.15);
+
+}
+
+.decorator-info-icon{
+
+width:60px;
+height:60px;
+border-radius:16px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#dcfce7;
+color:#16a34a;
+font-size:22px;
+flex-shrink:0;
+transition:.35s;
+
+}
+
+.decorator-info-card:hover .decorator-info-icon{
+
+transform:rotate(-10deg) scale(1.08);
+
+}
+
+.decorator-info-text{
+
+flex:1;
+
+}
+
+.decorator-info-text label{
+
+display:block;
+font-size:13px;
+color:#64748b;
+font-weight:600;
+text-transform:uppercase;
+margin-bottom:6px;
+
+}
+
+.decorator-info-text p{
+
+margin:0;
+font-size:17px;
+font-weight:600;
+color:#0f172a;
+word-break:break-word;
+
+}
+
+/*=========================================
+        FOOTER
+=========================================*/
+
+.decorator-details-footer{
+
+padding:30px;
+text-align:right;
+border-top:1px solid #e5e7eb;
+
+}
+
+.decorator-back-btn{
+
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:14px 28px;
+background:#16a34a;
+color:#fff;
+text-decoration:none;
+border-radius:12px;
+font-weight:600;
+transition:.35s;
+
+}
+
+.decorator-back-btn:hover{
+
+background:#15803d;
+transform:translateY(-3px);
 
 }

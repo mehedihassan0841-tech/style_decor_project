@@ -1,3 +1,4 @@
+```php
 <?php
 
 session_start();
@@ -224,8 +225,8 @@ include("../includes/admin_header.php");
 
 include("../includes/admin_sidebar.php");
 
-?>
 
+?>
 <div class="admin-content">
 
     <div class="review-page-wrapper">
@@ -481,9 +482,9 @@ include("../includes/admin_sidebar.php");
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
 
-                                <button type="button" class="review-delete-btn review-delete" data-id="<?php echo $review["id"]; ?>" title="Delete Review">
+                                <a href="delete_review.php?id=<?php echo $review["id"]; ?>" class="review-delete-btn" title="Delete Review" onclick="return confirm('Are you sure you want to delete this review?');">
                                     <i class="fa-solid fa-trash"></i>
-                                </button>
+                                </a>
                             </div>
                         </div>
 
@@ -510,52 +511,5 @@ include("../includes/admin_sidebar.php");
 
 </div>
 
-<!-- SweetAlert2 CDN -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // 1. Success Message Alert (PHP to JS)
-    <?php if(isset($_GET["deleted"]) && $_GET["deleted"] == 1): ?>
-        Swal.fire({
-            icon: "success",
-            title: "Deleted!",
-            text: "Review has been deleted successfully.",
-            timer: 2000,
-            showConfirmButton: false
-        }).then(() => {
-            // URL থেকে ?deleted=1 সরিয়ে পরিচ্ছন্ন URL রাখবে
-            if (window.history.replaceState) {
-                const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-                window.history.replaceState({path:newUrl}, '', newUrl);
-            }
-        });
-    <?php endif; ?>
-
-    // 2. Delete Confirmation SweetAlert Action
-    const deleteButtons = document.querySelectorAll(".review-delete");
-    deleteButtons.forEach(function(button){
-        button.addEventListener("click", function(){
-            const id = this.getAttribute("data-id");
-
-            Swal.fire({
-                title: "Are you sure?",
-                text: "This review will be permanently deleted!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#d33",
-                cancelButtonColor: "#3085d6",
-                confirmButtonText: "Yes, delete it!"
-            }).then((result) => {
-                if(result.isConfirmed){
-                    window.location.href = "delete_review.php?id=" + id;
-                }
-            });
-        });
-    });
-
-});
-</script>
-
 <?php include("../includes/admin_footer.php"); ?>
+

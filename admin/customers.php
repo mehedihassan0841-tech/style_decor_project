@@ -35,16 +35,27 @@ $show_all = isset($_GET['show_all']) && $_GET['show_all'] == '1';
 // show_all না থাকলে শুধু ৩টি ডাটা লিমিট করা হবে
 $limit_clause = $show_all ? "" : " LIMIT 3";
 
+$search = "";
+
+if (isset($_GET["search"])) {
+    $search = mysqli_real_escape_string($conn, $_GET["search"]);
+}
+
 $customer_list = mysqli_query($conn, "
     SELECT *
     FROM users
-    WHERE role = 'customer'
+    WHERE role='customer'
+    AND
+    (
+        full_name LIKE '%$search%'
+        OR
+        email LIKE '%$search%'
+        OR
+        phone LIKE '%$search%'
+    )
     ORDER BY created_at DESC
-    {$limit_clause}
 ");
 ?>
-
-
 
 <div class="customer-page-wrapper">
     <div class="customer-page-content">
@@ -122,294 +133,132 @@ $customer_list = mysqli_query($conn, "
 
         <!-- SEARCH BAR -->
         <div class="customer-search-wrapper">
-            <div class="customer-search-box">
+            <form method="GET" class="customer-search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="customerSearchInput" placeholder="Search customer...">
-            </div>
+                <input
+                    type="text"
+                    name="search"
+                    placeholder="Search customer..."
+                    value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>"
+                >
+                <button type="submit" class="customer-search-btn">
+                    Search
+                </button>
+            </form>
         </div>
 
         <!-- CUSTOMER TABLE -->
-       <!-- ===============================
-        CUSTOMER TABLE
-================================ -->
-
-<div class="customer-table-wrapper">
-
-<table class="customer-table">
-
-<thead>
-
-<tr>
-
-<th>Photo</th>
-
-<th>Name & ID</th>
-
-<th>Email</th>
-
-<th>Phone</th>
-
-<th>Status</th>
-
-<th>Joined Date</th>
-
-<th>Action</th>
-
-</tr>
-
-</thead>
-
-
-<tbody>
-
-
-<?php
-
-if(mysqli_num_rows($customer_list)>0){
-
-
-while($customer=mysqli_fetch_assoc($customer_list)){
-
-
-$profile_img = !empty($customer["profile_image"]) 
-&& file_exists("../uploads/profile/".$customer["profile_image"])
-
-? "../uploads/profile/".$customer["profile_image"]
-
-: "../images/default-user.png";
-
-
-?>
-
-
-<tr>
-
-
-<td>
-
-<img
-
-src="<?php echo $profile_img; ?>"
-
-alt="Customer Photo"
-
-class="customer-table-photo"
-
->
-
-</td>
-
-
-
-<td>
-
-
-<div class="customer-info">
-
-
-<h4>
-
-<?php echo htmlspecialchars($customer["full_name"]); ?>
-
-</h4>
-
-
-<span>
-
-#CUS<?php echo str_pad($customer["id"],4,"0",STR_PAD_LEFT); ?>
-
-</span>
-
-
-</div>
-
-
-</td>
-
-
-
-<td>
-
-<?php echo htmlspecialchars($customer["email"]); ?>
-
-</td>
-
-
-
-<td>
-
-<?php echo htmlspecialchars($customer["phone"] ?? "N/A"); ?>
-
-</td>
-
-
-
-<td>
-
-
-<span class="customer-status <?php echo strtolower($customer["status"]); ?>">
-
-
-<?php echo ucfirst($customer["status"]); ?>
-
-
-</span>
-
-
-</td>
-
-
-
-<td>
-
-<?php echo date("d M Y",strtotime($customer["created_at"])); ?>
-
-</td>
-
-
-
-
-<td>
-
-
-<div class="customer-action-group">
-
-
-<a
-
-href="customer_details.php?id=<?php echo $customer['id']; ?>"
-
-class="customer-view-btn"
-
-title="View Details"
-
->
-
-
-<i class="fa-solid fa-eye"></i>
-
-
-</a>
-
-
-
-<button
-
-type="button"
-
-class="customer-delete-btn customer-delete"
-
-data-id="<?php echo $customer['id']; ?>"
-
-title="Delete Customer"
-
->
-
-
-<i class="fa-solid fa-trash"></i>
-
-
-</button>
-
-
-
-</div>
-
-
-</td>
-
-
-
-</tr>
-
-
-
-<?php
-
-
-}
-
-
-}else{
-
-
-?>
-
-
-<tr>
-
-<td colspan="7" style="text-align:center;padding:35px;">
-
-No Customers Found
-
-</td>
-
-</tr>
-
-
-<?php
-
-}
-
-
-?>
-
-
-</tbody>
-
-
-</table>
-
-
-
-<!-- ===============================
-        SEE MORE BUTTON
-================================ -->
-
-
-<?php if(($stats["total"] ?? 0) > 3){ ?>
-
-
-<div class="see-more-wrapper">
-
-
-<?php if($show_all){ ?>
-
-
-<a href="customers.php" class="see-more-btn">
-
-
-<i class="fa-solid fa-chevron-up"></i>
-
-Show Less
-
-
-</a>
-
-
-<?php }else{ ?>
-
-
-<a href="?show_all=1" class="see-more-btn">
-
-
-<i class="fa-solid fa-users"></i>
-
-See More Customers
-
-
-</a>
-
-
-<?php } ?>
-
-
-</div>
-
-
-<?php } ?>
-
-
+        <div class="customer-table-wrapper">
+            <table class="customer-table">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Name & ID</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Joined Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <?php
+                    if (mysqli_num_rows($customer_list) > 0) {
+                        while ($customer = mysqli_fetch_assoc($customer_list)) {
+                            $profile_img = !empty($customer["profile_image"]) && file_exists("../uploads/profile/" . $customer["profile_image"])
+                                ? "../uploads/profile/" . $customer["profile_image"]
+                                : "../images/default-user.png";
+                    ?>
+                            <tr>
+                                <td>
+                                    <img
+                                        src="<?php echo $profile_img; ?>"
+                                        alt="Customer Photo"
+                                        class="customer-table-photo"
+                                    >
+                                </td>
+
+                                <td>
+                                    <div class="customer-info">
+                                        <h4><?php echo htmlspecialchars($customer["full_name"]); ?></h4>
+                                        <span>#CUS<?php echo str_pad($customer["id"], 4, "0", STR_PAD_LEFT); ?></span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <?php echo htmlspecialchars($customer["email"]); ?>
+                                </td>
+
+                                <td>
+                                    <?php echo htmlspecialchars($customer["phone"] ?? "N/A"); ?>
+                                </td>
+
+                                <td>
+                                    <span class="customer-status <?php echo strtolower($customer["status"]); ?>">
+                                        <?php echo ucfirst($customer["status"]); ?>
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <?php echo date("d M Y", strtotime($customer["created_at"])); ?>
+                                </td>
+
+                                <td>
+                                    <div class="customer-action-group">
+                                        <a
+                                            href="customer_details.php?id=<?php echo $customer['id']; ?>"
+                                            class="customer-view-btn"
+                                            title="View Details"
+                                        >
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+
+                                        <button
+                                            type="button"
+                                            class="customer-delete-btn customer-delete"
+                                            data-id="<?php echo $customer['id']; ?>"
+                                            title="Delete Customer"
+                                        >
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                    <?php
+                        }
+                    } else {
+                    ?>
+                        <tr>
+                            <td colspan="7" style="text-align:center;padding:35px;">
+                                No Customers Found
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+
+            <!-- SEE MORE BUTTON -->
+            <?php if (($stats["total"] ?? 0) > 3) { ?>
+                <div class="see-more-wrapper">
+                    <?php if ($show_all) { ?>
+                        <a href="customers.php" class="see-more-btn">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            Show Less
+                        </a>
+                    <?php } else { ?>
+                        <a href="?show_all=1" class="see-more-btn">
+                            <i class="fa-solid fa-users"></i>
+                            See More Customers
+                        </a>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+        </div>
+
+    </div>
 </div>
 
 <?php include("../includes/admin_footer.php"); ?>

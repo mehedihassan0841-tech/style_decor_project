@@ -1,0 +1,1039 @@
+/* =====================================================
+   STYLEDECOR ADMIN
+   REVIEW PAGE - PART 1
+===================================================== */
+
+
+/* =====================================================
+   PAGE AREA
+===================================================== */
+
+.admin-content{
+    margin-left:280px;
+    padding:35px 40px;
+    background:#f5f7fb;
+    min-height:100vh;
+}
+
+.review-page-wrapper{
+    width:100%;
+    max-width:1500px;
+    margin:0 auto;
+}
+
+.review-page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:28px;
+}
+
+
+/* =====================================================
+   PAGE TITLE
+===================================================== */
+
+.review-page-title{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.review-title-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 13px;
+    background:#dcfce7;
+    color:#15803d;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.review-title-badge i{
+    font-size:13px;
+}
+
+.review-page-title h1{
+    margin:0;
+    color:#0f172a;
+    font-size:32px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.review-page-title p{
+    margin:8px 0 0;
+    color:#64748b;
+    font-size:14px;
+}
+
+
+/* =====================================================
+   REVIEW OVERVIEW
+===================================================== */
+
+.review-overview{
+    display:grid;
+    grid-template-columns:1.05fr 1.4fr 1fr;
+    gap:20px;
+    margin-bottom:32px;
+}
+
+
+/* =====================================================
+   COMMON OVERVIEW CARD
+===================================================== */
+
+.review-overall-card,
+.review-breakdown-card,
+.review-feedback-card{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:20px;
+    box-shadow:0 8px 24px rgba(15,23,42,.05);
+}
+
+
+/* =====================================================
+   OVERALL RATING CARD
+===================================================== */
+
+.review-overall-card{
+    padding:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.review-overall-card::after{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#dcfce7;
+    right:-45px;
+    bottom:-55px;
+    opacity:.65;
+}
+
+.review-overall-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.review-small-title{
+    margin:0 0 8px;
+    color:#64748b;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.review-average{
+    display:flex;
+    align-items:baseline;
+    gap:5px;
+}
+
+.review-average strong{
+    font-size:44px;
+    line-height:1;
+    color:#0f172a;
+    font-weight:800;
+}
+
+.review-average span{
+    color:#94a3b8;
+    font-size:14px;
+    font-weight:600;
+}
+
+.review-rating-icon{
+    width:52px;
+    height:52px;
+    border-radius:15px;
+    background:#dcfce7;
+    color:#16a34a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.review-stars{
+    display:flex;
+    gap:5px;
+    margin-top:18px;
+}
+
+.review-stars i{
+    font-size:17px;
+    color:#cbd5e1;
+}
+
+.review-stars i.active{
+    color:#f59e0b;
+}
+
+.review-total-text{
+    margin:12px 0 0;
+    color:#64748b;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   BREAKDOWN CARD
+===================================================== */
+
+.review-breakdown-card{
+    padding:25px;
+}
+
+.review-card-heading{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.review-card-heading h3{
+    margin:0;
+    font-size:17px;
+    color:#0f172a;
+    font-weight:700;
+}
+
+.review-card-heading > i{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f0fdf4;
+    color:#16a34a;
+    font-size:15px;
+}
+
+.rating-row{
+    display:grid;
+    grid-template-columns:45px 1fr 30px;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+.rating-row:last-child{
+    margin-bottom:0;
+}
+
+.rating-number{
+    color:#475569;
+    font-size:13px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.rating-number i{
+    color:#f59e0b;
+    font-size:11px;
+    margin-left:2px;
+}
+
+.rating-progress{
+    height:8px;
+    background:#f1f5f9;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.rating-progress-fill{
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #16a34a
+    );
+    border-radius:20px;
+    min-width:0;
+}
+
+.rating-count{
+    color:#64748b;
+    font-size:12px;
+    font-weight:600;
+    text-align:right;
+}
+
+
+/* =====================================================
+   FEEDBACK HEALTH CARD
+===================================================== */
+
+.review-feedback-card{
+    padding:25px;
+}
+
+.feedback-stat{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:13px 0;
+    border-top:1px solid #f1f5f9;
+}
+
+.feedback-stat:first-of-type{
+    border-top:none;
+    padding-top:0;
+}
+
+.feedback-icon{
+    width:43px;
+    height:43px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    font-size:18px;
+}
+
+.feedback-stat.positive .feedback-icon{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+.feedback-stat.attention .feedback-icon{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.feedback-stat strong{
+    display:block;
+    color:#0f172a;
+    font-size:22px;
+    line-height:1.1;
+}
+
+.feedback-stat span{
+    display:block;
+    color:#64748b;
+    font-size:12px;
+    margin-top:3px;
+}
+
+
+/* =====================================================
+   REVIEW PAGE - PART 2
+   SEARCH / FILTER + REVIEW FEED
+===================================================== */
+
+/* =====================================================
+   REVIEW FEED HEADER
+===================================================== */
+
+.review-feed-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:18px;
+}
+
+.review-feed-header h2{
+    margin:0;
+    font-size:22px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.review-feed-header p{
+    margin:6px 0 0;
+    font-size:13px;
+    color:#64748b;
+}
+
+.review-result-count{
+    padding:8px 14px;
+    background:#dcfce7;
+    color:#15803d;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+}
+
+/* =====================================================
+   SEARCH & FILTER BAR
+===================================================== */
+
+.review-filter-bar{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:16px;
+    margin-bottom:22px;
+    box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.review-filter-form{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+}
+
+.review-search-box{
+    flex:1;
+    height:46px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 15px;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:11px;
+}
+
+.review-search-box i{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.review-search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:#0f172a;
+    font-size:13px;
+}
+
+.review-search-box input::placeholder{
+    color:#94a3b8;
+}
+
+.review-filter-select{
+    height:46px;
+    min-width:145px;
+    padding:0 12px;
+    border:1px solid #e2e8f0;
+    border-radius:11px;
+    background:#ffffff;
+    color:#334155;
+    font-size:13px;
+    outline:none;
+    cursor:pointer;
+    transition:border-color .2s ease;
+}
+
+.review-filter-select:focus{
+    border-color:#22c55e;
+}
+
+.review-filter-btn{
+    height:46px;
+    padding:0 20px;
+    border:none;
+    border-radius:11px;
+    background:#22c55e;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    transition:.25s;
+}
+
+.review-filter-btn:hover{
+    background:#16a34a;
+    transform:translateY(-1px);
+}
+
+/* =====================================================
+   REVIEW FEED
+===================================================== */
+
+.review-feed{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+/* =====================================================
+   REVIEW ITEM CARD
+===================================================== */
+
+.review-item-card{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:22px 24px;
+    box-shadow:0 6px 18px rgba(15,23,42,.04);
+    transition:.3s ease;
+}
+
+.review-item-card:hover{
+    border-color:#bbf7d0;
+    box-shadow:0 12px 28px rgba(34,197,94,.09);
+    transform:translateY(-2px);
+}
+
+/* =====================================================
+   REVIEW TOP
+===================================================== */
+
+.review-item-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.review-user{
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.review-avatar{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+    color:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.review-user-info h3{
+    margin:0;
+    font-size:15px;
+    color:#0f172a;
+    font-weight:700;
+}
+
+.review-user-info span{
+    display:block;
+    margin-top:4px;
+    color:#94a3b8;
+    font-size:12px;
+}
+
+/* =====================================================
+   REVIEW RATING
+===================================================== */
+
+.review-item-rating{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.review-star-display{
+    display:flex;
+    gap:2px;
+}
+
+.review-star-display i{
+    font-size:14px;
+    color:#cbd5e1;
+}
+
+.review-star-display i.active{
+    color:#f59e0b;
+}
+
+.review-item-rating strong{
+    color:#475569;
+    font-size:13px;
+    font-weight:700;
+}
+
+/* =====================================================
+   REVIEW MESSAGE
+===================================================== */
+
+.review-message{
+    display:flex;
+    gap:12px;
+    margin:20px 0;
+    padding:17px 18px;
+    background:#f8fafc;
+    border-radius:13px;
+    border-left:3px solid #22c55e;
+}
+
+.review-message > i{
+    color:#86efac;
+    font-size:17px;
+    margin-top:2px;
+}
+
+.review-message p{
+    margin:0;
+    color:#475569;
+    font-size:14px;
+    line-height:1.7;
+    word-break:break-word;
+}
+
+/* =====================================================
+   REVIEW BOTTOM
+===================================================== */
+
+.review-item-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    padding-top:15px;
+    border-top:1px solid #f1f5f9;
+}
+
+.review-meta{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.review-meta span{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:#64748b;
+    font-size:12px;
+}
+
+.review-meta span i{
+    color:#22c55e;
+    font-size:13px;
+}
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.review-action-group{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.review-view-btn,
+.review-delete-btn{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.review-view-btn{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+.review-view-btn:hover{
+    background:#22c55e;
+    color:#ffffff;
+    transform:translateY(-2px);
+}
+
+.review-delete-btn{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.review-delete-btn:hover{
+    background:#dc2626;
+    color:#ffffff;
+    transform:translateY(-2px);
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.review-empty-state{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:60px 25px;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.review-empty-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 18px;
+    border-radius:20px;
+    background:#dcfce7;
+    color:#16a34a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+}
+
+.review-empty-state h3{
+    margin:0;
+    color:#0f172a;
+    font-size:18px;
+}
+
+.review-empty-state p{
+    margin:7px 0 0;
+    color:#64748b;
+    font-size:13px;
+}
+
+/* =====================================================
+REVIEW DETAILS PAGE
+===================================================== */
+.review-details-page{
+width:100%;
+max-width:1200px;
+margin:0 auto;
+}
+.review-details-card{
+background:#ffffff;
+border:1px solid #e2e8f0;
+border-radius:22px;
+box-shadow:0 10px 30px rgba(15,23,42,.06);
+overflow:hidden;
+}
+/* =====================================================
+DETAILS HEADER
+===================================================== */
+.review-details-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:25px;
+padding:28px 32px;
+background:linear-gradient(
+135deg,
+#22c55e,
+#16a34a
+);
+}
+.review-details-label{
+display:inline-flex;
+align-items:center;
+gap:8px;
+color:#dcfce7;
+font-size:12px;
+font-weight:600;
+margin-bottom:7px;
+}
+.review-details-header h1{
+margin:0;
+color:#ffffff;
+font-size:30px;
+font-weight:700;
+}
+.review-details-header p{
+margin:7px 0 0;
+color:#dcfce7;
+font-size:13px;
+}
+.review-details-back-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding:11px 18px;
+background:#ffffff;
+color:#15803d;
+border-radius:11px;
+text-decoration:none;
+font-size:13px;
+font-weight:600;
+transition:.25s;
+white-space:nowrap;
+}
+.review-details-back-btn:hover{
+background:#f0fdf4;
+transform:translateY(-2px);
+}
+/* =====================================================
+MAIN CONTENT
+===================================================== */
+.review-details-main{
+padding:30px 32px;
+}
+/* =====================================================
+CUSTOMER INFORMATION
+===================================================== */
+.review-details-section{
+margin-bottom:24px;
+}
+.review-details-section-title{
+display:flex;
+align-items:center;
+gap:9px;
+margin-bottom:15px;
+color:#0f172a;
+font-size:15px;
+font-weight:700;
+}
+.review-details-section-title i{
+width:32px;
+height:32px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#dcfce7;
+color:#16a34a;
+border-radius:9px;
+font-size:13px;
+}
+.review-customer-box{
+display:flex;
+align-items:center;
+gap:15px;
+padding:18px;
+background:#f8fafc;
+border:1px solid #e2e8f0;
+border-radius:15px;
+}
+.review-details-avatar{
+width:58px;
+height:58px;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(
+135deg,
+#22c55e,
+#16a34a
+);
+color:#ffffff;
+font-size:22px;
+font-weight:700;
+flex-shrink:0;
+}
+.review-customer-box h3{
+margin:0;
+color:#0f172a;
+font-size:17px;
+}
+.review-customer-box p{
+margin:5px 0 2px;
+color:#64748b;
+font-size:13px;
+}
+.review-customer-box span{
+color:#94a3b8;
+font-size:12px;
+}
+/* =====================================================
+RATING HIGHLIGHT
+===================================================== */
+.review-rating-highlight{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 22px;
+margin-bottom:25px;
+background:#fffbeb;
+border:1px solid #fde68a;
+border-radius:16px;
+}
+.review-rating-highlight span{
+display:block;
+margin-bottom:8px;
+color:#92400e;
+font-size:12px;
+font-weight:600;
+text-transform:uppercase;
+letter-spacing:.4px;
+}
+.review-details-stars{
+display:flex;
+gap:4px;
+}
+.review-details-stars i{
+color:#d1d5db;
+font-size:19px;
+}
+.review-details-stars i.active{
+color:#f59e0b;
+}
+.review-rating-highlight > strong{
+color:#92400e;
+font-size:28px;
+font-weight:800;
+}
+/* =====================================================
+CUSTOMER MESSAGE
+===================================================== */
+.review-details-message{
+margin-bottom:28px;
+}
+.review-quote-box{
+position:relative;
+display:flex;
+gap:14px;
+padding:22px 24px;
+background:#f0fdf4;
+border:1px solid #bbf7d0;
+border-radius:16px;
+}
+.review-quote-box > i{
+color:#86efac;
+font-size:22px;
+flex-shrink:0;
+margin-top:2px;
+}
+.review-quote-box p{
+margin:0;
+color:#334155;
+font-size:15px;
+line-height:1.8;
+}
+/* =====================================================
+INFORMATION GRID
+===================================================== */
+.review-details-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:5px;
+}
+.review-info-box{
+padding:18px;
+background:#ffffff;
+border:1px solid #e2e8f0;
+border-radius:14px;
+transition:.25s;
+}
+.review-info-box:hover{
+border-color:#86efac;
+background:#fafffb;
+transform:translateY(-2px);
+}
+.review-info-box span{
+display:block;
+margin-bottom:7px;
+color:#94a3b8;
+font-size:11px;
+font-weight:600;
+text-transform:uppercase;
+letter-spacing:.4px;
+}
+.review-info-box strong{
+display:block;
+color:#0f172a;
+font-size:14px;
+font-weight:700;
+line-height:1.5;
+word-break:break-word;
+}
+/* =====================================================
+DETAILS FOOTER
+===================================================== */
+.review-details-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
+margin-top:30px;
+padding-top:22px;
+border-top:1px solid #e2e8f0;
+}
+.review-details-delete-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding:11px 18px;
+border-radius:11px;
+background:#fee2e2;
+color:#dc2626;
+text-decoration:none;
+font-size:13px;
+font-weight:600;
+transition:.25s;
+}
+.review-details-delete-btn:hover{
+background:#dc2626;
+color:#ffffff;
+transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   REVIEW SUCCESS MESSAGE
+===================================================== */
+
+.review-success-message{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    margin-bottom:20px;
+    background:#f0fdf4;
+    border:1px solid #bbf7d0;
+    border-left:4px solid #22c55e;
+    border-radius:12px;
+    color:#15803d;
+    font-size:14px;
+    font-weight:600;
+}
+
+.review-success-message i{
+    font-size:18px;
+}
+
+
+/* =====================================================
+   REVIEW ERROR MESSAGE
+===================================================== */
+
+.review-error-message{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    margin-bottom:20px;
+    background:#fef2f2;
+    border:1px solid #fecaca;
+    border-left:4px solid #ef4444;
+    border-radius:12px;
+    color:#dc2626;
+    font-size:14px;
+    font-weight:600;
+}
+
+.review-error-message i{
+    font-size:18px;
+}
+
+
+
+

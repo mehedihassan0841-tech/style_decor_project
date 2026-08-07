@@ -1,0 +1,1035 @@
+/* =====================================================
+   STYLEDECOR
+   ADMIN REPORTS - PART 1
+   Page Layout + Header + KPI Cards
+===================================================== */
+
+
+/* =====================================================
+   REPORT PAGE
+===================================================== */
+
+.reports-page-wrapper{
+    width:100%;
+    max-width:1600px;
+    margin:0 auto;
+    padding:5px 0 40px;
+}
+
+.reports-page-wrapper *{
+    box-sizing:border-box;
+}
+
+
+/* =====================================================
+   REPORT HEADER
+===================================================== */
+
+.reports-header{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    margin-bottom:28px;
+}
+
+.reports-header-left{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.reports-title-icon{
+    width:54px;
+    height:54px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:#ffffff;
+    font-size:22px;
+    box-shadow:0 8px 20px rgba(34,197,94,.22);
+}
+
+.reports-header-left h1{
+    margin:0;
+    color:#0f172a;
+    font-size:30px;
+    font-weight:750;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+.reports-header-left p{
+    margin:6px 0 0;
+    color:#64748b;
+    font-size:14px;
+}
+
+
+/* =====================================================
+   HEADER RIGHT
+===================================================== */
+
+.reports-header-right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+
+/* =====================================================
+   PERIOD SELECT
+===================================================== */
+
+.reports-period-form{
+    height:44px;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    padding:0 13px;
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:11px;
+    box-shadow:0 3px 12px rgba(15,23,42,.04);
+}
+
+.reports-period-form i{
+    color:#64748b;
+    font-size:14px;
+}
+
+.reports-period-form select{
+    border:0;
+    outline:none;
+    background:#ffffff;
+    color:#334155;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    padding-right:4px;
+}
+
+
+/* =====================================================
+   REFRESH BUTTON
+===================================================== */
+
+.reports-refresh-btn{
+    width:44px;
+    height:44px;
+    border:1px solid #e2e8f0;
+    background:#ffffff;
+    color:#475569;
+    border-radius:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:all .25s ease;
+    box-shadow:0 3px 12px rgba(15,23,42,.04);
+}
+
+.reports-refresh-btn:hover{
+    background:#f0fdf4;
+    color:#16a34a;
+    border-color:#bbf7d0;
+    transform:rotate(20deg);
+}
+
+
+/* =====================================================
+   EXPORT BUTTON
+===================================================== */
+
+.reports-export-btn{
+    height:44px;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border:0;
+    border-radius:11px;
+    background:#16a34a;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:650;
+    cursor:pointer;
+    transition:all .25s ease;
+    box-shadow:0 6px 16px rgba(22,163,74,.20);
+}
+
+.reports-export-btn:hover{
+    background:#15803d;
+    transform:translateY(-2px);
+    box-shadow:0 9px 20px rgba(22,163,74,.26);
+}
+
+
+/* =====================================================
+   KPI GRID
+===================================================== */
+
+.reports-kpi-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:18px;
+    margin-bottom:24px;
+}
+
+
+/* =====================================================
+   KPI CARD
+===================================================== */
+
+.reports-kpi-card{
+    position:relative;
+    min-width:0;
+    padding:21px;
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:17px;
+    box-shadow:0 5px 18px rgba(15,23,42,.045);
+    overflow:hidden;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.reports-kpi-card::after{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:90px;
+    right:-35px;
+    bottom:-40px;
+    border-radius:50%;
+    background:#f0fdf4;
+    opacity:.8;
+    pointer-events:none;
+}
+
+.reports-kpi-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 28px rgba(15,23,42,.08);
+    border-color:#d1fae5;
+}
+
+
+/* =====================================================
+   KPI TOP
+===================================================== */
+
+.reports-kpi-top{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.reports-kpi-icon{
+    width:43px;
+    height:43px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:#ecfdf5;
+    color:#16a34a;
+    font-size:18px;
+}
+
+.reports-kpi-label{
+    margin-left:auto;
+    color:#64748b;
+    font-size:13px;
+    font-weight:600;
+}
+
+
+/* =====================================================
+   KPI VALUE
+===================================================== */
+
+.reports-kpi-value{
+    position:relative;
+    z-index:2;
+    margin-top:19px;
+    color:#0f172a;
+    font-size:29px;
+    font-weight:750;
+    line-height:1;
+    letter-spacing:-.6px;
+}
+
+.reports-kpi-value small{
+    color:#94a3b8;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0;
+}
+
+
+/* =====================================================
+   KPI FOOTER
+===================================================== */
+
+.reports-kpi-footer{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:17px;
+    color:#94a3b8;
+    font-size:11px;
+}
+
+.reports-kpi-trend{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    font-weight:650;
+}
+
+.reports-kpi-trend.positive{
+    color:#16a34a;
+}
+
+
+/* =====================================================
+   KPI CARD VARIATIONS
+===================================================== */
+
+.revenue-card .reports-kpi-icon{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.booking-card .reports-kpi-icon{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.completed-card .reports-kpi-icon{
+    background:#f0fdf4;
+    color:#16a34a;
+}
+
+.rating-card .reports-kpi-icon{
+    background:#fef3c7;
+    color:#d97706;
+}
+
+/* =====================================================
+   REPORTS - PART 2
+   CHART CARDS & ANALYTICS AREA
+===================================================== */
+
+
+/* =====================================================
+   CHART GRID
+===================================================== */
+
+.reports-chart-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
+    gap:20px;
+    margin-bottom:20px;
+}
+
+
+/* =====================================================
+   CHART CARD
+===================================================== */
+
+.reports-chart-card{
+    min-width:0;
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 5px 18px rgba(15,23,42,.045);
+    overflow:hidden;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.reports-chart-card:hover{
+    border-color:#d1fae5;
+    box-shadow:0 12px 28px rgba(15,23,42,.075);
+}
+
+
+/* =====================================================
+   LARGE CHART
+===================================================== */
+
+.reports-chart-large{
+    min-height:390px;
+}
+
+
+/* =====================================================
+   CHART HEADER
+===================================================== */
+
+.reports-chart-header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.reports-chart-header h2{
+    margin:0;
+    color:#0f172a;
+    font-size:17px;
+    font-weight:700;
+    line-height:1.3;
+}
+
+.reports-chart-header p{
+    margin:6px 0 0;
+    color:#94a3b8;
+    font-size:12px;
+    line-height:1.5;
+}
+
+
+/* =====================================================
+   CHART MENU
+===================================================== */
+
+.reports-chart-menu{
+    width:34px;
+    height:34px;
+    flex:0 0 34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:9px;
+    color:#94a3b8;
+    background:#f8fafc;
+    cursor:pointer;
+    transition:all .2s ease;
+}
+
+.reports-chart-menu:hover{
+    color:#16a34a;
+    background:#f0fdf4;
+}
+
+
+/* =====================================================
+   CHART CONTAINER
+===================================================== */
+
+.reports-chart-container{
+    position:relative;
+    width:100%;
+    min-width:0;
+    height:290px;
+}
+
+
+/* =====================================================
+   LARGE CHART HEIGHT
+===================================================== */
+
+.reports-chart-large .reports-chart-container{
+    height:300px;
+}
+
+
+/* =====================================================
+   CHART HOLDER
+===================================================== */
+
+.reports-chart{
+    width:100%;
+    height:100%;
+    min-width:0;
+}
+
+
+/* =====================================================
+   EMPTY CHART STATE
+===================================================== */
+
+.reports-chart:empty::before{
+    content:"No data available";
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#94a3b8;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   BOTTOM ANALYTICS GRID
+===================================================== */
+
+.reports-bottom-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px;
+    margin-bottom:20px;
+}
+
+
+/* =====================================================
+   DATA CARD
+===================================================== */
+
+.reports-data-card{
+    min-width:0;
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 5px 18px rgba(15,23,42,.045);
+}
+
+
+/* =====================================================
+   DATA HEADER
+===================================================== */
+
+.reports-data-header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:15px;
+    padding-bottom:18px;
+    border-bottom:1px solid #f1f5f9;
+}
+
+.reports-data-header h2{
+    margin:0;
+    color:#0f172a;
+    font-size:17px;
+    font-weight:700;
+}
+
+.reports-data-header p{
+    margin:6px 0 0;
+    color:#94a3b8;
+    font-size:12px;
+}
+
+.reports-data-header > i{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    background:#f0fdf4;
+    color:#16a34a;
+    font-size:16px;
+}
+
+
+/* =====================================================
+   DECORATOR LIST
+===================================================== */
+
+.reports-decorator-list{
+    padding-top:5px;
+}
+
+.reports-decorator-row{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    min-height:67px;
+    padding:10px 0;
+    border-bottom:1px solid #f1f5f9;
+}
+
+.reports-decorator-row:last-child{
+    border-bottom:0;
+}
+
+
+/* =====================================================
+   RANK
+===================================================== */
+
+.reports-rank{
+    width:32px;
+    height:32px;
+    flex:0 0 32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:9px;
+    background:#f0fdf4;
+    color:#16a34a;
+    font-size:12px;
+    font-weight:750;
+}
+
+
+/* =====================================================
+   DECORATOR INFO
+===================================================== */
+
+.reports-decorator-info{
+    min-width:0;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.reports-decorator-info strong{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:#334155;
+    font-size:13px;
+    font-weight:650;
+}
+
+.reports-decorator-info span{
+    color:#94a3b8;
+    font-size:11px;
+}
+
+
+/* =====================================================
+   DECORATOR REVENUE
+===================================================== */
+
+.reports-decorator-revenue{
+    color:#15803d;
+    font-size:13px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+
+/* =====================================================
+   RATING SUMMARY
+===================================================== */
+
+.reports-rating-summary{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 10px;
+    border-radius:9px;
+    background:#fffbeb;
+    color:#d97706;
+}
+
+.reports-rating-summary strong{
+    font-size:14px;
+}
+
+.reports-rating-summary i{
+    font-size:12px;
+}
+
+
+/* =====================================================
+   RATING LIST
+===================================================== */
+
+.reports-rating-list{
+    padding-top:14px;
+}
+
+.reports-rating-row{
+    display:grid;
+    grid-template-columns:42px minmax(0,1fr) 30px;
+    align-items:center;
+    gap:10px;
+    min-height:38px;
+}
+
+.reports-rating-row > span{
+    color:#64748b;
+    font-size:12px;
+    font-weight:600;
+}
+
+.reports-rating-row > span i{
+    margin-left:2px;
+    color:#f59e0b;
+    font-size:10px;
+}
+
+.reports-rating-row > strong{
+    color:#475569;
+    font-size:12px;
+    text-align:right;
+}
+
+
+/* =====================================================
+   RATING BAR
+===================================================== */
+
+.reports-rating-bar{
+    width:100%;
+    height:7px;
+    overflow:hidden;
+    border-radius:20px;
+    background:#f1f5f9;
+}
+
+.reports-rating-bar div{
+    height:100%;
+    min-width:0;
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #16a34a
+    );
+    transition:width .5s ease;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.reports-empty-state{
+    min-height:200px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    color:#94a3b8;
+}
+
+.reports-empty-state i{
+    font-size:30px;
+    color:#cbd5e1;
+}
+
+.reports-empty-state p{
+    margin:0;
+    font-size:12px;
+}
+
+
+/* =====================================================
+   BUSINESS INSIGHTS
+===================================================== */
+
+.reports-insights-card{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:20px 22px;
+    margin-top:20px;
+    background:linear-gradient(
+        135deg,
+        #f0fdf4,
+        #ffffff
+    );
+    border:1px solid #dcfce7;
+    border-radius:17px;
+}
+
+.reports-insights-icon{
+    width:45px;
+    height:45px;
+    flex:0 0 45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:13px;
+    background:#dcfce7;
+    color:#16a34a;
+    font-size:18px;
+}
+
+.reports-insights-card h3{
+    margin:0;
+    color:#166534;
+    font-size:14px;
+    font-weight:700;
+}
+
+.reports-insights-card p{
+    margin:5px 0 0;
+    color:#64748b;
+    font-size:12px;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   CHART RESPONSIVE
+===================================================== */
+/* =====================================================
+   REPORTS - PART 4
+   TOP DECORATORS + RATING ANALYTICS
+===================================================== */
+
+
+/* =====================================================
+   DECORATOR ROW HOVER
+===================================================== */
+
+.reports-decorator-row{
+    position:relative;
+    padding:12px 8px;
+    margin:0 -8px;
+    border-radius:11px;
+    transition:all .22s ease;
+}
+
+.reports-decorator-row:hover{
+    background:#f8fafc;
+}
+
+
+/* =====================================================
+   RANK STYLE
+===================================================== */
+
+.reports-decorator-row:nth-child(1) .reports-rank{
+    background:#fef3c7;
+    color:#d97706;
+}
+
+.reports-decorator-row:nth-child(2) .reports-rank{
+    background:#f1f5f9;
+    color:#64748b;
+}
+
+.reports-decorator-row:nth-child(3) .reports-rank{
+    background:#ffedd5;
+    color:#c2410c;
+}
+
+
+/* =====================================================
+   DECORATOR INFO
+===================================================== */
+
+.reports-decorator-info strong{
+    color:#1e293b;
+    transition:color .2s ease;
+}
+
+.reports-decorator-row:hover
+.reports-decorator-info strong{
+    color:#15803d;
+}
+
+
+/* =====================================================
+   REVENUE
+===================================================== */
+
+.reports-decorator-revenue{
+    padding:6px 9px;
+    border-radius:8px;
+    background:#f0fdf4;
+    color:#15803d;
+}
+
+
+/* =====================================================
+   RATING ROW
+===================================================== */
+
+.reports-rating-row{
+    position:relative;
+    transition:all .2s ease;
+}
+
+.reports-rating-row:hover{
+    transform:translateX(3px);
+}
+
+
+/* =====================================================
+   RATING NUMBER
+===================================================== */
+
+.reports-rating-row > span{
+    display:flex;
+    align-items:center;
+    gap:3px;
+    color:#475569;
+}
+
+
+/* =====================================================
+   RATING BAR BACKGROUND
+===================================================== */
+
+.reports-rating-bar{
+    position:relative;
+    height:8px;
+    background:#f1f5f9;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+
+/* =====================================================
+   RATING BAR
+===================================================== */
+
+.reports-rating-bar div{
+    position:relative;
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        #f59e0b,
+        #fbbf24
+    );
+}
+
+
+/* =====================================================
+   RATING COUNT
+===================================================== */
+
+.reports-rating-row > strong{
+    font-size:11px;
+    color:#64748b;
+}
+
+
+/* =====================================================
+   INSIGHT CARD ENHANCEMENT
+===================================================== */
+
+.reports-insights-card{
+    position:relative;
+    overflow:hidden;
+    transition:all .25s ease;
+}
+
+.reports-insights-card::after{
+    content:"";
+    position:absolute;
+    width:140px;
+    height:140px;
+    right:-60px;
+    top:-70px;
+    border-radius:50%;
+    background:#dcfce7;
+    opacity:.45;
+}
+
+.reports-insights-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(22,163,74,.08);
+}
+
+
+/* =====================================================
+   INSIGHT ICON
+===================================================== */
+
+.reports-insights-icon{
+    position:relative;
+    z-index:2;
+}
+
+
+/* =====================================================
+   INSIGHT CONTENT
+===================================================== */
+
+.reports-insights-card > div:last-child{
+    position:relative;
+    z-index:2;
+}
+
+
+/* =====================================================
+   DECORATOR DATA CARD
+===================================================== */
+
+.reports-data-card{
+    transition:
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.reports-data-card:hover{
+    border-color:#dcfce7;
+    box-shadow:0 12px 28px rgba(15,23,42,.07);
+}
+
+
+/* =====================================================
+   RATING SUMMARY
+===================================================== */
+
+.reports-rating-summary{
+    min-width:58px;
+    justify-content:center;
+    box-shadow:0 3px 10px rgba(245,158,11,.08);
+}
+
+/* =====================================================
+   TOP DECORATOR PERFORMANCE BAR
+===================================================== */
+
+.reports-decorator-performance{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:6px;
+}
+
+.reports-decorator-performance-track{
+    width:100%;
+    max-width:150px;
+    height:5px;
+    overflow:hidden;
+    border-radius:20px;
+    background:#f1f5f9;
+}
+
+.reports-decorator-performance-fill{
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #16a34a
+    );
+    transition:width .6s ease;
+}
+
+.reports-decorator-performance span{
+    min-width:28px;
+    color:#94a3b8;
+    font-size:10px;
+    font-weight:650;
+}
+
