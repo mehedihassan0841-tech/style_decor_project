@@ -1,0 +1,1382 @@
+/* =========================================================
+   STYLEDECOR - DECORATORS PAGE
+========================================================= */
+
+.decorators-page {
+    background:
+        radial-gradient(circle at 10% 10%, rgba(108, 99, 255, 0.08), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(236, 72, 153, 0.07), transparent 25%),
+        linear-gradient(180deg, #fafaff 0%, #f6f7fc 100%);
+
+    min-height: 100vh;
+    padding: 90px 0 100px;
+}
+
+
+.decorators-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.decorators-page-header {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 45px;
+}
+
+
+.decorators-mini-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(108, 99, 255, 0.09);
+
+    border: 1px solid rgba(108, 99, 255, 0.18);
+
+    color: #6c63ff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 18px;
+}
+
+
+.decorators-page-header h1 {
+    margin: 0 0 16px;
+
+    color: #171536;
+
+    font-size: 44px;
+    line-height: 1.18;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+.decorators-page-header p {
+    max-width: 650px;
+    margin: auto;
+
+    color: #70708a;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FILTER BOX
+========================================================= */
+
+.decorator-filter-box {
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(108, 99, 255, 0.12);
+
+    border-radius: 22px;
+
+    padding: 24px;
+
+    margin-bottom: 38px;
+
+    box-shadow:
+        0 20px 50px rgba(30, 25, 80, 0.08);
+
+}
+
+
+.decorator-filter-form {
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 18px;
+
+}
+
+
+.decorator-filter-field {
+
+    flex: 1;
+}
+
+
+.decorator-filter-field label {
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 9px;
+
+    color: #34324e;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.decorator-filter-field label i {
+
+    color: #6c63ff;
+
+}
+
+
+.decorator-input-wrapper {
+
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    background: #f8f8fc;
+
+    border: 1px solid #e4e4ee;
+
+    border-radius: 13px;
+
+    padding: 0 15px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.decorator-input-wrapper:focus-within {
+
+    background: #fff;
+
+    border-color: #6c63ff;
+
+    box-shadow:
+        0 0 0 4px rgba(108, 99, 255, 0.08);
+
+}
+
+
+.decorator-input-wrapper > i {
+
+    color: #77758d;
+
+    margin-right: 10px;
+
+}
+
+
+.decorator-input-wrapper input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #292740;
+
+    font-size: 14px;
+
+}
+
+
+.decorator-input-wrapper input::placeholder {
+
+    color: #aaa8b8;
+
+}
+
+
+.taka-symbol {
+
+    color: #6c63ff;
+
+    font-weight: 800;
+
+    font-size: 16px;
+
+    margin-right: 10px;
+
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.decorator-search-btn {
+
+    height: 52px;
+
+    border: none;
+
+    padding: 0 25px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c63ff,
+            #8b5cf6
+        );
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 10px 25px rgba(108, 99, 255, 0.22);
+
+    transition: 0.25s ease;
+}
+
+
+.decorator-search-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(108, 99, 255, 0.28);
+
+}
+
+
+.decorator-clear-btn {
+
+    height: 52px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 13px;
+
+    border: 1px solid #e1e1eb;
+
+    background: #fff;
+
+    color: #68667c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+
+.decorator-clear-btn:hover {
+
+    color: #6c63ff;
+
+    border-color: #6c63ff;
+
+}
+
+
+/* =========================================================
+   RESULT INFO
+========================================================= */
+
+.decorator-result-info {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: #69677d;
+
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+
+.result-filter {
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    background: #fff;
+
+    border: 1px solid #e5e4ef;
+
+    border-radius: 50px;
+
+    padding: 6px 12px;
+
+    color: #6c63ff;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   DECORATOR GRID
+========================================================= */
+
+.decorators-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+
+}
+
+
+/* =========================================================
+   DECORATOR CARD
+========================================================= */
+
+.public-decorator-card {
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    border: 1px solid #e9e8f1;
+
+    box-shadow:
+        0 12px 35px rgba(30, 25, 80, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.public-decorator-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 22px 45px rgba(30, 25, 80, 0.13);
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.public-decorator-image {
+
+    height: 245px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9e7ff,
+            #f8eafa
+        );
+
+}
+
+
+.public-decorator-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.45s ease;
+
+}
+
+
+.public-decorator-card:hover
+.public-decorator-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+/* =====================================================
+   VERIFIED BADGE
+   SMALL TOP-RIGHT PILL
+===================================================== */
+
+.public-decorator-image .verified-badge {
+    position: absolute !important;
+
+    top: 8px !important;
+    right: 8px !important;
+
+    /* IMPORTANT */
+    width: fit-content !important;
+    min-width: 0 !important;
+    max-width: max-content !important;
+
+    height: auto !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px 7px !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 20px !important;
+
+    background: rgba(255, 255, 255, 0.92) !important;
+
+    color: #00a88f !important;
+
+    font-size: 7px !important;
+
+    font-weight: 700;
+
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+
+    z-index: 20;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
+
+    overflow: visible !important;
+}
+
+
+/* Check icon */
+
+.public-decorator-image .verified-badge i {
+    display: inline-block !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+
+    margin-right: 3px !important;
+
+    font-size: 7px !important;
+
+    color: #00a88f;
+}
+
+
+/* =====================================================
+   VERY SMALL PHONE
+   Redmi 6 / 320-380px
+===================================================== */
+
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.public-decorator-content {
+
+    padding: 24px;
+
+}
+
+
+.decorator-name-row h2 {
+
+    margin: 0;
+
+    color: #1b1938;
+
+    font-size: 22px;
+    font-weight: 800;
+
+}
+
+
+.decorator-company-name {
+
+    margin: 8px 0 13px;
+
+    color: #77758a;
+
+    font-size: 13px;
+
+}
+
+
+.decorator-company-name i {
+
+    color: #6c63ff;
+
+    margin-right: 5px;
+
+}
+
+
+.decorator-specialization span {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 50px;
+
+    background: #f1efff;
+
+    color: #6259df;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.decorator-info-list {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin: 20px 0;
+
+}
+
+
+.decorator-info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.decorator-info-item > i {
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #f4f2ff;
+
+    color: #6c63ff;
+
+    font-size: 13px;
+
+}
+
+
+.decorator-info-item small {
+
+    display: block;
+
+    color: #9997a9;
+
+    font-size: 10px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.decorator-info-item strong {
+
+    display: block;
+
+    color: #38364d;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   BIO
+========================================================= */
+
+.decorator-bio {
+
+    color: #77758a;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    min-height: 43px;
+
+    margin: 0 0 20px;
+
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.decorator-card-bottom {
+
+    border-top: 1px solid #eeeeF4;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+}
+
+
+.starting-price small {
+
+    display: block;
+
+    color: #9997a9;
+
+    font-size: 10px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.starting-price strong {
+
+    color: #29264a;
+
+    font-size: 15px;
+
+}
+
+
+.decorator-profile-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    background: #171536;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+
+}
+
+
+.decorator-profile-btn:hover {
+
+    background: #6c63ff;
+
+    transform: translateX(2px);
+
+}
+
+
+/* =========================================================
+   NO RESULT
+========================================================= */
+
+.no-decorator-result {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    background: #fff;
+
+    border: 1px solid #e9e8f1;
+
+    border-radius: 22px;
+
+    padding: 70px 30px;
+
+}
+
+
+.no-decorator-icon {
+
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1efff;
+
+    color: #6c63ff;
+
+    font-size: 28px;
+
+}
+
+
+.no-decorator-result h2 {
+
+    margin: 0 0 10px;
+
+    color: #292743;
+
+}
+
+
+.no-decorator-result p {
+
+    margin: 0 auto 22px;
+
+    max-width: 500px;
+
+    color: #7d7a90;
+
+    line-height: 1.6;
+
+}
+
+
+.browse-all-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border-radius: 11px;
+
+    background: #6c63ff;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   END
+========================================================= */
+/* =========================================================
+   DECORATORS PAGE
+   MOBILE RESPONSIVE
+   Redmi 6 → iPhone
+   ========================================================= */
+
+/* =========================================================
+   DECORATORS PAGE
+   MOBILE RESPONSIVE
+   Redmi 6 → iPhone
+========================================================= */
+
+/* =========================================================
+   BASE MOBILE & TABLET PORTRAIT (320px – 767px)
+========================================================= */
+
+@media (max-width: 767px) {
+
+    /* MAIN PAGE CONTAINER */
+    .decorators-page {
+        width: 100%;
+        min-height: 100vh;
+        padding: 16px 10px 85px;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .decorators-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* PAGE HEADER */
+    .decorators-page-header {
+        width: 100%;
+        text-align: center;
+        padding: 5px 5px 14px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .decorators-mini-title {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 4px;
+    }
+
+    .decorators-page-header h1 {
+        font-size: 21px;
+        line-height: 1.2;
+        margin: 0 0 5px;
+        padding: 0;
+    }
+
+    .decorators-page-header p {
+        font-size: 11px;
+        line-height: 1.35;
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    /* FILTER BOX */
+    .decorator-filter-box {
+        width: 100%;
+        margin: 5px 0 12px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 14px;
+    }
+
+    .decorator-filter-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .decorator-filter-field {
+        width: 100%;
+    }
+
+    .decorator-filter-field label {
+        display: block;
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+    .decorator-input-wrapper {
+        width: 100%;
+        height: 38px;
+        box-sizing: border-box;
+    }
+
+    .decorator-input-wrapper input {
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+
+    .decorator-search-btn {
+        width: 100%;
+        min-height: 38px;
+        padding: 8px 12px;
+        font-size: 12px;
+        border-radius: 9px;
+        box-sizing: border-box;
+    }
+
+    .decorator-clear-btn {
+        width: 100%;
+        min-height: 34px;
+        padding: 7px;
+        font-size: 11px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* RESULT INFORMATION */
+    .decorator-result-info {
+        width: 100%;
+        margin: 4px 0 10px;
+        padding: 0 2px;
+        font-size: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+        box-sizing: border-box;
+    }
+
+    .result-filter {
+        font-size: 10px;
+    }
+
+    /* DECORATOR GRID */
+    .decorators-grid {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* DECORATOR CARD (EXACT 160PX SIZE) */
+    .public-decorator-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        height: 160px !important;
+        min-height: 160px !important;
+        max-height: 160px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid rgba(108, 99, 255, 0.10);
+        box-shadow: 0 5px 16px rgba(108, 99, 255, 0.10);
+    }
+
+    /* LEFT CONTENT (50%) */
+    .public-decorator-content {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        height: 100% !important;
+        padding: 10px 8px 10px 12px !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        order: 1;
+    }
+
+    /* RIGHT IMAGE AREA (50%) */
+    .public-decorator-image {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        height: 100% !important;
+        min-height: 160px !important;
+        max-height: 160px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        position: relative;
+        order: 2;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden;
+        background: linear-gradient(145deg, #6C63FF 0%, #857dff 45%, #00BFA6 100%);
+    }
+
+    /* PROFILE IMAGE (ENHANCED SIZE) */
+    .public-decorator-image img {
+        width: 86px !important;
+        height: 86px !important;
+        min-width: 86px !important;
+        min-height: 86px !important;
+        max-width: 86px !important;
+        max-height: 86px !important;
+        display: block !important;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50% !important;
+        border: 4px solid rgba(255, 255, 255, 0.95);
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.20);
+        position: relative;
+        z-index: 2;
+        transform: none !important;
+        transition: none !important;
+        scale: 1 !important;
+    }
+
+    .public-decorator-image img:hover {
+        transform: none !important;
+        scale: 1 !important;
+        width: 86px !important;
+        height: 86px !important;
+    }
+
+    /* VERIFIED BADGE */
+    .public-decorator-image .verified-badge {
+        position: absolute !important;
+        top: 7px !important;
+        right: 7px !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: auto !important;
+        padding: 3px 6.5px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px;
+        font-size: 7.5px !important;
+        font-weight: 600;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+        border-radius: 10px !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        color: #6C63FF !important;
+        z-index: 20;
+    }
+
+    .public-decorator-image .verified-badge i {
+        font-size: 6.5px !important;
+        margin: 0 !important;
+    }
+
+    /* NAME (UPGRADED FONT) */
+    .decorator-name-row {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .decorator-name-row h2 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 14.5px !important;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #1a1a1a;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* COMPANY NAME (UPGRADED FONT & Dynamic Wrap) */
+    .decorator-company-name {
+        width: 100%;
+        margin: 2px 0 3px !important;
+        padding: 0;
+        font-size: 10px !important;
+        line-height: 1.35;
+        font-weight: 500;
+        color: #555555;
+        white-space: normal !important;
+        word-break: break-word;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .decorator-company-name i {
+        font-size: 8.5px;
+        margin-right: 3px;
+        color: #6C63FF;
+        display: inline-block;
+    }
+
+    /* HIDDEN ELEMENTS */
+    .decorator-specialization,
+    .decorator-bio {
+        display: none !important;
+    }
+
+    /* EXPERIENCE + LOCATION (UPGRADED FONT) */
+    .decorator-info-list {
+        width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3.5px;
+        margin: 2px 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .decorator-info-item {
+        width: 100%;
+        min-width: 0;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 5px;
+        box-sizing: border-box;
+    }
+
+    .decorator-info-item > i {
+        width: 15px;
+        min-width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(108, 99, 255, 0.10);
+        color: #6C63FF;
+        font-size: 7.5px;
+        flex-shrink: 0;
+    }
+
+    .decorator-info-item div {
+        min-width: 0;
+        max-width: calc(100% - 20px);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .decorator-info-item small {
+        font-size: 7.5px;
+        line-height: 1;
+        color: #888888;
+        font-weight: 500;
+    }
+
+    .decorator-info-item strong {
+        font-size: 9px;
+        line-height: 1.15;
+        color: #222222;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* CARD BOTTOM */
+    .decorator-card-bottom {
+        width: 100%;
+        margin-top: 3px;
+        padding-top: 4px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        gap: 4px;
+        border-top: 1px solid #eeeeee;
+        box-sizing: border-box;
+    }
+
+    .starting-price {
+        display: block;
+        font-size: 10px !important;
+        line-height: 1.1;
+        font-weight: 700;
+        color: #00a88f;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .decorator-profile-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 5px 9px !important;
+        margin: 0;
+        border-radius: 14px;
+        font-size: 8.5px !important;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    .decorator-profile-btn i {
+        font-size: 7px;
+    }
+
+    /* REMOVE HOVER EFFECT FOR TOUCH DEVICES */
+    .public-decorator-card:hover {
+        transform: none !important;
+        box-shadow: 0 5px 16px rgba(108, 99, 255, 0.10);
+    }
+
+    .public-decorator-card:hover .public-decorator-image img {
+        transform: none !important;
+        scale: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE (Redmi 6, Galaxy A-series, 320px – 375px)
+========================================================= */
+
+@media (max-width: 375px) {
+
+    .public-decorator-card {
+        height: 160px !important;
+        min-height: 160px !important;
+        max-height: 160px !important;
+    }
+
+    .public-decorator-content {
+        padding: 9px 6px 9px 10px !important;
+    }
+
+    .public-decorator-image img {
+        width: 78px !important;
+        height: 78px !important;
+        min-width: 78px !important;
+        min-height: 78px !important;
+        max-width: 78px !important;
+        max-height: 78px !important;
+    }
+
+    .decorator-name-row h2 {
+        font-size: 13.5px !important;
+    }
+
+    .decorator-company-name {
+        font-size: 9.5px !important;
+    }
+
+    .decorator-info-item strong {
+        font-size: 8.5px;
+    }
+
+    .starting-price {
+        font-size: 9.5px !important;
+    }
+
+    .decorator-profile-btn {
+        padding: 4.5px 8px !important;
+        font-size: 8px !important;
+    }
+}
+
+
+/* =========================================================
+   MID-TO-LARGE PHONES (iPhone 12/13/14/15/16 Pro & Max, 376px – 767px)
+========================================================= */
+
+@media (min-width: 376px) and (max-width: 767px) {
+
+    .public-decorator-card {
+        height: 160px !important;
+        min-height: 160px !important;
+        max-height: 160px !important;
+    }
+
+    .public-decorator-image img {
+        width: 88px !important;
+        height: 88px !important;
+        min-width: 88px !important;
+        min-height: 88px !important;
+        max-width: 88px !important;
+        max-height: 88px !important;
+    }
+
+    .decorator-name-row h2 {
+        font-size: 15px !important;
+    }
+
+    .decorator-company-name {
+        font-size: 10.5px !important;
+    }
+
+    .decorator-info-item strong {
+        font-size: 9.5px;
+    }
+
+    .starting-price {
+        font-size: 10.5px !important;
+    }
+
+    .decorator-profile-btn {
+        padding: 5.5px 10px !important;
+        font-size: 9px !important;
+    }
+}

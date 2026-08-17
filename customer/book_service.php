@@ -20,143 +20,94 @@ include("../includes/customer_header.php");
 include("../includes/customer_sidebar.php");
 
 if(!isset($_GET["id"])){
-
     header("Location: services.php");
     exit();
-
 }
 
 $service_id = (int)$_GET["id"];
 
-$sql = "SELECT *
-
-FROM decorator_services
-
-WHERE id=?";
-
+$sql = "SELECT * FROM decorator_services WHERE id=?";
 $stmt = $conn->prepare($sql);
-
 $stmt->bind_param("i",$service_id);
-
 $stmt->execute();
-
 $result = $stmt->get_result();
 
 if($result->num_rows==0){
-
     die("Service not found.");
-
 }
 
 $service = $result->fetch_assoc();
 
 ?>
+
 <div class="dashboard-content">
 
-<div class="dashboard-main">
+    <!-- 🌸 রেইনবো ফ্লাওয়ার অ্যানিমেশন কন্টেইনার 🌸 -->
+    <div class="flower-rain">
+        <span class="flower f1">🌸</span>
+        <span class="flower f2">🌺</span>
+        <span class="flower f3">🌼</span>
+        <span class="flower f4">🌷</span>
+        <span class="flower f5">🌻</span>
+        <span class="flower f6">🌸</span>
+        <span class="flower f7">🌺</span>
+        <span class="flower f8">🌼</span>
+        <span class="flower f9">🌷</span>
+        <span class="flower f10">🌹</span>
+    </div>
 
-<div class="page-header">
+    <div class="dashboard-main">
 
-<h1>Book Service</h1>
+        <div class="page-header">
+            <h1>Book Service</h1>
+            <p>Complete your booking information.</p>
+        </div>
 
-<p>Complete your booking information.</p>
+        <div class="profile-form-card">
+            <form action="insert_booking.php" method="POST">
 
-</div>
+                <input type="hidden" name="service_id" value="<?php echo $service["id"]; ?>">
 
-<div class="profile-form-card">
+                <div class="form-group">
+                    <label>Service</label>
+                    <input type="text" value="<?php echo htmlspecialchars($service["service_name"]); ?>" readonly>
+                </div>
 
-<form action="insert_booking.php" method="POST">
+                <div class="form-group">
+                    <label>Total Amount</label>
+                    <input type="text" value="৳ <?php echo number_format($service["price"]); ?>" readonly>
+                    <input type="hidden" name="total_amount" value="<?php echo $service["price"]; ?>">
+                </div>
 
-<input
-type="hidden"
-name="service_id"
-value="<?php echo $service["id"]; ?>">
+                <div class="form-group">
+                    <label>Event Date</label>
+                    <input type="date" name="event_date" required>
+                </div>
 
-<div class="form-group">
+                <div class="form-group">
+                    <label>Event Time</label>
+                    <input type="time" name="event_time" required>
+                </div>
 
-<label>Service</label>
+                <div class="form-group">
+                    <label>Event Location</label>
+                    <input type="text" name="event_location" required>
+                </div>
 
-<input
-type="text"
-value="<?php echo $service["service_name"]; ?>"
-readonly>
+                <div class="form-group">
+                    <label>Special Instruction</label>
+                    <textarea name="special_instruction" rows="5"></textarea>
+                </div>
 
-</div>
+                <button type="submit" class="save-btn">
+                    <i class="fas fa-calendar-check"></i>
+                    Confirm Booking
+                </button>
 
-<div class="form-group">
+            </form>
+        </div>
 
-<label>Total Amount</label>
-
-<input
-type="text"
-value="৳ <?php echo number_format($service["price"]); ?>"
-readonly>
-
-<input
-type="hidden"
-name="total_amount"
-value="<?php echo $service["price"]; ?>">
-
-</div>
-
-<div class="form-group">
-
-<label>Event Date</label>
-
-<input
-type="date"
-name="event_date"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Event Time</label>
-
-<input
-type="time"
-name="event_time"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Event Location</label>
-
-<input
-type="text"
-name="event_location"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Special Instruction</label>
-
-<textarea
-name="special_instruction"
-rows="5"></textarea>
-
-</div>
-
-<button
-type="submit"
-class="save-btn">
-
-<i class="fas fa-calendar-check"></i>
-
-Confirm Booking
-
-</button>
-
-</form>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 

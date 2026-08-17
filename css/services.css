@@ -1,0 +1,1503 @@
+
+/* =========================================================
+   STYLEDECOR — SERVICES PAGE HEADER
+   Premium / Master Class Design
+========================================================= */
+
+.services-page-header { position: relative;
+    width: 100%;
+    max-width:100%;
+    margin: 0 0 60px; 
+    padding: 75px 30px 85px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Premium background */ background: radial-gradient( circle at 15% 20%, rgba(139, 92, 246, 0.22), transparent 35% ), radial-gradient( circle at 85% 75%, rgba(236, 72, 153, 0.16), transparent 38% ), linear-gradient( 135deg, #f8f7ff 0%, #f4f1ff 45%, #fff8fc 100% );
+    border-radius: 0 0 32px 32px;
+    border: 1px solid rgba(139, 92, 246, 0.10);
+    box-shadow: 0 15px 45px rgba(76, 29, 149, 0.08);
+         }
+
+
+
+/* =========================================================
+   MINI TITLE
+========================================================= */
+
+.services-mini-title {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 18px;
+
+    margin-bottom: 22px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(108, 99, 255, 0.12),
+        rgba(168, 85, 247, 0.08)
+    );
+
+    border: 1px solid rgba(108, 99, 255, 0.20);
+
+    color: #6c63ff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.8px;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        0 5px 18px rgba(108, 99, 255, 0.08);
+
+}
+
+
+/* Small decorative dots */
+
+.services-mini-title::before,
+.services-mini-title::after {
+
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #8b5cf6;
+
+    margin: 0 9px;
+
+    opacity: 0.65;
+
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.services-page-header h1 {
+
+    position: relative;
+
+    margin: 0 auto 18px;
+
+    max-width: 780px;
+
+    font-size: clamp(36px, 4vw, 52px);
+
+    line-height: 1.12;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    color: #17142f;
+
+}
+
+
+/* Gradient emphasis */
+
+.services-page-header h1 {
+
+    background: linear-gradient(
+        120deg,
+        #17142f 0%,
+        #302b63 45%,
+        #6c63ff 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+/* =========================================================
+   HEADING DECORATIVE UNDERLINE
+========================================================= */
+
+.services-page-header h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 58px;
+    height: 4px;
+
+    margin: 18px auto 0;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #a855f7
+    );
+
+    box-shadow:
+        0 4px 12px rgba(108, 99, 255, 0.25);
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+/* =========================================================
+   SERVICES SEARCH BAR
+========================================================= */
+
+.services-search-box {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 28px auto 0;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+/* Search Form */
+
+.services-search-form {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    height: 62px;
+
+    padding: 7px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(124, 58, 237, 0.16);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 12px 35px rgba(76, 29, 149, 0.10);
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* Focus */
+
+.services-search-form:focus-within {
+
+    border-color: rgba(124, 58, 237, 0.45);
+
+    box-shadow:
+        0 15px 40px rgba(124, 58, 237, 0.16);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* Search Icon */
+
+.services-search-form > i {
+
+    margin-left: 18px;
+
+    margin-right: 12px;
+
+    font-size: 18px;
+
+    color: #7c3aed;
+
+}
+
+
+/* Input */
+
+.services-search-form input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 15px;
+
+    color: #272343;
+
+    font-family: inherit;
+
+}
+
+
+/* Placeholder */
+
+.services-search-form input::placeholder {
+
+    color: #9290a7;
+
+}
+
+
+/* Search Button */
+
+.services-search-form button {
+
+    height: 48px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(124, 58, 237, 0.25);
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* Hover */
+
+.services-search-form button:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 24px rgba(124, 58, 237, 0.32);
+
+}
+
+
+/* =========================================================
+   SEARCH RESULT STATE
+========================================================= */
+
+.services-search-result {
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #77758c;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   SUBTLE HEADER GLOW
+========================================================= */
+
+.services-page-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 140px;
+
+    top: -45px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(108, 99, 255, 0.10);
+
+    filter: blur(65px);
+
+    border-radius: 50%;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE WIDTH ONLY
+   (Not changing mobile layout)
+========================================================= */
+
+
+
+
+
+
+.public-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.public-service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #eef0f8;
+    box-shadow: 0 10px 30px rgba(35, 30, 80, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.public-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(35, 30, 80, 0.12);
+}
+
+/* =========================================================
+   CARD IMAGE & BADGES
+========================================================= */
+
+.public-service-image {
+    position: relative;
+    height: 230px;
+    width: 100%;
+    overflow: hidden;
+    background: #eeeef5;
+}
+
+.public-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.public-service-card:hover .public-service-image img {
+    transform: scale(1.06);
+}
+
+.public-service-category {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #6c63ff;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.public-service-availability {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(23, 20, 48, 0.8);
+    color: #42dfae;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.public-service-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.public-service-content h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #1e1d38;
+    font-weight: 700;
+}
+
+.public-service-description {
+    color: #727288;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 18px;
+    flex-grow: 1;
+}
+
+/* =========================================================
+   DECORATOR INFO
+========================================================= */
+
+.public-service-decorator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #f2f3f9;
+}
+
+.public-service-decorator img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e8e8f0;
+    border: 1px solid #e0e2ec;
+}
+
+.public-service-decorator div {
+    display: flex;
+    flex-direction: column;
+}
+
+.public-service-decorator strong {
+    font-size: 14px;
+    color: #272545;
+    font-weight: 700;
+}
+
+.public-service-decorator span {
+    font-size: 12px;
+    color: #8c8ca1;
+    margin-top: 2px;
+}
+
+/* =========================================================
+   META INFO (PRICE, DURATION, LOCATION)
+========================================================= */
+
+.public-service-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.public-service-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #69687e;
+}
+
+.public-service-meta i {
+    color: #6c63ff;
+    font-size: 13px;
+}
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.public-service-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #f2f3f9;
+    margin-top: auto;
+}
+
+.public-service-price small {
+    display: block;
+    font-size: 11px;
+    color: #9292a8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.public-service-price strong {
+    display: block;
+    font-size: 18px;
+    color: #242144;
+    font-weight: 800;
+}
+
+.public-service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #6c63ff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.public-service-btn:hover {
+    background: #574fd6;
+    transform: translateX(3px);
+    box-shadow: 0 6px 18px rgba(108, 99, 255, 0.28);
+}
+
+.public-service-btn i {
+    font-size: 11px;
+    transition: transform 0.2s ease;
+}
+
+.public-service-btn:hover i {
+    transform: translateX(2px);
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.public-no-services {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 70px 30px;
+    border: 1px solid #eef0f8;
+    box-shadow: 0 10px 30px rgba(35, 30, 80, 0.04);
+}
+
+.public-no-services-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f0ff;
+    color: #6c63ff;
+    font-size: 32px;
+}
+
+.public-no-services h2 {
+    margin: 0 0 10px;
+    color: #22203d;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.public-no-services p {
+    max-width: 460px;
+    margin: 0 auto;
+    color: #7d7d94;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   SERVICES PAGE
+   MOBILE RESPONSIVE
+   Redmi 6 → iPhone
+========================================================= */
+
+@media (max-width: 767px) {
+
+    /* =====================================================
+       MAIN SERVICES PAGE
+    ===================================================== */
+
+    .services-page {
+        width: 100%;
+        min-height: calc(100vh - 70px);
+        padding: 0 10px 95px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .services-page .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       TOP HEADER / BANNER
+       প্রায় 20% visual space
+    ===================================================== */
+
+    .services-page-header {
+
+        width: 100%;
+
+        min-height: 20vh;
+
+        padding: 22px 12px 18px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        border-radius: 0 0 22px 22px;
+
+        margin-bottom: 18px;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(108, 99, 255, 0.12),
+                rgba(0, 191, 166, 0.10)
+            );
+    }
+
+
+    /* Small title */
+
+    .services-mini-title {
+
+        display: inline-block;
+
+        font-size: 10px;
+
+        font-weight: 800;
+
+        letter-spacing: 2px;
+
+        color: #6C63FF;
+
+        margin-bottom: 6px;
+    }
+
+
+    /* Main heading */
+
+    .services-page-header h1 {
+
+        font-size: 21px;
+
+        line-height: 1.2;
+
+        font-weight: 750;
+
+        color: #222;
+
+        margin: 0 0 13px;
+
+        max-width: 310px;
+    }
+
+
+    /* =====================================================
+       SEARCH BOX
+    ===================================================== */
+
+    .services-search-box {
+
+        width: 100%;
+
+        max-width: 350px;
+
+        margin: 0 auto;
+    }
+
+
+    .services-search-form {
+
+        width: 100%;
+
+        min-height: 43px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 7px;
+
+        padding: 4px 5px 4px 12px;
+
+        background: #ffffff;
+
+        border: 1px solid rgba(108, 99, 255, 0.16);
+
+        border-radius: 30px;
+
+        box-shadow:
+            0 6px 20px rgba(0, 0, 0, 0.08);
+
+        box-sizing: border-box;
+    }
+
+
+    .services-search-form i {
+
+        flex: 0 0 auto;
+
+        font-size: 14px;
+
+        color: #6C63FF;
+    }
+
+
+    .services-search-form input {
+
+        flex: 1;
+
+        min-width: 0;
+
+        height: 34px;
+
+        border: none;
+
+        outline: none;
+
+        background: transparent;
+
+        font-size: 12px;
+
+        color: #333;
+
+        padding: 0 3px;
+    }
+
+
+    .services-search-form input::placeholder {
+
+        color: #999;
+
+        font-size: 11px;
+    }
+
+
+    .services-search-form button {
+
+        flex: 0 0 auto;
+
+        border: none;
+
+        outline: none;
+
+        cursor: pointer;
+
+        padding: 9px 15px;
+
+        border-radius: 22px;
+
+        background: #6C63FF;
+
+        color: #fff;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        white-space: nowrap;
+
+        transition: none;
+    }
+
+
+    .services-search-form button:hover {
+
+        background: #6C63FF;
+
+        transform: none;
+    }
+
+
+    /* =====================================================
+       SERVICES GRID
+       3 CARDS VERTICALLY
+    ===================================================== */
+
+    .public-services-grid {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        padding: 0 2px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       SERVICE CARD
+       ROW STYLE
+    ===================================================== */
+
+    .public-service-card {
+
+        width: 100%;
+
+        min-height: 165px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        position: relative;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+
+        background: #ffffff;
+
+        border-radius: 18px;
+
+        border: 1px solid rgba(108, 99, 255, 0.10);
+
+        box-shadow:
+            0 7px 22px rgba(0, 0, 0, 0.08);
+
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       SERVICE IMAGE
+       RIGHT SIDE = প্রায় 50%
+    ===================================================== */
+
+    .public-service-image {
+
+        order: 2;
+
+        width: 50%;
+
+        min-width: 50%;
+
+        height: 165px;
+
+        position: relative;
+
+        overflow: hidden;
+
+        flex-shrink: 0;
+
+        border-radius: 0 18px 18px 0;
+    }
+
+
+    .public-service-image img {
+
+        width: 100%;
+
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        object-position: center;
+
+        transition: none;
+    }
+
+
+    /* No hover effect */
+
+    .public-service-card:hover
+    .public-service-image img {
+
+        transform: none;
+        filter: none;
+    }
+
+
+    /* =====================================================
+       CATEGORY BADGE
+    ===================================================== */
+
+    .public-service-category {
+
+        position: absolute;
+
+        top: 9px;
+
+        right: 8px;
+
+        padding: 4px 8px;
+
+        border-radius: 20px;
+
+        background: rgba(255, 255, 255, 0.90);
+
+        backdrop-filter: blur(5px);
+
+        color: #6C63FF;
+
+        font-size: 8px;
+
+        font-weight: 700;
+
+        max-width: 90px;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* =====================================================
+       AVAILABILITY
+    ===================================================== */
+
+    .public-service-availability {
+
+        position: absolute;
+
+        bottom: 9px;
+
+        right: 8px;
+
+        padding: 4px 7px;
+
+        border-radius: 20px;
+
+        background: rgba(0, 191, 166, 0.90);
+
+        color: #fff;
+
+        font-size: 8px;
+
+        font-weight: 700;
+    }
+
+
+    /* =====================================================
+       LEFT CONTENT
+    ===================================================== */
+
+    .public-service-content {
+
+        order: 1;
+
+        width: 50%;
+
+        min-width: 0;
+
+        padding: 16px 12px 14px 15px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       SERVICE NAME
+    ===================================================== */
+
+    .public-service-content h2 {
+
+        font-size: 16px;
+
+        line-height: 1.25;
+
+        font-weight: 750;
+
+        color: #222;
+
+        margin: 0 0 9px;
+
+        display: -webkit-box;
+
+        -webkit-line-clamp: 2;
+
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+
+        word-break: break-word;
+    }
+
+
+    /* =====================================================
+       HIDE DESCRIPTION
+    ===================================================== */
+
+    .public-service-description {
+
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       HIDE DECORATOR INFORMATION
+    ===================================================== */
+
+    .public-service-decorator {
+
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       HIDE META
+       duration + location
+    ===================================================== */
+
+    .public-service-meta {
+
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       BOTTOM SECTION
+    ===================================================== */
+
+    .public-service-bottom {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+
+        margin-top: 3px;
+    }
+
+
+    /* =====================================================
+       PRICE
+    ===================================================== */
+
+    .public-service-price {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        line-height: 1;
+    }
+
+
+    .public-service-price small {
+
+        font-size: 8px;
+
+        color: #999;
+
+        margin-bottom: 4px;
+
+        white-space: nowrap;
+    }
+
+
+    .public-service-price strong {
+
+        font-size: 16px;
+
+        color: #00A88F;
+
+        font-weight: 800;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       VIEW DETAILS BUTTON
+    ===================================================== */
+
+    .public-service-btn {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 8px 11px;
+
+        border-radius: 20px;
+
+        background: #6C63FF;
+
+        color: #fff;
+
+        text-decoration: none;
+
+        font-size: 9px;
+
+        font-weight: 700;
+
+        white-space: nowrap;
+
+        box-shadow:
+            0 4px 10px rgba(108, 99, 255, 0.20);
+
+        transition: none;
+    }
+
+
+    .public-service-btn:hover {
+
+        background: #6C63FF;
+
+        color: #fff;
+
+        transform: none;
+
+        box-shadow:
+            0 4px 10px rgba(108, 99, 255, 0.20);
+    }
+
+
+    .public-service-btn i {
+
+        font-size: 8px;
+    }
+
+
+    /* =====================================================
+       EMPTY STATE
+    ===================================================== */
+
+    .public-no-services {
+
+        width: 100%;
+
+        padding: 40px 20px;
+
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+
+    .public-no-services-icon {
+
+        font-size: 35px;
+
+        color: #6C63FF;
+
+        margin-bottom: 12px;
+    }
+
+
+    .public-no-services h2 {
+
+        font-size: 20px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .public-no-services p {
+
+        font-size: 12px;
+
+        line-height: 1.5;
+
+        color: #777;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   Redmi 6 / 360px type devices
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .services-page {
+
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 90px;
+    }
+
+
+    .services-page-header {
+
+        min-height: 20vh;
+
+        padding: 18px 8px 15px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .services-mini-title {
+
+        font-size: 9px;
+
+        letter-spacing: 1.7px;
+    }
+
+
+    .services-page-header h1 {
+
+        font-size: 18px;
+
+        max-width: 280px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .services-search-box {
+
+        max-width: 330px;
+    }
+
+
+    .services-search-form {
+
+        min-height: 40px;
+
+        padding-left: 10px;
+    }
+
+
+    .services-search-form input {
+
+        font-size: 11px;
+
+        height: 31px;
+    }
+
+
+    .services-search-form input::placeholder {
+
+        font-size: 9px;
+    }
+
+
+    .services-search-form button {
+
+        padding: 8px 12px;
+
+        font-size: 10px;
+    }
+
+
+    /* Cards */
+
+    .public-services-grid {
+
+        gap: 11px;
+
+        padding: 0;
+    }
+
+
+    .public-service-card {
+
+        min-height: 145px;
+
+        border-radius: 16px;
+    }
+
+
+    .public-service-image {
+
+        width: 50%;
+
+        min-width: 50%;
+
+        height: 145px;
+
+        border-radius: 0 16px 16px 0;
+    }
+
+
+    .public-service-content {
+
+        width: 50%;
+
+        padding: 13px 9px 12px 12px;
+    }
+
+
+    .public-service-content h2 {
+
+        font-size: 14px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .public-service-price small {
+
+        font-size: 7px;
+    }
+
+
+    .public-service-price strong {
+
+        font-size: 14px;
+    }
+
+
+    .public-service-btn {
+
+        padding: 7px 9px;
+
+        font-size: 8px;
+
+        gap: 4px;
+    }
+
+
+    .public-service-category {
+
+        top: 7px;
+
+        right: 6px;
+
+        font-size: 7px;
+
+        padding: 3px 6px;
+
+        max-width: 75px;
+    }
+
+
+    .public-service-availability {
+
+        bottom: 7px;
+
+        right: 6px;
+
+        font-size: 7px;
+
+        padding: 3px 6px;
+    }
+
+}
+
+
+/* =========================================================
+   NORMAL PHONES
+   381px → 767px
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 767px) {
+
+    .public-service-card {
+
+        min-height: 175px;
+    }
+
+
+    .public-service-image {
+
+        height: 175px;
+    }
+
+
+    .public-service-content {
+
+        padding: 17px 13px 15px 16px;
+    }
+
+
+    .public-service-content h2 {
+
+        font-size: 17px;
+    }
+
+
+    .public-service-price strong {
+
+        font-size: 17px;
+    }
+
+
+    .public-service-btn {
+
+        padding: 9px 12px;
+
+        font-size: 9px;
+    }
+
+}

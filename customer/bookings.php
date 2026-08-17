@@ -80,7 +80,15 @@ $review_result = $review_check->get_result();
 
 
 ?>
-
+<!-- 3D Floating Animated Background Cubes -->
+<div class="cube-background-wrapper">
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+</div>
 
 <div class="dashboard-content">
 

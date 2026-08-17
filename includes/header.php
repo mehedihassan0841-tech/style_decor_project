@@ -35,17 +35,22 @@ if(session_status() === PHP_SESSION_NONE){
     <!-- CSS Files -->
 
    <link rel="stylesheet" href="css/style.css?v=2">
-<link rel="stylesheet" href="css/navbar.css?v=2">
-<link rel="stylesheet" href="css/home.css?v=2">
+<link rel="stylesheet" href="css/navbar.css?v=4">
+<link rel="stylesheet" href="css/services.css?v=6">
+<link rel="stylesheet" href="css/home.css?v=12">
+<link rel="stylesheet" href="css/about.css?v=2">
 <link rel="stylesheet" href="css/forms.css?v=2">
 <link rel="stylesheet" href="css/dashboard.css?v=2">
-<link rel="stylesheet" href="../css/customer_dashboard.css?v=2">
+<link rel="stylesheet" href="../css/customer_dashboard.css?v=5">
 <link rel="stylesheet" href="css/animation.css?v=2">
 <link rel="stylesheet" href="css/responsive.css?v=2">
 <link rel="stylesheet" href="css/footer.css?v=2">
-<link rel="stylesheet" href="css/register.css?v=1">
-<link rel="stylesheet" href="css/login.css?v=1">
+<link rel="stylesheet" href="css/register.css?v=2">
+<link rel="stylesheet" href="css/login.css?v=2">
 <link rel="stylesheet" href="../css/decorator_dashboard.css?v=10">
+<link rel="stylesheet" href="css/decorators.css?v=2">
+
+
 
 </head>
 

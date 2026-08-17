@@ -50,140 +50,287 @@ body{
     color:#64748b;
 }
 
-/* ===============================
-   Sidebar
-=============================== */
+/* =========================================================
+   SIDEBAR
+========================================================= */
 
-.sidebar{
-    width:280px;
-    background:hsl(12, 2%, 41%);
-    color:#fff;
-    position:fixed;
-    top:0;
-    left:0;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    box-shadow:0 10px 30px rgba(216, 96, 186, 0.15);
+.sidebar {
+    width: 280px;
+
+    background: hsl(12, 2%, 41%);
+    color: #fff;
+
+    position: fixed;
+
+    /* Navbar height */
+    top: 78px;
+    left: 0;
+
+    /* Navbar বাদ দিয়ে বাকি পুরো screen */
+    height: calc(100vh - 78px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: 0 10px 30px rgba(216, 96, 186, 0.15);
+
+    /* Important */
     overflow-y: auto;
-    padding-bottom:30px;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+
+    /* Logout কাটবে না */
+    padding-bottom: 0;
+
+    z-index: 100;
 }
 
-/* ===============================
-   Logo
-=============================== */
 
-.sidebar-logo{
-    padding:30px;
-    text-align:center;
-    border-bottom:1px solid rgba(224, 104, 104, 0.15);
+/* =========================================================
+   LOGO
+========================================================= */
+
+.sidebar-logo {
+    padding: 30px;
+
+    text-align: center;
+
+    border-bottom: 1px solid rgba(224, 104, 104, 0.15);
+
+    flex-shrink: 0;
 }
 
-.sidebar-logo h2{
-    font-size:28px;
-    font-weight:700;
-    letter-spacing:1px;
-    color:#ff6b35;
+
+.sidebar-logo h2 {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #ff6b35;
 }
 
-.sidebar-logo span{
-    display:block;
-    margin-top:8px;
-    font-size:14px;
-    color:#cbd5e1;
+
+.sidebar-logo span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: #cbd5e1;
 }
 
-/* ===============================
-   User
-=============================== */
 
-.sidebar-user{
-    text-align:center;
-    padding:30px;
+/* =========================================================
+   USER INFORMATION
+========================================================= */
+
+.sidebar-user {
+    text-align: center;
+
+    padding: 30px;
+
+    flex-shrink: 0;
 }
 
-.sidebar-user img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    border:4px solid rgba(255,107,53,.4);
-    object-fit:cover;
+
+.sidebar-user img {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    border: 4px solid rgba(255, 107, 53, 0.4);
+
+    object-fit: cover;
 }
 
-.sidebar-user h3{
-    margin-top:15px;
-    font-size:18px;
+
+.sidebar-user h3 {
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    color: #fff;
 }
 
-.sidebar-user p{
-    margin-top:5px;
-    color:#ffd8cc;
-    font-size:14px;
-    word-break:break-word;
+
+.sidebar-user p {
+    margin-top: 5px;
+
+    color: #ffd8cc;
+
+    font-size: 14px;
+
+    word-break: break-word;
 }
 
-/* ===============================
-   Menu
-=============================== */
 
-.sidebar-menu{
-    list-style:none;
-    padding:20px;
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.sidebar-menu {
+    list-style: none;
+
+    padding: 20px;
+
+    margin: 0;
+
+    flex: 1;
 }
 
-.sidebar-menu li{
-    margin-bottom:8px;
+
+.sidebar-menu li {
+    margin-bottom: 8px;
 }
 
-.sidebar-menu li a{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:15px 18px;
-    color:#fff;
-    text-decoration:none;
-    border-radius:12px;
-    transition:.3s;
+
+.sidebar-menu li a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
 }
 
-.sidebar-menu li a i{
-    width:22px;
-    text-align:center;
+
+.sidebar-menu li a i {
+    width: 22px;
+
+    min-width: 22px;
+
+    text-align: center;
 }
 
-.sidebar-menu li a:hover{
-    background:linear-gradient(135deg,#ff6b35,#ff9f43);
-    transform:translateX(6px);
+
+/* Hover */
+
+.sidebar-menu li a:hover {
+    background: linear-gradient(
+        135deg,
+        #ff6b35,
+        #ff9f43
+    );
+
+    transform: translateX(6px);
 }
 
-.sidebar-menu li.active a{
-    background:linear-gradient(135deg,#ff6b35,#ff9f43);
+
+/* Active */
+
+.sidebar-menu li.active a {
+    background: linear-gradient(
+        135deg,
+        #ff6b35,
+        #ff9f43
+    );
 }
 
-/* ===============================
-   Logout
-=============================== */
 
-.sidebar-footer{
-    padding:25px;
+/* =========================================================
+   SIDEBAR FOOTER
+========================================================= */
+
+.sidebar-footer {
+    padding: 20px 25px 25px;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
 }
 
-.logout-btn{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    padding:14px;
-    border-radius:12px;
-    background:#dc2626;
-    color:#fff;
-    text-decoration:none;
-    transition:.3s;
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-btn {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    background: #dc2626;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    white-space: nowrap;
 }
 
-.logout-btn:hover{
-    background:#b91c1c;
+
+.logout-btn:hover {
+    background: #b91c1c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+
+    border-radius: 10px;
+}
+
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================================================
+   DASHBOARD CONTENT
+========================================================= */
+
+.dashboard-content {
+    margin-left: 280px;
+    min-height: calc(100vh - 78px);
+    box-sizing: border-box;
 }
 
 /* ===============================
@@ -1703,35 +1850,2244 @@ TOP FILTER BAR
 
 
 
+/* =========================================================
+   TRANSPARENT & 3D ANIMATED DASHBOARD (FULL WIDTH MOBILE)
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Full Width & 3D Animated Background Canvas */
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        background: #17153b !important;
+    }
+
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 0 !important; /* স্ক্রিনের দুই পাশে ০ প্যাডিং (Edge-to-Edge Full Screen) */
+        margin: 0 !important;
+        background: radial-gradient(circle at 20% 20%, rgba(41, 36, 95, 0.8), transparent 40%),
+                    radial-gradient(circle at 80% 80%, rgba(8, 127, 115, 0.6), transparent 40%),
+                    linear-gradient(135deg, #17153b 0%, #29245f 50%, #087f73 100%) !important;
+        background-size: 200% 200% !important;
+        animation: bg3DGradient 8s ease infinite alternate !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    /* 1. Header (Full Width Glass Edge) */
+    .dashboard-header {
+        width: 100% !important;
+        padding: 12px 14px !important;
+        box-sizing: border-box !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .header-left h2 {
+        font-size: 16px !important;
+        color: #ffffff !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-left h2 i {
+        color: #64e8d3 !important;
+    }
+
+    .notification-btn {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        color: #ffffff !important;
+        width: 36px !important;
+        height: 36px !important;
+        backdrop-filter: blur(10px) !important;
+    }
+
+    .header-profile {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        padding: 4px 8px 4px 4px !important;
+        backdrop-filter: blur(10px) !important;
+    }
+
+    .header-profile h4 {
+        color: #ffffff !important;
+        font-size: 12px !important;
+    }
+
+    .header-profile span {
+        display: none !important;
+    }
+
+    /* 2. Welcome Card (Transparent 3D Curve) */
+    .welcome-card {
+        margin: 0 10px !important;
+        padding: 16px !important;
+        background: rgba(255, 255, 255, 0.07) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 18px !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .welcome-card h1 {
+        font-size: 18px !important;
+        color: #ffffff !important;
+    }
+
+    .welcome-card p {
+        font-size: 11px !important;
+        color: rgba(255, 255, 255, 0.75) !important;
+        margin-bottom: 12px !important;
+    }
+
+    .browse-service-btn {
+        width: 100% !important;
+        justify-content: center !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        color: #ffffff !important;
+        font-size: 12px !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(100, 232, 211, 0.3) !important;
+        border-radius: 12px !important;
+    }
+
+    .welcome-icon {
+        display: none !important;
+    }
+
+    /* 3. Stats Grid (Edge-to-Edge Grid) */
+    .stats-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        padding: 0 10px !important;
+    }
+
+    .stat-card {
+        background: rgba(255, 255, 255, 0.06) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        border-radius: 14px !important;
+        padding: 12px 10px !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .stat-icon {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 15px !important;
+        border-radius: 10px !important;
+    }
+
+    .stat-icon.blue { background: rgba(108, 99, 255, 0.25) !important; color: #a49eff !important; }
+    .stat-icon.orange { background: rgba(255, 159, 67, 0.25) !important; color: #ffc078 !important; }
+    .stat-icon.green { background: rgba(46, 213, 115, 0.25) !important; color: #7bed9f !important; }
+    .stat-icon.red { background: rgba(255, 71, 87, 0.25) !important; color: #ff7888 !important; }
+
+    .stat-info h2 {
+        font-size: 17px !important;
+        color: #ffffff !important;
+    }
+
+    .stat-info p {
+        font-size: 10px !important;
+        color: rgba(255, 255, 255, 0.65) !important;
+    }
+
+    /* 4. Full Table Display (Without Horizontal Scroll Cut) */
+    .recent-bookings {
+        width: 100% !important;
+        margin: 20px 0 !important;
+        padding: 14px 10px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-radius: 0 !important; /* Full width edge to edge */
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        box-sizing: border-box !important;
+    }
+
+    .section-title h2 {
+        font-size: 15px !important;
+        color: #ffffff !important;
+    }
+
+    .section-title a {
+        color: #64e8d3 !important;
+        font-size: 11px !important;
+    }
+
+    .recent-bookings table {
+        width: 100% !important;
+        min-width: 100% !important;
+        table-layout: fixed !important; /* স্ক্রিনের ভেতরে টেবিলের সব কলাম ফিট রাখবে */
+    }
+
+    .recent-bookings th {
+        background: rgba(0, 0, 0, 0.25) !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-size: 9px !important;
+        padding: 8px 4px !important;
+        text-align: center !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        word-wrap: break-word !important;
+    }
+
+    .recent-bookings td {
+        padding: 10px 3px !important;
+        font-size: 10px !important;
+        color: #ffffff !important;
+        text-align: center !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+    }
+
+    /* Status Badges Transparent Neon Glow */
+    .status {
+        padding: 3px 6px !important;
+        font-size: 8px !important;
+        border-radius: 8px !important;
+        display: inline-block !important;
+        text-transform: uppercase !important;
+    }
+
+    .status.pending { background: rgba(255, 159, 67, 0.25) !important; color: #ffd8a8 !important; border: 1px solid rgba(255, 159, 67, 0.4) !important; }
+    .status.approved { background: rgba(29, 209, 161, 0.25) !important; color: #99ffe4 !important; border: 1px solid rgba(29, 209, 161, 0.4) !important; }
+    .status.completed { background: rgba(108, 99, 255, 0.25) !important; color: #d0ccff !important; border: 1px solid rgba(108, 99, 255, 0.4) !important; }
+    .status.rejected { background: rgba(255, 71, 87, 0.25) !important; color: #ffb8c0 !important; border: 1px solid rgba(255, 71, 87, 0.4) !important; }
+    .status.cancelled { background: rgba(255, 255, 255, 0.15) !important; color: #d1d1d1 !important; border: 1px solid rgba(255, 255, 255, 0.2) !important; }
+}
+
+/* 3D Dynamic Animated Gradient Keyframes */
+@keyframes bg3DGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =========================================================
+   3D ANIMATED GLASSMORPHISM PROFILE PAGE (ULTRA RESPONSIVE)
+========================================================= */
+
+/* Mobile Layout Base (Redmi 6 to iPhone) */
+@media screen and (max-width: 767px) {
+
+    /* Full Screen 3D Animated Canvas */
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        background: #17153b !important;
+    }
+
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 12px 100px 12px !important; /* বটম মেনুর জন্য সেফ প্যাডিং */
+        margin: 0 !important;
+        background: radial-gradient(circle at 10% 20%, rgba(41, 36, 95, 0.85), transparent 45%),
+                    radial-gradient(circle at 90% 80%, rgba(8, 127, 115, 0.75), transparent 45%),
+                    linear-gradient(135deg, #17153b 0%, #29245f 50%, #087f73 100%) !important;
+        background-size: 200% 200% !important;
+        animation: profile3DMove 8s ease infinite alternate !important;
+        box-sizing: border-box !important;
+        min-height: 100vh !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    /* Alert Boxes (Success / Error) */
+    .alert-success, .alert-error {
+        padding: 12px 16px !important;
+        border-radius: 14px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        animation: fadeInDown 0.4s ease-out !important;
+    }
+
+    .alert-success {
+        background: rgba(46, 213, 115, 0.2) !important;
+        border: 1px solid rgba(46, 213, 115, 0.4) !important;
+        color: #7bed9f !important;
+    }
+
+    .alert-error {
+        background: rgba(255, 71, 87, 0.2) !important;
+        border: 1px solid rgba(255, 71, 87, 0.4) !important;
+        color: #ff7888 !important;
+    }
+
+    /* Profile Header */
+    .profile-header {
+        text-align: left !important;
+        margin-bottom: 5px !important;
+    }
+
+    .profile-header h1 {
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .profile-header p {
+        font-size: 12px !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+        margin: 0 !important;
+    }
+
+    /* Container for Profile Cards */
+    .profile-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    /* 1. Left Card (Avatar & Quick Action) */
+    .profile-left {
+        background: rgba(255, 255, 255, 0.06) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 22px !important;
+        padding: 24px 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .profile-left img {
+        width: 100px !important;
+        height: 100px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 3px solid #64e8d3 !important;
+        box-shadow: 0 8px 25px rgba(100, 232, 211, 0.4) !important;
+        margin-bottom: 12px !important;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    }
+
+    .profile-left img:hover {
+        transform: scale(1.05) rotate(2deg) !important;
+    }
+
+    .profile-left h2 {
+        font-size: 19px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+    }
+
+    .profile-left span {
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        color: #64e8d3 !important;
+        background: rgba(100, 232, 211, 0.15) !important;
+        padding: 4px 12px !important;
+        border-radius: 20px !important;
+        letter-spacing: 0.5px !important;
+        text-transform: uppercase !important;
+        margin-bottom: 16px !important;
+        border: 1px solid rgba(100, 232, 211, 0.3) !important;
+    }
+
+    .change-photo-btn {
+        width: 100% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 11px !important;
+        background: rgba(255, 255, 255, 0.12) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #ffffff !important;
+        border-radius: 14px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        cursor: pointer !important;
+        backdrop-filter: blur(10px) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .change-photo-btn:active {
+        transform: scale(0.97) !important;
+        background: rgba(100, 232, 211, 0.25) !important;
+    }
+
+    /* 2. Right Card (Profile Details & Edit Form) */
+    .profile-right {
+        background: rgba(255, 255, 255, 0.06) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 22px !important;
+        padding: 20px 16px !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+    }
+
+    .profile-item {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+        padding-bottom: 10px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .profile-item:last-of-type {
+        border-bottom: none !important;
+    }
+
+    .profile-item label {
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        color: rgba(255, 255, 255, 0.55) !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .profile-item p {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+        margin: 0 !important;
+        word-break: break-word !important;
+    }
+
+    /* Edit Profile Inputs */
+    .profile-item input {
+        width: 100% !important;
+        background: rgba(0, 0, 0, 0.25) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 12px !important;
+        padding: 10px 12px !important;
+        color: #ffffff !important;
+        font-size: 13px !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .profile-item input:focus {
+        border-color: #64e8d3 !important;
+        box-shadow: 0 0 12px rgba(100, 232, 211, 0.35) !important;
+        background: rgba(0, 0, 0, 0.4) !important;
+    }
+
+    /* Action Buttons (Edit & Save) */
+    .edit-profile-btn {
+        width: 100% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 12px !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        border: none !important;
+        color: #ffffff !important;
+        font-size: 14px !important;
+        font-weight: 800 !important;
+        border-radius: 14px !important;
+        cursor: pointer !important;
+        box-shadow: 0 6px 20px rgba(100, 232, 211, 0.3) !important;
+        margin-top: 10px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .edit-profile-btn:active {
+        transform: scale(0.97) !important;
+    }
+
+    /* Hidden Form Animation Wrapper */
+    #editProfileForm {
+        animation: formSlideUp 0.4s ease-out !important;
+    }
+}
+
+/* =========================================================
+   ULTRA SMALL PHONES (Redmi 6, iPhone SE 320px - 380px)
+========================================================= */
+@media screen and (max-width: 380px) {
+    .profile-header h1 {
+        font-size: 19px !important;
+    }
+
+    .profile-left img {
+        width: 85px !important;
+        height: 85px !important;
+    }
+
+    .profile-left h2 {
+        font-size: 17px !important;
+    }
+
+    .profile-item p {
+        font-size: 13px !important;
+    }
+
+    .edit-profile-btn, .change-photo-btn {
+        font-size: 12px !important;
+        padding: 10px !important;
+    }
+}
+
+/* =========================================================
+   3D ANIMATIONS & KEYFRAMES
+========================================================= */
+
+@keyframes profile3DMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes formSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================================================
+   3D CUBE ANIMATED & ULTRA TRANSPARENT GLASS CSS
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Page Setup */
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        background: #0d0b26 !important; /* ডিপ নাইট ব্যাকগ্রাউন্ড */
+        position: relative !important;
+    }
+
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 12px 100px 12px !important;
+        margin: 0 !important;
+        background: transparent !important; /* ব্যাকগ্রাউন্ড সম্পূর্ণ ট্রান্সপারেন্ট */
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 2 !important; /* কিউবের উপরে থাকবে */
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
 
 
+    /* =========================================================
+       BACKGROUND 3D FLOATING CUBES (পিছনে ঘুরতে থাকা ৩ডি কিউব)
+    ========================================================= */
 
-@media(max-width:700px){
+    .cube-background-wrapper {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+    .cube-item {
+        position: absolute !important;
+        display: block !important;
+        list-style: none !important;
+        width: 40px !important;
+        height: 40px !important;
+        background: rgba(100, 232, 211, 0.15) !important;
+        border: 2px solid rgba(100, 232, 211, 0.4) !important;
+        box-shadow: 0 0 15px rgba(100, 232, 211, 0.3) !important;
+        backdrop-filter: blur(2px) !important;
+        animation: rotateCube 20s linear infinite !important;
+        bottom: -150px !important;
+        border-radius: 8px !important;
+    }
+
+    /* আলাদা আলাদা আকারের ও স্পিডের ৬টি ৩ডি কিউব */
+    .cube-item:nth-child(1) {
+        left: 10% !important;
+        width: 70px !important;
+        height: 70px !important;
+        animation-delay: 0s !important;
+        animation-duration: 12s !important;
+        background: rgba(108, 99, 255, 0.2) !important;
+        border-color: rgba(108, 99, 255, 0.5) !important;
+    }
+
+    .cube-item:nth-child(2) {
+        left: 65% !important;
+        width: 45px !important;
+        height: 45px !important;
+        animation-delay: 2s !important;
+        animation-duration: 10s !important;
+        border-color: rgba(8, 127, 115, 0.6) !important;
+    }
+
+    .cube-item:nth-child(3) {
+        left: 30% !important;
+        width: 85px !important;
+        height: 85px !important;
+        animation-delay: 4s !important;
+        animation-duration: 15s !important;
+        background: rgba(255, 110, 125, 0.15) !important;
+        border-color: rgba(255, 110, 125, 0.4) !important;
+    }
+
+    .cube-item:nth-child(4) {
+        left: 80% !important;
+        width: 35px !important;
+        height: 35px !important;
+        animation-delay: 0s !important;
+        animation-duration: 8s !important;
+    }
+
+    .cube-item:nth-child(5) {
+        left: 50% !important;
+        width: 60px !important;
+        height: 60px !important;
+        animation-delay: 6s !important;
+        animation-duration: 14s !important;
+        border-color: rgba(108, 99, 255, 0.6) !important;
+    }
+
+    .cube-item:nth-child(6) {
+        left: 85% !important;
+        width: 90px !important;
+        height: 90px !important;
+        animation-delay: 3s !important;
+        animation-duration: 18s !important;
+        background: rgba(8, 127, 115, 0.25) !important;
+    }
 
 
-.customer-photo-panel{
+    /* =========================================================
+       SUPER TRANSPARENT GLASS CARDS (স্বচ্ছ কার্ড)
+    ========================================================= */
 
+    /* Alert Boxes */
+    .alert-success, .alert-error {
+        padding: 12px 16px !important;
+        border-radius: 14px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+    }
 
-    margin:20px;
+    .alert-success {
+        background: rgba(46, 213, 115, 0.15) !important;
+        border: 1px solid rgba(46, 213, 115, 0.4) !important;
+        color: #7bed9f !important;
+    }
 
+    .alert-error {
+        background: rgba(255, 71, 87, 0.15) !important;
+        border: 1px solid rgba(255, 71, 87, 0.4) !important;
+        color: #ff7888 !important;
+    }
 
-    padding:25px;
+    /* Profile Header */
+    .profile-header h1 {
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    }
 
+    .profile-header p {
+        font-size: 12px !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
 
+    .profile-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    /* Left Profile Card (Ultra Transparent Glass) */
+    .profile-left {
+        background: rgba(255, 255, 255, 0.03) !important; /* একদম পাতলা ক্রিস্টাল গ্লাস */
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 22px !important;
+        padding: 24px 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .profile-left img {
+        width: 95px !important;
+        height: 95px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 2px solid #64e8d3 !important;
+        box-shadow: 0 0 20px rgba(100, 232, 211, 0.5) !important;
+    }
+
+    .profile-left h2 {
+        font-size: 18px !important;
+        color: #ffffff !important;
+        margin: 10px 0 2px 0 !important;
+    }
+
+    .profile-left span {
+        font-size: 10px !important;
+        color: #64e8d3 !important;
+        background: rgba(100, 232, 211, 0.15) !important;
+        padding: 3px 10px !important;
+        border-radius: 20px !important;
+        border: 1px solid rgba(100, 232, 211, 0.3) !important;
+        margin-bottom: 14px !important;
+    }
+
+    .change-photo-btn {
+        width: 100% !important;
+        padding: 10px !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        color: #ffffff !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        backdrop-filter: blur(10px) !important;
+    }
+
+    /* Right Details Card (Ultra Transparent Glass) */
+    .profile-right {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 22px !important;
+        padding: 18px 14px !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .profile-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        padding-bottom: 8px !important;
+    }
+
+    .profile-item label {
+        font-size: 10px !important;
+        color: rgba(255, 255, 255, 0.55) !important;
+        text-transform: uppercase !important;
+    }
+
+    .profile-item p {
+        font-size: 13px !important;
+        color: #ffffff !important;
+        margin: 2px 0 0 0 !important;
+    }
+
+    .profile-item input {
+        width: 100% !important;
+        background: rgba(0, 0, 0, 0.35) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 10px !important;
+        padding: 9px 12px !important;
+        color: #ffffff !important;
+        font-size: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .edit-profile-btn {
+        width: 100% !important;
+        padding: 11px !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        border: none !important;
+        color: #ffffff !important;
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 15px rgba(100, 232, 211, 0.3) !important;
+    }
 }
 
 
+/* =========================================================
+   3D ROTATING CUBE ANIMATION KEYFRAMES
+========================================================= */
 
-.customer-photo-preview img{
+@keyframes rotateCube {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg) scale(1.3);
+        opacity: 0;
+    }
+}
+/* =========================================================
+   PAGE-HEADER OVERRIDE & MOBILE RESPONSIVE (Redmi 6 to iPhone)
+========================================================= */
 
+@media screen and (max-width: 767px) {
 
-    width:140px;
+    /* Page Header Clean Glass Override */
+    .dashboard-main .page-header {
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-left: 4px solid #64e8d3 !important; /* আগের কমলা সরিয়ে নিয়ন গ্লো বর্ডার */
+        padding: 16px 14px !important;
+        border-radius: 16px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+    }
 
-    height:140px;
+    .dashboard-main .page-header h1 {
+        margin: 0 !important;
+        font-size: 20px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+    }
 
+    .dashboard-main .page-header p {
+        margin-top: 5px !important;
+        margin-bottom: 0 !important;
+        font-size: 12px !important;
+        color: rgba(255, 255, 255, 0.75) !important;
+        line-height: 1.4 !important;
+    }
 
+    /* Change Photo Glass Card Panel */
+    .customer-photo-panel {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 20px !important;
+        padding: 20px 14px !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .customer-photo-panel form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 18px !important;
+        width: 100% !important;
+    }
+
+    /* Profile Preview Image */
+    .customer-photo-preview img {
+        width: 120px !important;
+        height: 120px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 3px solid #64e8d3 !important;
+        box-shadow: 0 0 25px rgba(100, 232, 211, 0.45) !important;
+    }
+
+    /* Input Field Overlay */
+    .customer-photo-field {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+    }
+
+    .customer-photo-field label {
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+        text-transform: uppercase !important;
+    }
+
+    .customer-photo-field input[type="file"] {
+        width: 100% !important;
+        padding: 8px !important;
+        background: rgba(0, 0, 0, 0.35) !important;
+        border: 1px dashed rgba(255, 255, 255, 0.25) !important;
+        border-radius: 12px !important;
+        color: #ffffff !important;
+        font-size: 11px !important;
+        box-sizing: border-box !important;
+    }
+
+    .customer-photo-field input[type="file"]::-webkit-file-upload-button {
+        background: rgba(100, 232, 211, 0.2) !important;
+        border: 1px solid rgba(100, 232, 211, 0.4) !important;
+        color: #64e8d3 !important;
+        padding: 5px 10px !important;
+        border-radius: 6px !important;
+        font-weight: 700 !important;
+        cursor: pointer !important;
+    }
+
+    /* Upload Button */
+    .customer-photo-upload-btn {
+        width: 100% !important;
+        padding: 12px !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        border: none !important;
+        color: #ffffff !important;
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 15px rgba(100, 232, 211, 0.3) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+    }
 }
 
+/* =========================================================
+   ULTRA SMALL PHONES (Redmi 6, iPhone SE 320px - 380px)
+========================================================= */
+@media screen and (max-width: 380px) {
+    .dashboard-main .page-header h1 {
+        font-size: 18px !important;
+    }
 
+    .dashboard-main .page-header p {
+        font-size: 11px !important;
+    }
 
+    .customer-photo-preview img {
+        width: 100px !important;
+        height: 100px !important;
+    }
 }
+/* =========================================================
+   MASTERCLASS GLASSMORPHISM & ANIMATED MOBILE RESPONSIVE
+========================================================= */
+
+/* 3D Animated Background Canvas */
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background: #0d0b26 !important;
+    position: relative !important;
+}
+
+@media screen and (max-width: 767px) {
+
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 12px 100px 12px !important;
+        margin: 0 !important;
+        background: transparent !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    /* Transparent Animated Page Header */
+    .dashboard-main .page-header {
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-left: 4px solid #64e8d3 !important;
+        padding: 16px 14px !important;
+        border-radius: 16px !important;
+        margin-bottom: 8px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        animation: pulseHeader 4s ease-in-out infinite alternate !important;
+    }
+
+    .dashboard-main .page-header h1 {
+        margin: 0 !important;
+        font-size: 20px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        text-shadow: 0 0 12px rgba(100, 232, 211, 0.5) !important;
+    }
+
+    .dashboard-main .page-header p {
+        margin-top: 4px !important;
+        margin-bottom: 0 !important;
+        font-size: 12px !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    /* HORIZONTAL SCROLLABLE TABLE CONTAINER */
+    .table-responsive {
+        width: 100% !important;
+        overflow-x: auto !important; /* বাম থেকে ডানে স্ক্রোল সিস্টেম */
+        -webkit-overflow-scrolling: touch !important; /* আইফোনে স্মুথ স্লাইড স্ক্রোলিং */
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 18px !important;
+        padding: 6px !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Table Min-Width for Scrollable Content */
+    .booking-table {
+        width: 100% !important;
+        min-width: 680px !important; /* লেখা না গুটিয়ে স্ক্রোল হওয়ার নির্দিষ্ট প্রস্থ */
+        border-collapse: collapse !important;
+        background: transparent !important;
+    }
+
+    /* Transparent Table Header */
+    .booking-table thead {
+        background: transparent !important;
+    }
+
+    .booking-table thead tr {
+        background: transparent !important;
+    }
+
+    .booking-table th {
+        background: transparent !important;
+        color: #64e8d3 !important;
+        font-size: 11px !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        padding: 12px 10px !important;
+        text-align: left !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        white-space: nowrap !important;
+    }
+
+    /* Table Rows & Cells */
+    .booking-table tbody tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        transition: background 0.3s ease !important;
+        animation: rowSlide 0.5s ease forwards !important;
+    }
+
+    .booking-table tbody tr:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .booking-table td {
+        color: #ffffff !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        padding: 14px 10px !important;
+        vertical-align: middle !important;
+        white-space: nowrap !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    /* First Column Highlight (Booking Code) */
+    .booking-table td:first-child {
+        color: #64e8d3 !important;
+        font-weight: 800 !important;
+    }
+
+    /* Status Badge */
+    .booking-table td span[style*="background"] {
+        padding: 5px 12px !important;
+        border-radius: 12px !important;
+        font-size: 11px !important;
+        font-weight: 800 !important;
+        display: inline-block !important;
+        white-space: nowrap !important;
+        box-shadow: 0 0 8px rgba(0,0,0,0.4) !important;
+    }
+
+    /* Action Buttons */
+    .cancel-btn {
+        background: rgba(220, 53, 69, 0.3) !important;
+        border: 1px solid rgba(220, 53, 69, 0.6) !important;
+        color: #ff7888 !important;
+        padding: 6px 12px !important;
+        border-radius: 8px !important;
+        font-weight: 700 !important;
+        font-size: 11px !important;
+        text-decoration: none !important;
+        display: inline-block !important;
+        white-space: nowrap !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .cancel-btn:active {
+        transform: scale(0.95) !important;
+        background: rgba(220, 53, 69, 0.5) !important;
+    }
+
+    .review-btn {
+        background: linear-gradient(135deg, #ffc107 0%, #ff8c00 100%) !important;
+        color: #000000 !important;
+        padding: 6px 12px !important;
+        border-radius: 8px !important;
+        font-weight: 800 !important;
+        font-size: 11px !important;
+        text-decoration: none !important;
+        display: inline-block !important;
+        white-space: nowrap !important;
+        box-shadow: 0 2px 8px rgba(255, 193, 7, 0.4) !important;
+        animation: buttonPulse 2s infinite !important;
+    }
+
+    /* Empty State */
+    .empty-booking {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 20px !important;
+        padding: 30px 15px !important;
+        text-align: center !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+    }
+
+    .empty-booking i {
+        font-size: 40px !important;
+        color: #64e8d3 !important;
+        margin-bottom: 8px !important;
+        animation: floatIcon 3s ease-in-out infinite !important;
+    }
+
+    .empty-booking h2 {
+        color: #ffffff !important;
+        font-size: 18px !important;
+        margin: 4px 0 !important;
+    }
+
+    .empty-booking p {
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-size: 12px !important;
+    }
+
+    .browse-btn {
+        display: inline-block !important;
+        margin-top: 10px !important;
+        padding: 10px 20px !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        color: #ffffff !important;
+        border-radius: 10px !important;
+        text-decoration: none !important;
+        font-weight: 800 !important;
+        font-size: 12px !important;
+        box-shadow: 0 4px 15px rgba(100, 232, 211, 0.4) !important;
+    }
+}
+
+/* =========================================================
+   ULTRA SMALL PHONES (320px - 380px)
+========================================================= */
+@media screen and (max-width: 380px) {
+    .dashboard-main .page-header h1 {
+        font-size: 18px !important;
+    }
+}
+
+/* =========================================================
+   ANIMATIONS & KEYFRAMES
+========================================================= */
+@keyframes rowSlide {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseHeader {
+    0% { border-left-color: #64e8d3; }
+    100% { border-left-color: #ff6b81; }
+}
+
+@keyframes buttonPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+/* =========================================================
+   CUSTOM NEON GLOWING GLASS SCROLLBAR
+========================================================= */
+
+/* Webkit Browsers (Chrome, Safari, Edge, Opera) */
+.table-responsive::-webkit-scrollbar {
+    height: 6px !important; /* স্ক্রোলবারের পুরুত্ব */
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05) !important; /* ব্যাকগ্রাউন্ড ট্র্যাক */
+    border-radius: 10px !important;
+    margin: 0 8px !important;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #64e8d3, #ff6b81) !important; /* নিয়ন গ্রেডিয়েন্ট */
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px rgba(100, 232, 211, 0.8),
+                0 0 20px rgba(255, 107, 129, 0.6) !important; /* গ্লোয়িং ইফেক্ট */
+    transition: all 0.3s ease !important;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #ff6b81, #64e8d3) !important;
+    box-shadow: 0 0 15px rgba(100, 232, 211, 1),
+                0 0 25px rgba(255, 107, 129, 0.9) !important;
+}
+
+/* Firefox Support */
+.table-responsive {
+    scrollbar-width: thin !important;
+    scrollbar-color: #64e8d3 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* =========================================================
+   BROWSE SERVICES - FIT CONTENT PRICE BADGE & CLEAN UI
+========================================================= */
+
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background: #0d0b26 !important;
+    position: relative !important;
+}
+
+@media screen and (max-width: 767px) {
+
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 12px 100px 12px !important;
+        margin: 0 !important;
+        background: transparent !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    /* Page Header */
+    .dashboard-main .page-header {
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-left: 4px solid #64e8d3 !important;
+        padding: 14px 12px !important;
+        border-radius: 16px !important;
+        margin-bottom: 4px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        animation: pulseHeader 4s ease-in-out infinite alternate !important;
+    }
+
+    .dashboard-main .page-header h1 {
+        margin: 0 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        text-shadow: 0 0 12px rgba(100, 232, 211, 0.5) !important;
+        background: transparent !important;
+    }
+
+    .dashboard-main .page-header p {
+        margin-top: 2px !important;
+        margin-bottom: 0 !important;
+        font-size: 11px !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+
+    /* Filter Bar Container */
+    .service-filter-bar {
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-radius: 16px !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .filter-form {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    /* Search Input Box */
+    .filter-search {
+        position: relative !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .filter-search i {
+        position: absolute !important;
+        left: 12px !important;
+        color: #64e8d3 !important;
+        font-size: 12px !important;
+        pointer-events: none !important;
+    }
+
+    .filter-search input {
+        width: 100% !important;
+        height: 36px !important;
+        padding: 0 12px 0 34px !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 10px !important;
+        color: #ffffff !important;
+        font-size: 11px !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .filter-search input:focus {
+        border-color: #64e8d3 !important;
+        box-shadow: 0 0 10px rgba(100, 232, 211, 0.3) !important;
+    }
+
+    /* Select Dropdowns */
+    .filter-form select {
+        width: 100% !important;
+        height: 36px !important;
+        padding: 0 10px !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 10px !important;
+        color: #ffffff !important;
+        font-size: 11px !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+    }
+
+    .filter-form select option {
+        background: #0d0b26 !important;
+        color: #ffffff !important;
+    }
+
+    /* Filter Submit Button */
+    .filter-btn {
+        width: 100% !important;
+        height: 36px !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        border: none !important;
+        border-radius: 10px !important;
+        color: #ffffff !important;
+        font-size: 11px !important;
+        font-weight: 800 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        box-shadow: 0 4px 12px rgba(100, 232, 211, 0.3) !important;
+        cursor: pointer !important;
+    }
+
+    .filter-btn:active {
+        transform: scale(0.97) !important;
+    }
+
+    /* Services Grid Layout */
+    .services-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin-top: 4px !important;
+    }
+
+    /* Service Card Structure */
+    .service-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        height: 155px !important;
+        background: rgba(20, 18, 45, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35) !important;
+        position: relative !important;
+        animation: cardSlideUp 0.5s ease forwards !important;
+    }
+
+    /* Left Side: Text Area (50%) */
+    .service-content {
+        order: 1 !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        height: 100% !important;
+        padding: 8px 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        box-sizing: border-box !important;
+        background: transparent !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    /* Category Tag */
+    .category {
+        font-size: 8px !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        color: #64e8d3 !important;
+        letter-spacing: 0.5px !important;
+        display: block !important;
+        background: transparent !important;
+        padding: 0 !important;
+    }
+
+    .service-content h3 {
+        font-size: 11px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        margin: 2px 0 !important;
+        line-height: 1.2 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        background: transparent !important;
+    }
+
+    .service-content p {
+        font-size: 9px !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        margin: 1px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        background: transparent !important;
+    }
+
+    .service-content p i {
+        color: #64e8d3 !important;
+        font-size: 8px !important;
+        background: transparent !important;
+    }
+
+    /* Right Side: Image Area (50% Crisp) */
+    .service-image-box {
+        order: 2 !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        height: 100% !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #000000 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        filter: none !important;
+    }
+
+    .service-image-box img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        filter: none !important;
+        transition: transform 0.4s ease !important;
+    }
+
+    /* Price Badge (Auto Width Fit to Text) */
+    .price-tag {
+        position: absolute !important;
+        top: 6px !important;
+        right: 6px !important;
+        display: inline-block !important;
+        width: fit-content !important;
+        max-width: max-content !important;
+        white-space: nowrap !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        color: #000000 !important;
+        font-size: 9px !important;
+        font-weight: 800 !important;
+        padding: 3px 6px !important;
+        border-radius: 6px !important;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5) !important;
+        z-index: 3 !important;
+    }
+
+    /* Available Status Badge (Auto Fit) */
+    .available-tag {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        display: inline-block !important;
+        width: fit-content !important;
+        max-width: max-content !important;
+        white-space: nowrap !important;
+        align-self: flex-start !important;
+        background: rgba(100, 232, 211, 0.15) !important;
+        border: 1px solid rgba(100, 232, 211, 0.4) !important;
+        color: #64e8d3 !important;
+        font-size: 8px !important;
+        font-weight: 700 !important;
+        padding: 2px 6px !important;
+        border-radius: 4px !important;
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
+        box-shadow: none !important;
+    }
+
+    /* Action Buttons */
+    .service-buttons {
+        display: flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+        margin-top: 4px !important;
+        background: transparent !important;
+    }
+
+    .wish-btn {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #ffffff !important;
+        border-radius: 7px !important;
+        text-decoration: none !important;
+        font-size: 10px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .wish-btn.active {
+        background: rgba(220, 53, 69, 0.25) !important;
+        border-color: rgba(220, 53, 69, 0.5) !important;
+        color: #ff6b81 !important;
+    }
+
+    .view-btn {
+        flex: 1 !important;
+        height: 28px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 3px !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        color: #ffffff !important;
+        border-radius: 7px !important;
+        font-size: 9px !important;
+        font-weight: 800 !important;
+        text-decoration: none !important;
+        box-shadow: 0 3px 8px rgba(100, 232, 211, 0.3) !important;
+    }
+
+    /* Empty State */
+    .no-service {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 18px !important;
+        padding: 30px 15px !important;
+        text-align: center !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        width: 100% !important;
+    }
+
+    .no-service i {
+        font-size: 35px !important;
+        color: #64e8d3 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .no-service h2 {
+        color: #ffffff !important;
+        font-size: 16px !important;
+        margin: 0 !important;
+    }
+}
+
+/* Animations */
+@keyframes cardSlideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseHeader {
+    0% { border-left-color: #64e8d3; }
+    100% { border-left-color: #ff6b81; }
+}
+/* =========================================================
+   SERVICE DETAILS PAGE - Dynamic Background Shapes & CSS
+========================================================= */
+
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background: #0d0b26 !important;
+    position: relative !important;
+}
+
+/* Background Animated Shapes Container */
+.dashboard-content::before,
+.dashboard-content::after {
+    content: '' !important;
+    position: fixed !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Floating Triangle Shape */
+.dashboard-content::before {
+    top: 10% !important;
+    left: -20px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 30px solid transparent !important;
+    border-right: 30px solid transparent !important;
+    border-bottom: 50px solid rgba(100, 232, 211, 0.2) !important;
+    filter: drop-shadow(0 0 15px rgba(100, 232, 211, 0.6)) !important;
+    animation: floatTriangle 8s ease-in-out infinite alternate !important;
+}
+
+/* Floating Glow Circle/Sphere */
+.dashboard-content::after {
+    bottom: 15% !important;
+    right: -30px !important;
+    width: 120px !important;
+    height: 120px !important;
+    background: radial-gradient(circle, rgba(255, 107, 129, 0.3) 0%, rgba(0,0,0,0) 70%) !important;
+    border-radius: 50% !important;
+    animation: floatSphere 6s ease-in-out infinite alternate !important;
+}
+
+@media screen and (max-width: 767px) {
+
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 12px 100px 12px !important;
+        margin: 0 !important;
+        background: transparent !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    /* Main Service Card */
+    .service-details-card {
+        width: 100% !important;
+        background: rgba(20, 18, 45, 0.75) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 20px !important;
+        overflow: hidden !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(100, 232, 211, 0.1) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important;
+        animation: detailsCardEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards !important;
+    }
+
+    /* Animated Floating Flower Element Inside Card */
+    .service-details-card::before {
+        content: '🌸' !important;
+        position: absolute !important;
+        top: 15px !important;
+        right: 15px !important;
+        font-size: 22px !important;
+        opacity: 0.6 !important;
+        z-index: 5 !important;
+        animation: spinFlower 12s linear infinite !important;
+        filter: drop-shadow(0 0 8px rgba(255, 107, 129, 0.8)) !important;
+    }
+
+    /* Animated Floating Square Element */
+    .service-details-card::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 25px !important;
+        height: 25px !important;
+        border: 2px solid rgba(100, 232, 211, 0.3) !important;
+        border-radius: 6px !important;
+        z-index: 1 !important;
+        animation: rotateSquare 10s ease-in-out infinite alternate !important;
+    }
+
+    /* Service Banner Image Container */
+    .service-image {
+        width: 100% !important;
+        height: 220px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #000000 !important;
+    }
+
+    .service-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+        transition: transform 0.6s ease !important;
+    }
+
+    .service-details-card:hover .service-image img {
+        transform: scale(1.05) !important;
+    }
+
+    /* Gradient overlay on image bottom */
+    .service-image::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 60% !important;
+        background: linear-gradient(to top, rgba(20, 18, 45, 1), transparent) !important;
+    }
+
+    /* Service Info Area */
+    .service-info {
+        padding: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        position: relative !important;
+        z-index: 3 !important;
+    }
+
+    /* Category Badge (Auto Fit Width) */
+    .category-badge {
+        display: inline-block !important;
+        width: fit-content !important;
+        max-width: max-content !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        color: #0d0b26 !important;
+        font-size: 10px !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        padding: 4px 10px !important;
+        border-radius: 8px !important;
+        letter-spacing: 0.5px !important;
+        box-shadow: 0 4px 10px rgba(100, 232, 211, 0.3) !important;
+    }
+
+    /* Service Main Title */
+    .service-info h1 {
+        font-size: 18px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        margin: 4px 0 0 0 !important;
+        line-height: 1.3 !important;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* Company Name Subtitle */
+    .service-info h3 {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #64e8d3 !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    /* Individual Info Lines (Phone, Email, Experience, etc.) */
+    .service-info p {
+        font-size: 12px !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        margin: 2px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        line-height: 1.4 !important;
+    }
+
+    .service-info p strong {
+        color: #ffffff !important;
+        min-width: 85px !important;
+        display: inline-block !important;
+    }
+
+    /* Status Badge inside text */
+    .service-info p .status {
+        background: rgba(100, 232, 211, 0.15) !important;
+        border: 1px solid rgba(100, 232, 211, 0.4) !important;
+        color: #64e8d3 !important;
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        padding: 2px 8px !important;
+        border-radius: 6px !important;
+        text-transform: capitalize !important;
+    }
+
+    /* Description Blocks */
+    .service-info .description {
+        margin-top: 10px !important;
+        padding-top: 10px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .service-info .description h3 {
+        font-size: 13px !important;
+        color: #64e8d3 !important;
+        margin-bottom: 4px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .service-info .description p {
+        font-size: 11px !important;
+        color: rgba(255, 255, 255, 0.75) !important;
+        line-height: 1.5 !important;
+        display: block !important;
+    }
+
+    /* Book Now Glowing CTA Button */
+    .book-btn {
+        width: 100% !important;
+        height: 42px !important;
+        margin-top: 15px !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        border: none !important;
+        border-radius: 12px !important;
+        color: #ffffff !important;
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        text-decoration: none !important;
+        box-shadow: 0 6px 20px rgba(100, 232, 211, 0.4) !important;
+        transition: all 0.3s ease !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    /* Button Light Sweep Effect */
+    .book-btn::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: -100% !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent) !important;
+        transition: left 0.7s ease !important;
+    }
+
+    .book-btn:active::before {
+        left: 100% !important;
+    }
+
+    .book-btn:active {
+        transform: scale(0.97) !important;
+    }
+}
+
+/* =========================================================
+   ANIMATIONS & KEYFRAMES
+========================================================= */
+
+/* Main Entrance */
+@keyframes detailsCardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Flower Spin Animation */
+@keyframes spinFlower {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* Triangle Floating Animation */
+@keyframes floatTriangle {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(40px) rotate(45deg);
+    }
+}
+
+/* Square Rotating Animation */
+@keyframes rotateSquare {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: rotate(180deg) translateY(-20px);
+    }
+}
+
+/* Sphere Floating Animation */
+@keyframes floatSphere {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+/* =========================================================
+   FALLING FLOWERS & GLASS FORM (Z-INDEX FIXED)
+========================================================= */
+
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background: #0d0b26 !important;
+    position: relative !important;
+}
+
+/* Dynamic Falling Flowers Layer */
+.flower-rain {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+    z-index: 9999 !important; /* ফুলগুলো সবার ওপরে দেখানোর জন্য */
+    overflow: hidden !important;
+}
+
+/* Individual Flowers */
+.flower {
+    position: absolute !important;
+    top: -60px !important;
+    display: inline-block !important;
+    animation: flowerFall 7s linear infinite !important;
+    opacity: 0.9 !important;
+}
+
+/* ১০টি ফুলের কালার গ্লো ও পড়ার গতি */
+.flower.f1  { left: 3%;  animation-duration: 6s;  animation-delay: 0s;   font-size: 22px; filter: drop-shadow(0 0 8px #ff6b81); }
+.flower.f2  { left: 13%; animation-duration: 8s;  animation-delay: 1.5s; font-size: 26px; filter: drop-shadow(0 0 8px #ff4757); }
+.flower.f3  { left: 23%; animation-duration: 5.5s;animation-delay: 3s;   font-size: 18px; filter: drop-shadow(0 0 8px #eccc68); }
+.flower.f4  { left: 33%; animation-duration: 7.5s;animation-delay: 0.8s; font-size: 24px; filter: drop-shadow(0 0 8px #70a1ff); }
+.flower.f5  { left: 45%; animation-duration: 9s;  animation-delay: 2.2s; font-size: 28px; filter: drop-shadow(0 0 8px #ffa502); }
+.flower.f6  { left: 55%; animation-duration: 6.5s;animation-delay: 4s;   font-size: 20px; filter: drop-shadow(0 0 8px #ff6b81); }
+.flower.f7  { left: 67%; animation-duration: 7.8s;animation-delay: 1.2s; font-size: 25px; filter: drop-shadow(0 0 8px #ff6348); }
+.flower.f8  { left: 77%; animation-duration: 6s;  animation-delay: 0.3s; font-size: 19px; filter: drop-shadow(0 0 8px #2ed573); }
+.flower.f9  { left: 87%; animation-duration: 8.5s;animation-delay: 2.8s; font-size: 24px; filter: drop-shadow(0 0 8px #1e90ff); }
+.flower.f10 { left: 94%; animation-duration: 10s; animation-delay: 1s;   font-size: 22px; filter: drop-shadow(0 0 8px #ff4757); }
+
+/* Keyframe for Rain Animation */
+@keyframes flowerFall {
+    0% {
+        top: -60px;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        top: 105vh;
+        transform: translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Background Shapes (Triangle & Square) */
+.dashboard-content::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 20% !important;
+    left: 2% !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 18px solid transparent !important;
+    border-right: 18px solid transparent !important;
+    border-bottom: 30px solid rgba(100, 232, 211, 0.25) !important;
+    filter: drop-shadow(0 0 10px rgba(100, 232, 211, 0.5)) !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    animation: floatAndRotateTriangle 8s ease-in-out infinite alternate !important;
+}
+
+.dashboard-content::after {
+    content: '' !important;
+    position: fixed !important;
+    bottom: 15% !important;
+    right: 3% !important;
+    width: 28px !important;
+    height: 28px !important;
+    background: transparent !important;
+    border: 2px solid rgba(255, 107, 129, 0.35) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 0 10px rgba(255, 107, 129, 0.3) !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    animation: floatAndRotateSquare 10s ease-in-out infinite alternate !important;
+}
+
+@media screen and (max-width: 767px) {
+
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 12px 100px 12px !important;
+        margin: 0 !important;
+        background: transparent !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        position: relative !important;
+        z-index: 3 !important;
+    }
+
+    /* Page Header */
+    .dashboard-main .page-header {
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-left: 4px solid #64e8d3 !important;
+        padding: 14px 12px !important;
+        border-radius: 16px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+    }
+
+    .dashboard-main .page-header h1 {
+        margin: 0 !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        text-shadow: 0 0 12px rgba(100, 232, 211, 0.5) !important;
+    }
+
+    .dashboard-main .page-header p {
+        margin-top: 2px !important;
+        margin-bottom: 0 !important;
+        font-size: 11px !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    /* Booking Form Container Card */
+    .profile-form-card {
+        width: 100% !important;
+        background: rgba(20, 18, 45, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 20px !important;
+        padding: 16px 14px !important;
+        box-sizing: border-box !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(100, 232, 211, 0.08) !important;
+    }
+
+    .profile-form-card form {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .form-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        width: 100% !important;
+    }
+
+    .form-group label {
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        color: #64e8d3 !important;
+        text-transform: uppercase !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100% !important;
+        background: rgba(0, 0, 0, 0.35) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 10px !important;
+        padding: 10px 12px !important;
+        color: #ffffff !important;
+        font-size: 12px !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+    }
+
+    .form-group input[readonly] {
+        background: rgba(100, 232, 211, 0.06) !important;
+        border-color: rgba(100, 232, 211, 0.3) !important;
+        color: #ffffff !important;
+        font-weight: 700 !important;
+    }
+
+    .form-group input[type="date"]::-webkit-calendar-picker-indicator,
+    .form-group input[type="time"]::-webkit-calendar-picker-indicator {
+        filter: invert(1) sepia(1) saturate(5) hue-rotate(120deg) !important;
+    }
+
+    .save-btn {
+        width: 100% !important;
+        height: 42px !important;
+        margin-top: 6px !important;
+        background: linear-gradient(135deg, #64e8d3 0%, #087f73 100%) !important;
+        border: none !important;
+        border-radius: 12px !important;
+        color: #ffffff !important;
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        box-shadow: 0 6px 20px rgba(100, 232, 211, 0.35) !important;
+    }
+}
+
+@keyframes floatAndRotateTriangle {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(30px) rotate(180deg); }
+}
+
+@keyframes floatAndRotateSquare {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-30px) rotate(-180deg); }
+}
+

@@ -2,416 +2,2118 @@
         REGISTER PAGE
 =================================== */
 
-.register-section{
+/* =========================================================
+   STYLEDECOR REGISTER PAGE
+   DESKTOP + MOBILE RESPONSIVE
+   HTML/PHP CHANGE NOT REQUIRED
+========================================================= */
 
-    min-height:100vh;
 
-    display:flex;
+/* =========================================================
+   REGISTER SECTION
+========================================================= */
 
-    justify-content:center;
+.register-section {
 
-    align-items:center;
+    min-height: 100vh;
 
-    padding:80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    background:linear-gradient(135deg,#6C63FF,#00BFA6);
+    padding: 80px 20px;
 
-}
+    box-sizing: border-box;
 
-.register-container{
-
-    width:100%;
-
-    max-width:1300px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:60px;
-
-    align-items:center;
-
-}
-
-.register-left{
-
-    color:#fff;
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #eef4ff
+        );
 
 }
 
-.register-left h1{
 
-    font-size:55px;
+/* =========================================================
+   REGISTER CONTAINER
+========================================================= */
 
-    font-weight:700;
+.register-container {
 
-    margin-bottom:25px;
+    width: 100%;
+    max-width: 1200px;
 
-    line-height:1.2;
+    display: grid;
 
-}
+    grid-template-columns: 1fr 1fr;
 
-.register-left p{
+    background: #ffffff;
 
-    font-size:19px;
+    border-radius: 22px;
 
-    line-height:1.8;
+    overflow: hidden;
 
-    margin-bottom:40px;
-
-    opacity:.95;
-
-}
-
-.feature-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.10);
 
 }
 
-.feature-item{
 
-    display:flex;
+/* =========================================================
+   LEFT SIDE
+========================================================= */
 
-    align-items:center;
+.register-left {
 
-    gap:15px;
+    padding: 65px;
 
-    font-size:18px;
+    display: flex;
 
-}
+    flex-direction: column;
 
-.feature-item i{
+    justify-content: center;
 
-    color:#FFD43B;
+    align-items: center;
 
-    font-size:22px;
+    text-align: center;
 
-}
-.register-right{
+    color: #ffffff;
 
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.register-card{
-
-    width:100%;
-
-    max-width:520px;
-
-    background:#fff;
-
-    border-radius:25px;
-
-    padding:45px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.18);
+    background:
+        linear-gradient(
+            135deg,
+            #6C63FF,
+            #4f46c9,
+            #00BFA6
+        );
 
 }
 
-.register-card h2{
 
-    text-align:center;
+.register-left h1 {
 
-    font-size:34px;
+    font-size: 40px;
 
-    color:#222;
+    line-height: 1.2;
 
-    margin-bottom:10px;
-
-}
-
-.register-card p{
-
-    text-align:center;
-
-    color:#777;
-
-    margin-bottom:35px;
-
-}
-.input-group{
-
-    position:relative;
-
-    margin-bottom:22px;
+    margin: 0 0 20px;
 
 }
 
-.input-group i:first-child{
 
-    position:absolute;
+.register-left p {
 
-    left:18px;
+    max-width: 450px;
 
-    top:50%;
+    font-size: 16px;
 
-    transform:translateY(-50%);
+    line-height: 1.8;
 
-    color:#6C63FF;
+    margin: 0 0 35px;
+
+    color:
+        rgba(255,255,255,.88);
 
 }
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.feature-list {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+.feature-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+}
+
+
+.feature-item i {
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.register-right {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 60px;
+
+}
+
+
+.register-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+}
+
+
+.register-card h2 {
+
+    margin: 0 0 8px;
+
+    font-size: 32px;
+
+    color: #1e293b;
+
+}
+
+
+.register-card > p {
+
+    margin: 0 0 28px;
+
+    color: #666;
+
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.alert-error,
+.alert-success {
+
+    padding: 11px 14px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    text-align: center;
+
+}
+
+
+.alert-error {
+
+    color: #dc2626;
+
+    background:
+        rgba(220,38,38,.08);
+
+    border:
+        1px solid
+        rgba(220,38,38,.15);
+
+}
+
+
+.alert-success {
+
+    color: #059669;
+
+    background:
+        rgba(5,150,105,.08);
+
+    border:
+        1px solid
+        rgba(5,150,105,.15);
+
+}
+
+
+/* =========================================================
+   INPUT GROUP
+========================================================= */
+
+.input-group {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 17px;
+
+}
+
+
+.input-group > i {
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #888;
+
+    z-index: 3;
+
+}
+
+
+/* =========================================================
+   INPUT + SELECT
+========================================================= */
 
 .input-group input,
-.input-group select{
+.input-group select {
 
-    width:100%;
+    width: 100%;
 
-    padding:16px 18px 16px 50px;
+    height: 53px;
 
-    border:1px solid #ddd;
+    box-sizing: border-box;
 
-    border-radius:12px;
+    padding:
+        14px 45px;
 
-    outline:none;
+    border:
+        1px solid #ddd;
 
-    font-size:16px;
+    border-radius: 12px;
 
-    transition:.3s;
+    outline: none;
 
-    box-sizing:border-box;
+    background: #ffffff;
+
+    color: #333;
+
+    font-size: 14px;
+
+    transition:
+        .3s ease;
 
 }
+
 
 .input-group input:focus,
-.input-group select:focus{
+.input-group select:focus {
 
-    border-color:#6C63FF;
+    border-color:
+        #6C63FF;
 
-    box-shadow:0 0 10px rgba(108,99,255,.20);
-
-}
-/* ===============================
-        PASSWORD ICON
-================================ */
-
-.password-group{
-
-    position:relative;
+    box-shadow:
+        0 0 0 3px
+        rgba(108,99,255,.08);
 
 }
 
-.toggle-password{
 
-    position:absolute;
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
 
-    right:18px;
+.password-group {
 
-    top:50%;
-
-    transform:translateY(-50%);
-
-    cursor:pointer;
-
-    color:#777;
-
-    font-size:18px;
+    position: relative;
 
 }
 
-.toggle-password:hover{
 
-    color:#6C63FF;
+.password-group .toggle-password {
 
-}
+    position: absolute;
 
-/* ===============================
-        BUTTON
-================================ */
+    right: 14px;
 
-.register-submit-btn{
+    top: 50%;
 
-    width:100%;
+    transform:
+        translateY(-50%);
 
-    padding:16px;
+    width: 30px;
 
-    border:none;
+    height: 30px;
 
-    border-radius:12px;
+    display: flex;
 
-    background:linear-gradient(135deg,#6C63FF,#00BFA6);
+    align-items: center;
 
-    color:#fff;
+    justify-content: center;
 
-    font-size:17px;
+    cursor: pointer;
 
-    font-weight:600;
+    color: #888;
 
-    cursor:pointer;
-
-    transition:.35s;
-
-    margin-top:10px;
+    z-index: 5;
 
 }
 
-.register-submit-btn i{
 
-    margin-right:8px;
+.password-group
+.toggle-password:hover {
 
-}
-
-.register-submit-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 15px 30px rgba(108,99,255,.30);
+    color:
+        #6C63FF;
 
 }
 
-/* ===============================
-        LOGIN LINK
-================================ */
 
-.login-link{
+/* =========================================================
+   PASSWORD MESSAGE
+========================================================= */
 
-    text-align:center;
+#password-message,
+#password-strength {
 
-    margin-top:25px;
+    display: block;
 
-    color:#666;
+    font-size: 11px;
 
-}
+    margin-top: -10px;
 
-.login-link a{
-
-    color:#6C63FF;
-
-    text-decoration:none;
-
-    font-weight:600;
+    margin-bottom: 7px;
 
 }
 
-.login-link a:hover{
 
-    color:#00BFA6;
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
 
-}
+.register-submit-btn {
 
-/* ===============================
-        CARD HOVER
-================================ */
+    width: 100%;
 
-.register-card{
+    min-height: 50px;
 
-    transition:.4s;
+    margin-top: 10px;
 
-}
+    border: none;
 
-.register-card:hover{
+    border-radius: 12px;
 
-    transform:translateY(-8px);
+    background:
+        linear-gradient(
+            135deg,
+            #6C63FF,
+            #857dff,
+            #00BFA6
+        );
 
-}
-#password-message{
+    background-size: 200% 200%;
 
-    display:block;
+    color: #ffffff;
 
-    margin-top:-10px;
+    font-size: 15px;
 
-    margin-bottom:18px;
+    font-weight: 700;
 
-    font-size:14px;
+    cursor: pointer;
 
-    font-weight:600;
+    transition:
+        .35s ease;
 
-}
-#password-strength{
+    animation:
+        registerButtonGradient
+        5s ease infinite;
 
-    display:block;
-
-    margin-top:-10px;
-
-    margin-bottom:18px;
-
-    font-size:14px;
-
-    font-weight:600;
-
-}
-.alert-error{
-
-    background:#ffe5e5;
-    color:#c62828;
-    border:1px solid #ef9a9a;
-    padding:14px;
-    border-radius:10px;
-    margin-bottom:20px;
-    font-weight:500;
+    box-shadow:
+        0 10px 25px
+        rgba(108,99,255,.25);
 
 }
 
-.alert-success{
 
-    background:#e8f5e9;
-    color:#2e7d32;
-    border:1px solid #a5d6a7;
-    padding:14px;
-    border-radius:10px;
-    margin-bottom:20px;
-    font-weight:500;
+.register-submit-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 16px 32px
+        rgba(108,99,255,.35);
 
 }
-/* ===============================
-        RESPONSIVE
-================================ */
 
-@media(max-width:991px){
 
-    .register-container{
+.register-submit-btn:active {
 
-        grid-template-columns:1fr;
+    transform:
+        translateY(1px)
+        scale(.98);
 
-        gap:40px;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.login-link {
+
+    margin-top: 22px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+
+.login-link a {
+
+    color:
+        #6C63FF;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+
+.login-link a:hover {
+
+    color:
+        #00a88f;
+
+}
+
+
+/* =========================================================
+   BUTTON ANIMATION
+========================================================= */
+
+@keyframes registerButtonGradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* =========================================================
+   =========================================================
+   MOBILE VERSION
+   Redmi 6 → iPhone
+   =========================================================
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+
+    /* =====================================================
+       BODY / PAGE
+    ===================================================== */
+
+    body:has(.register-section) {
+
+        overflow-x: hidden;
+
+        background: #050714;
 
     }
 
-    .register-left{
 
-        text-align:center;
+    /* =====================================================
+       MAIN BACKGROUND
+    ===================================================== */
+
+    .register-section {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        padding:
+            25px 10px 35px;
+
+        box-sizing: border-box;
+
+        position: relative;
+
+        overflow: hidden;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        perspective: 1200px;
+
+        background:
+
+            radial-gradient(
+                circle at 15% 20%,
+                rgba(108,99,255,.28),
+                transparent 30%
+            ),
+
+            radial-gradient(
+                circle at 85% 80%,
+                rgba(0,191,166,.24),
+                transparent 32%
+            ),
+
+            linear-gradient(
+                135deg,
+                #030510,
+                #0b1028 48%,
+                #061d22
+            );
 
     }
 
-    .register-left h1{
 
-        font-size:42px;
+    /* =====================================================
+       HIDE LEFT SIDE
+    ===================================================== */
+
+    .register-left {
+
+        display: none !important;
+
+    }
+
+
+    /* =====================================================
+       HIDE FOOTER
+    ===================================================== */
+
+    body:has(.register-section) footer,
+    body:has(.register-section) .footer {
+
+        display: none !important;
+
+    }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
+    .register-container {
+
+        width: 100%;
+
+        max-width: 430px;
+
+        display: block;
+
+        background: transparent;
+
+        border-radius: 0;
+
+        overflow: visible;
+
+        box-shadow: none;
+
+        position: relative;
+
+        z-index: 10;
+
+        transform-style: preserve-3d;
+
+        animation:
+            registerContainerFloat
+            7s
+            ease-in-out
+            infinite;
+
+    }
+
+
+    /* =====================================================
+       RIGHT
+    ===================================================== */
+
+    .register-right {
+
+        width: 100%;
+
+        padding: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+    /* =====================================================
+       GLASS REGISTER CARD
+    ===================================================== */
+
+    .register-card {
+
+        width: 100%;
+
+        max-width: 430px;
+
+        box-sizing: border-box;
+
+        padding:
+            30px 22px 25px;
+
+        border-radius: 28px;
+
+        position: relative;
+
+        overflow: hidden;
+
+        background:
+
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,.15),
+                rgba(255,255,255,.045)
+            );
+
+        border:
+            1px solid
+            rgba(255,255,255,.20);
+
+        backdrop-filter:
+            blur(25px);
+
+        -webkit-backdrop-filter:
+            blur(25px);
+
+        box-shadow:
+
+            0 35px 80px
+            rgba(0,0,0,.55),
+
+            inset 0 1px 0
+            rgba(255,255,255,.25),
+
+            inset 0 -1px 0
+            rgba(255,255,255,.05);
+
+        transform-style:
+            preserve-3d;
+
+        animation:
+            registerCardEnter
+            .9s
+            cubic-bezier(.2,.8,.2,1);
+
+    }
+
+
+    /* =====================================================
+       GLASS SHINE
+    ===================================================== */
+
+    .register-card::before {
+
+        content: "";
+
+        position: absolute;
+
+        width: 180px;
+
+        height: 180px;
+
+        top: -105px;
+
+        right: -80px;
+
+        border-radius: 50%;
+
+        background:
+
+            radial-gradient(
+                circle,
+                rgba(255,255,255,.25),
+                transparent 70%
+            );
+
+        pointer-events: none;
+
+    }
+
+
+    .register-card::after {
+
+        content: "";
+
+        position: absolute;
+
+        width: 170px;
+
+        height: 170px;
+
+        bottom: -100px;
+
+        left: -80px;
+
+        border-radius: 50%;
+
+        background:
+
+            radial-gradient(
+                circle,
+                rgba(0,191,166,.20),
+                transparent 70%
+            );
+
+        pointer-events: none;
+
+    }
+
+
+    /* =====================================================
+       TITLE
+    ===================================================== */
+
+    .register-card h2 {
+
+        position: relative;
+
+        z-index: 5;
+
+        margin:
+            0 0 7px;
+
+        text-align: center;
+
+        color: #ffffff;
+
+        font-size: 28px;
+
+        line-height: 1.2;
+
+        font-weight: 800;
+
+        text-shadow:
+            0 5px 22px
+            rgba(108,99,255,.45);
+
+    }
+
+
+    .register-card > p {
+
+        position: relative;
+
+        z-index: 5;
+
+        margin:
+            0 0 25px;
+
+        text-align: center;
+
+        color:
+            rgba(255,255,255,.62);
+
+        font-size: 11px;
+
+        line-height: 1.5;
+
+    }
+
+
+    /* =====================================================
+       ALERT
+    ===================================================== */
+
+    .register-card
+    .alert-error,
+    .register-card
+    .alert-success {
+
+        position: relative;
+
+        z-index: 20;
+
+        font-size: 10px;
+
+        padding:
+            9px 10px;
+
+        margin-bottom: 13px;
+
+        border-radius: 10px;
+
+        backdrop-filter:
+            blur(12px);
+
+        -webkit-backdrop-filter:
+            blur(12px);
+
+    }
+
+
+    .register-card
+    .alert-error {
+
+        color:
+            #ffb5c2;
+
+        background:
+            rgba(255,60,90,.12);
+
+        border:
+            1px solid
+            rgba(255,70,100,.25);
+
+    }
+
+
+    .register-card
+    .alert-success {
+
+        color:
+            #9dffe9;
+
+        background:
+            rgba(0,191,166,.12);
+
+        border:
+            1px solid
+            rgba(0,191,166,.25);
+
+    }
+
+
+    /* =====================================================
+       INPUT GROUP
+    ===================================================== */
+
+    .register-card .input-group {
+
+        width: 100%;
+
+        height: 53px;
+
+        position: relative;
+
+        margin-bottom: 14px;
+
+        background: transparent !important;
+
+        border: none !important;
+
+        box-shadow: none !important;
+
+    }
+
+
+    /* =====================================================
+       INPUT ICON
+    ===================================================== */
+
+    .register-card
+    .input-group > i {
+
+        position: absolute;
+
+        left: 1px;
+
+        top: 19px;
+
+        z-index: 5;
+
+        color:
+            rgba(255,255,255,.55);
+
+        font-size: 12px;
+
+        transition:
+            .35s ease;
+
+    }
+
+
+    /* =====================================================
+       INPUT + SELECT
+    ===================================================== */
+
+    .register-card
+    .input-group input,
+    .register-card
+    .input-group select {
+
+        width: 100%;
+
+        height: 53px;
+
+        padding:
+            20px 38px 4px 26px !important;
+
+        box-sizing: border-box;
+
+        border: none !important;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.22) !important;
+
+        border-radius: 0 !important;
+
+        outline: none !important;
+
+        background:
+            transparent !important;
+
+        color:
+            #ffffff !important;
+
+        font-size: 12px;
+
+        box-shadow: none !important;
+
+        position: relative;
+
+        z-index: 3;
+
+    }
+
+
+    /* =====================================================
+       SELECT
+    ===================================================== */
+
+    .register-card
+    .input-group select {
+
+        padding-top: 5px !important;
+
+        padding-left: 26px !important;
+
+        color:
+            rgba(255,255,255,.85) !important;
+
+        appearance: none;
+
+        -webkit-appearance: none;
+
+    }
+
+
+    .register-card
+    .input-group select option {
+
+        background: #11152d;
+
+        color: #ffffff;
+
+    }
+
+
+    /* =====================================================
+       PLACEHOLDER
+    ===================================================== */
+
+    .register-card
+    .input-group input::placeholder {
+
+        color:
+            rgba(255,255,255,.55);
+
+        opacity: 1;
+
+        transition:
+            .35s ease;
+
+    }
+
+
+    .register-card
+    .input-group input:focus::placeholder {
+
+        opacity: .20;
+
+        transform:
+            translateY(-13px);
+
+        font-size: 9px;
+
+    }
+
+
+    /* =====================================================
+       ANIMATED UNDERLINE
+    ===================================================== */
+
+    .register-card
+    .input-group::after {
+
+        content: "";
+
+        position: absolute;
+
+        left: 100%;
+
+        bottom: 0;
+
+        width: 100%;
+
+        height: 2px;
+
+        z-index: 8;
+
+        background:
+
+            linear-gradient(
+                90deg,
+                #6C63FF,
+                #00BFA6,
+                #6C63FF
+            );
+
+        background-size:
+            200% 100%;
+
+        transition:
+            left .45s
+            cubic-bezier(.2,.8,.2,1);
+
+        box-shadow:
+            0 0 13px
+            rgba(108,99,255,.65);
+
+    }
+
+
+    .register-card
+    .input-group:focus-within::after {
+
+        left: 0;
+
+        animation:
+            registerBorderFlow
+            2s
+            linear
+            infinite;
+
+    }
+
+
+    /* =====================================================
+       ICON FOCUS
+    ===================================================== */
+
+    .register-card
+    .input-group:focus-within > i {
+
+        color:
+            #8e86ff;
+
+        transform:
+            translateY(-2px);
+
+        filter:
+            drop-shadow(
+                0 0 7px
+                rgba(108,99,255,.70)
+            );
+
+    }
+
+
+    /* =====================================================
+       PASSWORD EYE
+    ===================================================== */
+
+    .register-card
+    .password-group
+    .toggle-password {
+
+        position: absolute;
+
+        right: 1px;
+
+        top: 11px;
+
+        width: 31px;
+
+        height: 31px;
+
+        z-index: 15;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        color:
+            rgba(255,255,255,.52);
+
+        cursor: pointer;
+
+        transition:
+            .25s ease;
+
+    }
+
+
+    .register-card
+    .password-group
+    .toggle-password:hover {
+
+        color: #ffffff;
+
+        transform:
+            scale(1.08);
+
+    }
+
+
+    .register-card
+    .password-group
+    .toggle-password i {
+
+        font-size: 11px;
+
+    }
+
+
+    /* =====================================================
+       PASSWORD MESSAGE
+    ===================================================== */
+
+    .register-card
+    #password-message,
+    .register-card
+    #password-strength {
+
+        display: block;
+
+        position: relative;
+
+        z-index: 5;
+
+        font-size: 9px;
+
+        line-height: 1.3;
+
+        margin:
+            -5px 0 7px;
+
+        color:
+            rgba(255,255,255,.65);
+
+    }
+
+
+    /* =====================================================
+       REGISTER BUTTON
+    ===================================================== */
+
+    .register-card
+    .register-submit-btn {
+
+        position: relative;
+
+        z-index: 8;
+
+        width: 100%;
+
+        height: 48px;
+
+        margin-top: 8px;
+
+        border: none;
+
+        border-radius: 14px;
+
+        background:
+
+            linear-gradient(
+                135deg,
+                #6C63FF,
+                #8279ff,
+                #00BFA6
+            );
+
+        background-size:
+            200% 200%;
+
+        color: #ffffff;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        letter-spacing: .4px;
+
+        cursor: pointer;
+
+        box-shadow:
+
+            0 13px 30px
+            rgba(108,99,255,.35),
+
+            inset 0 1px 0
+            rgba(255,255,255,.25);
+
+        animation:
+            registerButtonGradient
+            4s ease infinite;
+
+        transition:
+            .35s ease;
+
+    }
+
+
+    .register-card
+    .register-submit-btn:hover {
+
+        transform:
+            translateY(-3px)
+            scale(1.01);
+
+        box-shadow:
+            0 18px 35px
+            rgba(108,99,255,.45);
+
+    }
+
+
+    .register-card
+    .register-submit-btn:active {
+
+        transform:
+            translateY(1px)
+            scale(.98);
+
+    }
+
+
+    /* =====================================================
+       LOGIN LINK
+    ===================================================== */
+
+    .register-card
+    .login-link {
+
+        position: relative;
+
+        z-index: 8;
+
+        margin-top: 18px;
+
+        text-align: center;
+
+        color:
+            rgba(255,255,255,.55);
+
+        font-size: 10px;
+
+    }
+
+
+    .register-card
+    .login-link a {
+
+        color:
+            #9d96ff;
+
+        font-weight: 700;
+
+        text-decoration: none;
+
+        transition:
+            .25s ease;
+
+    }
+
+
+    .register-card
+    .login-link a:hover {
+
+        color:
+            #00BFA6;
+
+    }
+
+
+    /* =====================================================
+       3D ROTATING CUBE
+       DIFFERENT FROM LOGIN PAGE
+    ===================================================== */
+
+    .register-section::before {
+
+        content: "";
+
+        position: absolute;
+
+        width: 95px;
+
+        height: 95px;
+
+        top: 9%;
+
+        right: 7%;
+
+        border:
+            1px solid
+            rgba(139,130,255,.35);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(108,99,255,.13),
+                rgba(0,191,166,.06)
+            );
+
+        box-shadow:
+
+            0 0 35px
+            rgba(108,99,255,.20),
+
+            inset 0 0 30px
+            rgba(255,255,255,.04);
+
+        backdrop-filter:
+            blur(4px);
+
+        transform-style:
+            preserve-3d;
+
+        animation:
+            registerCubeRotate
+            12s
+            linear
+            infinite;
+
+        pointer-events: none;
+
+        z-index: 1;
+
+    }
+
+
+    /* =====================================================
+       SECOND FLOATING CUBE / DEPTH SHADOW
+    ===================================================== */
+
+    .register-section::after {
+
+        content: "";
+
+        position: absolute;
+
+        width: 55px;
+
+        height: 55px;
+
+        bottom: 11%;
+
+        left: 8%;
+
+        border:
+            1px solid
+            rgba(0,191,166,.35);
+
+        background:
+            rgba(0,191,166,.04);
+
+        box-shadow:
+            0 0 30px
+            rgba(0,191,166,.18);
+
+        transform-style:
+            preserve-3d;
+
+        animation:
+            registerCubeSmall
+            9s
+            ease-in-out
+            infinite;
+
+        pointer-events: none;
+
+        z-index: 1;
+
+    }
+
+
+    /* =====================================================
+       CARD 3D PRESS
+    ===================================================== */
+
+    .register-card:active {
+
+        transform:
+
+            perspective(1000px)
+
+            rotateX(1deg)
+
+            translateY(1px)
+
+            scale(.995);
 
     }
 
 }
 
-@media(max-width:576px){
 
-    .register-section{
+/* =========================================================
+   VERY SMALL DEVICES
+   Redmi 6 / 320px – 380px
+========================================================= */
 
-        padding:40px 5%;
+@media (max-width: 380px) {
 
-    }
+    .register-section {
 
-    .register-card{
-
-        padding:30px 22px;
-
-    }
-
-    .register-left h1{
-
-        font-size:34px;
+        padding:
+            18px 8px 25px;
 
     }
 
-    .register-left p{
 
-        font-size:16px;
+    .register-container {
+
+        max-width: 100%;
+
+    }
+
+
+    .register-card {
+
+        padding:
+            26px 17px 21px;
+
+        border-radius: 24px;
+
+    }
+
+
+    .register-card h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .register-card > p {
+
+        font-size: 10px;
+
+        margin-bottom: 21px;
+
+    }
+
+
+    .register-card
+    .input-group {
+
+        height: 50px;
+
+        margin-bottom: 13px;
+
+    }
+
+
+    .register-card
+    .input-group input,
+    .register-card
+    .input-group select {
+
+        height: 50px;
+
+        font-size: 11px;
+
+        padding-left: 25px !important;
+
+    }
+
+
+    .register-card
+    .input-group > i {
+
+        left: 0;
+
+        top: 18px;
+
+        font-size: 11px;
+
+    }
+
+
+    .register-card
+    .input-group input::placeholder {
+
+        font-size: 11px;
+
+    }
+
+
+    .register-card
+    .password-group
+    .toggle-password {
+
+        right: 0;
+
+        top: 9px;
+
+    }
+
+
+    .register-card
+    .register-submit-btn {
+
+        height: 45px;
+
+        font-size: 11px;
+
+        border-radius: 13px;
+
+    }
+
+
+    .register-card
+    .login-link {
+
+        font-size: 9px;
+
+        margin-top: 16px;
+
+    }
+
+
+    /* Smaller 3D cube */
+
+    .register-section::before {
+
+        width: 65px;
+
+        height: 65px;
+
+        top: 7%;
+
+        right: 3%;
+
+    }
+
+
+    .register-section::after {
+
+        width: 42px;
+
+        height: 42px;
+
+        bottom: 8%;
+
+        left: 3%;
+
+    }
+
+}
+
+
+/* =========================================================
+   NORMAL MOBILE
+   381px – 767px
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 767px) {
+
+    .register-card {
+
+        padding:
+            32px 24px 27px;
+
+    }
+
+
+    .register-card h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .register-card > p {
+
+        font-size: 12px;
+
+    }
+
+
+    .register-card
+    .input-group input,
+    .register-card
+    .input-group select {
+
+        font-size: 13px;
+
+    }
+
+
+    .register-card
+    .register-submit-btn {
+
+        height: 50px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   3D CUBE ROTATION
+========================================================= */
+
+@keyframes registerCubeRotate {
+
+    0% {
+
+        transform:
+
+            perspective(700px)
+
+            rotateX(0deg)
+
+            rotateY(0deg)
+
+            rotateZ(0deg)
+
+            translate3d(0,0,0);
+
+    }
+
+    25% {
+
+        transform:
+
+            perspective(700px)
+
+            rotateX(90deg)
+
+            rotateY(90deg)
+
+            rotateZ(20deg)
+
+            translate3d(
+                -25px,
+                30px,
+                30px
+            );
+
+    }
+
+    50% {
+
+        transform:
+
+            perspective(700px)
+
+            rotateX(180deg)
+
+            rotateY(180deg)
+
+            rotateZ(45deg)
+
+            translate3d(
+                -5px,
+                60px,
+                55px
+            );
+
+    }
+
+    75% {
+
+        transform:
+
+            perspective(700px)
+
+            rotateX(270deg)
+
+            rotateY(270deg)
+
+            rotateZ(20deg)
+
+            translate3d(
+                25px,
+                25px,
+                30px
+            );
+
+    }
+
+    100% {
+
+        transform:
+
+            perspective(700px)
+
+            rotateX(360deg)
+
+            rotateY(360deg)
+
+            rotateZ(0deg)
+
+            translate3d(
+                0,
+                0,
+                0
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL CUBE MOVEMENT
+========================================================= */
+
+@keyframes registerCubeSmall {
+
+    0%,
+    100% {
+
+        transform:
+
+            perspective(600px)
+
+            rotateX(0deg)
+
+            rotateY(0deg)
+
+            translate3d(0,0,0)
+            scale(1);
+
+    }
+
+    25% {
+
+        transform:
+
+            perspective(600px)
+
+            rotateX(90deg)
+
+            rotateY(45deg)
+
+            translate3d(
+                25px,
+                -20px,
+                25px
+            )
+            scale(1.08);
+
+    }
+
+    50% {
+
+        transform:
+
+            perspective(600px)
+
+            rotateX(180deg)
+
+            rotateY(120deg)
+
+            translate3d(
+                50px,
+                -5px,
+                40px
+            )
+            scale(.92);
+
+    }
+
+    75% {
+
+        transform:
+
+            perspective(600px)
+
+            rotateX(270deg)
+
+            rotateY(220deg)
+
+            translate3d(
+                20px,
+                25px,
+                20px
+            )
+            scale(1.05);
+
+    }
+
+}
+
+
+/* =========================================================
+   CARD ENTRANCE
+========================================================= */
+
+@keyframes registerCardEnter {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+
+            perspective(1000px)
+
+            rotateX(12deg)
+
+            translateY(40px)
+
+            scale(.94);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+
+            perspective(1000px)
+
+            rotateX(0)
+
+            translateY(0)
+
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   CONTAINER FLOAT
+========================================================= */
+
+@keyframes registerContainerFloat {
+
+    0%,
+    100% {
+
+        transform:
+
+            translateY(0)
+            rotateX(0deg)
+            rotateY(0deg);
+
+    }
+
+    50% {
+
+        transform:
+
+            translateY(-7px)
+            rotateX(.5deg)
+            rotateY(-.5deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   INPUT BORDER FLOW
+========================================================= */
+
+@keyframes registerBorderFlow {
+
+    0% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    100% {
+
+        background-position:
+            200% 50%;
+
+    }
+
+}
+
+
+/* =========================================================
+   BUTTON GRADIENT
+========================================================= */
+
+@keyframes registerButtonGradient {
+
+    0% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+}
+
+/* =========================================================
+   REGISTER BUTTON CLICK FIX
+   Card will NOT move
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .register-card {
+        position: relative !important;
+        z-index: 20 !important;
+
+        /* Card movement completely disabled */
+        transform: none !important;
+
+        /* Remove card animation */
+        animation: none !important;
+
+        /* Keep glass effect */
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+
+        pointer-events: auto !important;
+    }
+
+
+    /* Make sure everything inside card is clickable */
+
+    .register-card form,
+    .register-card input,
+    .register-card select,
+    .register-card button,
+    .register-card .toggle-password,
+    .register-card a {
+        position: relative;
+        z-index: 30 !important;
+
+        pointer-events: auto !important;
+    }
+
+
+    /* Register button */
+
+    .register-submit-btn {
+
+        position: relative !important;
+
+        z-index: 50 !important;
+
+        pointer-events: auto !important;
+
+        cursor: pointer !important;
+
+        transform: none !important;
+    }
+
+
+    .register-submit-btn:hover {
+
+        transform: translateY(-2px) !important;
+
+    }
+
+
+    .register-submit-btn:active {
+
+        transform: scale(.98) !important;
+
+    }
+
+
+    /* Keep animated background objects behind card */
+
+    .register-section::before,
+    .register-section::after {
+
+        z-index: 1 !important;
+
+        pointer-events: none !important;
+
+    }
+
+
+    .register-container {
+
+        position: relative;
+
+        z-index: 10;
+
+    }
+
+
+    .register-right {
+
+        position: relative;
+
+        z-index: 20;
 
     }
 

@@ -1,3 +1,5 @@
+
+
 <?php
 
 session_start();
@@ -19,6 +21,17 @@ if($_SESSION["user_role"]!="admin"){
 include("../includes/admin_header.php");
 include("../includes/admin_sidebar.php");
 require_once("../config/database.php");
+$pending_query = mysqli_query(
+    $conn,
+    "SELECT COUNT(*) AS total
+     FROM users
+     WHERE status = 'pending'
+       AND role IN ('customer', 'decorator')"
+);
+
+$pending_data = mysqli_fetch_assoc($pending_query);
+
+$pending_requests = (int)$pending_data["total"];
 
 /* Total Customers */
 
@@ -57,14 +70,7 @@ FROM bookings
 ");
 
 $total_bookings = mysqli_fetch_assoc($booking_query)['total'];
-/* Total Bookings */
 
-$booking_query = mysqli_query($conn,"
-SELECT COUNT(*) AS total
-FROM bookings
-");
-
-$total_bookings = mysqli_fetch_assoc($booking_query)['total'];
 
 
 /*==========================================
@@ -173,6 +179,8 @@ LIMIT 4
 
     <div class="admin-cards">
 
+    
+
         <div class="admin-card">
 
             <i class="fas fa-users"></i>
@@ -220,6 +228,21 @@ LIMIT 4
             <p>Total Earnings</p>
 
         </div>
+        <div class="admin-card">
+
+    <i class="fas fa-user-clock"></i>
+
+    <h4>Pending Requests</h4>
+
+    <h2><?php echo $pending_requests; ?></h2>
+
+    <p>Awaiting Approval</p>
+
+    <a href="pending_requests.php" class="pending-btn">
+        Review Requests
+    </a>
+
+</div>
 
     </div>
     <div class="dashboard-box">

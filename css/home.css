@@ -194,171 +194,352 @@
 /* ===========================
     FEATURED DECORATORS
 =========================== */
+/* =========================================
+   FEATURED DECORATORS
+========================================= */
 
-.featured-decorators{
-
-    padding:100px 0;
-
-    background:#ffffff;
+.featured-decorators {
+    padding: 100px 0;
+    background: #ffffff;
 }
 
-.decorator-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-    gap:35px;
+.decorator-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
 }
 
-.decorator-card{
-
-    background:#fff;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-    transition:.35s;
+.decorator-slider {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
 }
 
-.decorator-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+.decorator-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
 }
 
-.decorator-card img{
-
-    width:100%;
-
-    height:280px;
-
-    object-fit:cover;
+.decorator-card {
+    flex: 0 0 calc((100% - 60px) / 3);
+    min-width: 0;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:  0 8px 25px rgba(15, 23, 42, 0.12),
+        0 2px 8px rgba(15, 23, 42, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.decorator-content{
-
-    padding:25px;
+.decorator-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
 }
 
-.decorator-content h3{
 
-    color:#6C63FF;
+/* =========================================
+   DECORATOR IMAGE
+========================================= */
 
-    margin-bottom:10px;
-
-    font-size:26px;
+.decorator-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f1f3f6;
 }
 
-.rating{
-
-    color:#f4b400;
-
-    font-size:20px;
-
-    margin-bottom:15px;
+.decorator-photo,
+.decorator-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
 }
 
-.decorator-content p{
-
-    color:#555;
-
-    margin-bottom:10px;
-
-    line-height:1.7;
+.decorator-card:hover .decorator-photo {
+    transform: scale(1.06);
 }
 
-.profile-btn{
 
-    display:inline-block;
+/* =========================================
+   DECORATOR CONTENT
+========================================= */
 
-    margin-top:20px;
-
-    padding:12px 28px;
-
-    background:#6C63FF;
-
-    color:#fff;
-
-    border-radius:30px;
-
-    transition:.3s;
+.decorator-content {
+    padding: 25px;
 }
 
-.profile-btn:hover{
+.decorator-content h3 {
+    font-size: 22px;
+    color: #6c63ff;
+    margin: 0 0 7px;
+}
 
-    background:#00BFA6;
+.decorator-company {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #f5b301;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.decorator-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   PROFILE BUTTON
+========================================= */
+
+.profile-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #6c63ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    background: #574fd6;
+}
+
+
+/* =========================================
+   ARROW BUTTONS
+========================================= */
+
+.decorator-nav {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #6c63ff;
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.decorator-nav:hover {
+    background: #574fd6;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
+}
+
+.decorator-nav:active {
+    transform: scale(0.92);
+}
+
+.decorator-nav:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* =========================================
+   NO DECORATORS
+========================================= */
+
+.no-decorators {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    color: #777;
 }
 /* ===========================
         WHY CHOOSE US
 =========================== */
 
-.why-us{
+/* =========================================================
+   STYLEDECOR - WHY CHOOSE US
+========================================================= */
 
-    padding:100px 0;
-
-    background:#f8f9fc;
+.sd-why-section {
+    padding: 100px 0;
+    background: #f8f9fc;
 }
 
-.why-grid{
 
-    display:grid;
+/* ===============================
+   GRID
+================================ */
 
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:30px;
+.sd-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 45px;
 }
 
-.why-card{
 
-    background:#fff;
+/* ===============================
+   CARD
+================================ */
 
-    padding:40px 30px;
+.sd-why-card {
+    background: #ffffff;
+    padding: 42px 28px;
+    border-radius: 22px;
+    text-align: center;
 
-    border-radius:20px;
+    border: 1px solid rgba(108, 99, 255, 0.08);
 
-    text-align:center;
+    box-shadow:
+        0 10px 35px rgba(22, 20, 54, 0.07);
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
 
-    transition:.3s;
+    position: relative;
+    overflow: hidden;
 }
 
-.why-card:hover{
 
-    transform:translateY(-10px);
+/* Top decorative line */
 
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+.sd-why-card::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #8f88ff
+    );
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.35s ease;
 }
 
-.why-card i{
 
-    font-size:55px;
+/* ===============================
+   HOVER
+================================ */
 
-    color:#6C63FF;
+.sd-why-card:hover {
+    transform: translateY(-10px);
 
-    margin-bottom:25px;
+    box-shadow:
+        0 20px 50px rgba(22, 20, 54, 0.13);
+
+    border-color:
+        rgba(108, 99, 255, 0.18);
 }
 
-.why-card h3{
 
-    margin-bottom:15px;
-
-    font-size:24px;
-
-    color:#222;
+.sd-why-card:hover::before {
+    transform: scaleX(1);
 }
 
-.why-card p{
 
-    color:#666;
+/* ===============================
+   ICON
+================================ */
 
-    line-height:1.8;
+.sd-why-card i {
+    width: 78px;
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    border-radius: 20px;
+
+    font-size: 32px;
+
+    color: #6c63ff;
+
+    background:
+        rgba(108, 99, 255, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        color 0.35s ease;
 }
+
+
+.sd-why-card:hover i {
+    transform: scale(1.08) rotate(-3deg);
+
+    background: #6c63ff;
+
+    color: #ffffff;
+}
+
+
+/* ===============================
+   TITLE
+================================ */
+
+.sd-why-card h3 {
+    margin: 0 0 14px;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    color: #22213d;
+}
+
+
+/* ===============================
+   DESCRIPTION
+================================ */
+
+.sd-why-card p {
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    color: #707087;
+}
+
+
+
 /* ===========================
       HOW IT WORKS
 =========================== */
@@ -463,73 +644,160 @@
     background:#f8f9fc;
 }
 
-.review-grid{
+/* =========================================
+   CUSTOMER REVIEW SLIDER
+========================================= */
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-    gap:30px;
+.review-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
 }
 
-.review-card{
-
-    background:#fff;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    transition:.3s;
+.review-slider {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
 }
 
-.review-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+.review-track {
+    display: flex;
+   
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
 }
 
-.review-card img{
+.review-card {
+    flex: 0 0 calc((100% - 60px) / 3);
+    min-width: 0;
 
-    width:90px;
+    background: #fff;
 
-    height:90px;
+    padding: 35px;
 
-    border-radius:50%;
+    border-radius: 20px;
 
-    object-fit:cover;
+    text-align: center;
 
-    margin:auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
 
-    margin-bottom:20px;
+    transition: transform .3s ease,
+                box-shadow .3s ease;
 }
 
-.review-card h3{
+.review-card:hover {
+    transform: translateY(-8px);
 
-    margin-bottom:10px;
-
-    color:#6C63FF;
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
 }
 
-.stars{
 
-    color:#FFD700;
+/* =========================================
+   REVIEW IMAGE
+========================================= */
 
-    font-size:20px;
+.review-card img {
+    width: 90px;
+    height: 90px;
 
-    margin-bottom:15px;
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto 20px;
 }
 
-.review-card p{
 
-    color:#666;
+/* =========================================
+   REVIEW TEXT
+========================================= */
 
-    line-height:1.8;
+.review-card h3 {
+    margin-bottom: 10px;
+    color: #6C63FF;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   REVIEW ARROWS
+========================================= */
+
+.review-nav {
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #6C63FF;
+
+    color: #fff;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+.review-nav:hover {
+    background: #574FD6;
+
+    transform: scale(1.1);
+
+    box-shadow: 0 8px 20px rgba(108,99,255,.3);
+}
+
+.review-nav:active {
+    transform: scale(.92);
+}
+
+.review-nav:disabled {
+    opacity: .35;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+.no-reviews {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    color: #777;
 }
 /* ===========================
         CALL TO ACTION
@@ -617,4 +885,2511 @@
     background:#fff;
 
     color:#6C63FF;
+}
+
+/* =====================================================
+   MOBILE HOME PAGE
+   360px - 767px
+===================================================== */
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+
+    /* =================================================
+       HERO / BANNER
+       40%
+    ================================================= */
+
+    .hero{
+
+        width:100% !important;
+
+        height:40vh !important;
+        min-height:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        position:relative !important;
+
+        background-position:center !important;
+        background-size:cover !important;
+
+        display:flex !important;
+        align-items:center !important;
+
+        overflow:hidden !important;
+    }
+
+
+    .hero-overlay{
+
+        position:absolute !important;
+
+        inset:0 !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,.68),
+                rgba(0,0,0,.35),
+                rgba(0,0,0,.15)
+            ) !important;
+
+        z-index:1 !important;
+    }
+
+
+    .hero .container{
+
+        width:100% !important;
+        max-width:none !important;
+
+        height:100% !important;
+
+        padding:0 18px !important;
+
+        margin:0 !important;
+
+        display:flex !important;
+        align-items:center !important;
+
+        position:relative !important;
+
+        z-index:2 !important;
+    }
+
+
+    .hero-content{
+
+        width:72% !important;
+
+        padding:0 !important;
+
+        margin:0 !important;
+
+        text-align:left !important;
+    }
+
+
+    /* Banner title */
+
+    .hero-content h1{
+
+        margin:0 0 7px !important;
+
+        padding:0 !important;
+
+        font-size:23px !important;
+
+        line-height:1.12 !important;
+
+        font-weight:700 !important;
+
+        color:#ffffff !important;
+    }
+
+
+    /* Banner subtitle */
+
+    .hero-content p{
+
+        margin:0 0 10px !important;
+
+        padding:0 !important;
+
+        font-size:9px !important;
+
+        line-height:1.4 !important;
+
+        color:rgba(255,255,255,.88) !important;
+
+        display:-webkit-box !important;
+
+        
+
+        -webkit-box-orient:vertical !important;
+
+        overflow:hidden !important;
+    }
+
+
+    /* =================================================
+       HERO BUTTONS
+    ================================================= */
+
+    .hero-buttons{
+
+        display:flex !important;
+
+        align-items:center !important;
+
+        gap:6px !important;
+
+        flex-wrap:nowrap !important;
+
+    }
+
+
+    .hero-buttons a{
+
+        padding:7px 10px !important;
+
+        font-size:9px !important;
+
+        line-height:1 !important;
+
+        border-radius:18px !important;
+
+        white-space:nowrap !important;
+    }
+
+
+
+    /* =================================================
+       CATEGORIES SECTION
+       
+       Total = 50%
+       
+       10% heading
+       40% cards
+    ================================================= */
+
+}
+/* =========================================================
+   MOBILE RESPONSIVE
+   381px → 767px
+   Categories + Decorator Slider + Featured Decorators
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 767px) {
+
+
+    /* =====================================================
+       =====================================================
+       CATEGORIES SECTION
+       =====================================================
+    ===================================================== */
+
+    .categories {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        padding: 0 !important;
+
+        margin: 0 0 30px !important;
+
+        overflow: visible !important;
+
+        box-sizing: border-box !important;
+
+        background:
+            linear-gradient(
+                135deg,
+                #fff3f7 0%,
+                #f5f1ff 48%,
+                #eef8ff 100%
+            ) !important;
+
+        position: relative !important;
+    }
+
+
+    /* =====================================================
+       CATEGORIES CONTAINER
+    ===================================================== */
+
+    .categories > .container {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        max-width: none !important;
+
+        padding: 0 12px !important;
+
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       OUR CATEGORIES TITLE
+    ===================================================== */
+
+    .categories .section-title {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 100px !important;
+
+        padding: 20px 10px !important;
+
+        margin: 20px 0 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        position: relative !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+
+        background:
+            radial-gradient(
+                circle at 0% 100%,
+                rgba(255, 72, 129, 0.18),
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 100% 0%,
+                rgba(108, 99, 255, 0.18),
+                transparent 35%
+            ),
+            linear-gradient(
+                135deg,
+                #fff8fa,
+                #f8f4ff,
+                #f1faff
+            ) !important;
+
+        border-radius: 16px !important;
+
+        box-shadow:
+            0 5px 18px rgba(108, 99, 255, 0.08) !important;
+    }
+
+
+    /* =====================================================
+       CATEGORIES DECORATIVE CIRCLE
+    ===================================================== */
+
+    .categories .section-title::after {
+
+        content: "" !important;
+
+        position: absolute !important;
+
+        width: 90px !important;
+
+        height: 90px !important;
+
+        right: -45px !important;
+
+        top: -50px !important;
+
+        border-radius: 50% !important;
+
+        background:
+            rgba(108, 99, 255, 0.14) !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       CATEGORIES COLOR LINE
+    ===================================================== */
+
+    .categories .section-title::before {
+
+        content: "" !important;
+
+        width: 35px !important;
+
+        height: 3px !important;
+
+        margin-bottom: 6px !important;
+
+        border-radius: 10px !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                #ff4f8b,
+                #6c63ff,
+                #00bfa6
+            ) !important;
+
+        flex-shrink: 0 !important;
+
+        position: relative !important;
+
+        z-index: 2 !important;
+    }
+
+
+    /* =====================================================
+       CATEGORIES HEADING
+    ===================================================== */
+
+    .categories .section-title h2 {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        font-size: 19px !important;
+
+        line-height: 1.2 !important;
+
+        font-weight: 700 !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                #ff3f81,
+                #6c63ff,
+                #4d8cff
+            ) !important;
+
+        -webkit-background-clip: text !important;
+
+        background-clip: text !important;
+
+        -webkit-text-fill-color: transparent !important;
+    }
+
+
+    /* =====================================================
+       CATEGORIES DESCRIPTION
+    ===================================================== */
+
+    .categories .section-title p {
+
+        margin: 5px 0 0 !important;
+
+        padding: 0 !important;
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        font-size: 9px !important;
+
+        line-height: 1.3 !important;
+
+        color: #64748b !important;
+
+        max-width: 90% !important;
+    }
+
+
+    /* =====================================================
+       CATEGORY GRID
+    ===================================================== */
+
+    .categories .category-grid {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) !important;
+
+        grid-template-rows:
+            repeat(2, 110px) !important;
+
+        gap: 8px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       CATEGORY CARD
+    ===================================================== */
+
+    .categories .category-card {
+
+        width: 100% !important;
+
+        height: 110px !important;
+
+        min-width: 0 !important;
+
+        min-height: 110px !important;
+
+        padding: 7px !important;
+
+        margin: 0 !important;
+
+        border-radius: 13px !important;
+
+        background: #ffffff !important;
+
+        border:
+            1px solid rgba(
+                108,
+                99,
+                255,
+                0.08
+            ) !important;
+
+        box-shadow:
+            0 3px 12px
+            rgba(15, 23, 42, 0.07) !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+
+        transition: none !important;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       CATEGORY CARD HOVER COMPLETELY OFF
+    ===================================================== */
+
+    .categories .category-card:hover {
+
+        transform: none !important;
+
+        background: #ffffff !important;
+
+        box-shadow:
+            0 3px 12px
+            rgba(15, 23, 42, 0.07) !important;
+
+        border-color:
+            rgba(108, 99, 255, 0.08) !important;
+
+        transition: none !important;
+
+        cursor: default !important;
+    }
+
+
+    /* =====================================================
+       CATEGORY ICON
+    ===================================================== */
+
+    .categories .category-icon {
+
+        width: 32px !important;
+
+        height: 32px !important;
+
+        min-width: 32px !important;
+
+        margin: 0 0 5px !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        border-radius: 50% !important;
+
+        background: #f1efff !important;
+
+        font-size: 18px !important;
+
+        line-height: 1 !important;
+
+        transition: none !important;
+
+        transform: none !important;
+    }
+
+
+    /* Icon hover OFF */
+
+    .categories .category-icon:hover {
+
+        background: #f1efff !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       CATEGORY TITLE
+    ===================================================== */
+
+    .categories .category-card h3 {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        font-size: 10px !important;
+
+        line-height: 1.2 !important;
+
+        font-weight: 600 !important;
+
+        color: #1e293b !important;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       HIDE CATEGORY DESCRIPTION
+    ===================================================== */
+
+    .categories .category-card p {
+
+        display: none !important;
+    }
+
+
+
+    /* =====================================================
+       =====================================================
+       DECORATOR SLIDER
+       =====================================================
+    ===================================================== */
+
+
+    .decorator-slider {
+
+        width: 100% !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .decorator-track {
+
+        display: flex !important;
+
+        width: 100% !important;
+
+        transition: none;
+    }
+
+
+    /* =====================================================
+       DECORATOR CARD
+    ===================================================== */
+
+    .decorator-card {
+
+        flex: 0 0 100% !important;
+
+        max-width: 100% !important;
+
+        height: 500px !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        box-sizing: border-box !important;
+
+        transition: none !important;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       DECORATOR IMAGE
+    ===================================================== */
+
+    .decorator-image {
+
+        width: 100% !important;
+
+        height: 50% !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .decorator-photo {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        display: block !important;
+
+        object-fit: cover !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+
+        border: none !important;
+
+        border-radius: 0 !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       DECORATOR PHOTO HOVER OFF
+    ===================================================== */
+
+    .decorator-photo:hover {
+
+        transform: none !important;
+
+        box-shadow: none !important;
+
+        filter: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       DECORATOR CONTENT
+    ===================================================== */
+
+    .decorator-content {
+
+        height: 45% !important;
+
+        padding: 15px 10px !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        justify-content: space-between !important;
+
+        align-items: center !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       DECORATOR NAME
+    ===================================================== */
+
+    .decorator-content h3 {
+
+        font-size: 18px !important;
+
+        margin: 0 !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       COMPANY + DETAILS
+    ===================================================== */
+
+    .decorator-company,
+    .decorator-content > p {
+
+        font-size: 12px !important;
+
+        margin: 2px 0 !important;
+
+        line-height: 1.3 !important;
+    }
+
+
+    /* =====================================================
+       RATING
+    ===================================================== */
+
+    .rating {
+
+        font-size: 14px !important;
+
+        margin: 2px 0 !important;
+    }
+
+
+    /* =====================================================
+       PROFILE BUTTON
+    ===================================================== */
+
+    .profile-btn {
+
+        padding: 9px 24px !important;
+
+        font-size: 13px !important;
+
+        display: inline-block !important;
+
+        text-decoration: none !important;
+
+        transition: none !important;
+
+        transform: none !important;
+    }
+
+
+    /* Profile button hover OFF */
+
+    .profile-btn:hover {
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+
+    /* =====================================================
+       =====================================================
+       FEATURED DECORATORS TITLE
+       =====================================================
+    ===================================================== */
+
+
+    .featured-decorators .section-title {
+
+        width: 100% !important;
+
+        padding: 24px 18px !important;
+
+        box-sizing: border-box !important;
+
+        text-align: center !important;
+
+        background:
+            radial-gradient(
+                circle at 0% 100%,
+                rgba(255, 92, 141, 0.28),
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 100% 0%,
+                rgba(113, 88, 255, 0.28),
+                transparent 35%
+            ),
+            linear-gradient(
+                135deg,
+                #fff0f5 0%,
+                #f5efff 45%,
+                #eef8ff 100%
+            ) !important;
+
+        border:
+            1px solid
+            rgba(255, 255, 255, 0.8) !important;
+
+        border-radius: 18px !important;
+
+        box-shadow:
+            0 8px 25px
+            rgba(255, 92, 141, 0.12),
+            0 4px 18px
+            rgba(113, 88, 255, 0.10) !important;
+
+        position: relative !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       FEATURED LEFT DECORATION
+    ===================================================== */
+
+    .featured-decorators .section-title::before {
+
+        content: "" !important;
+
+        position: absolute !important;
+
+        width: 130px !important; 
+
+        height: 130px !important;
+
+        left: -75px !important;
+
+        bottom: -75px !important;
+
+        background:
+            rgba(255, 71, 126, 0.18) !important;
+
+        border-radius: 50% !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       FEATURED RIGHT DECORATION
+    ===================================================== */
+
+    .featured-decorators .section-title::after {
+
+        content: "" !important;
+
+        position: absolute !important;
+
+        width: 120px !important;
+
+        height: 120px !important;
+
+        right: -65px !important;
+
+        top: -65px !important;
+
+        background:
+            rgba(105, 82, 255, 0.18) !important;
+
+        border-radius: 50% !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       FEATURED HEADING
+    ===================================================== */
+
+    .featured-decorators .section-title h2 {
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        margin: 0 0 8px !important;
+
+        font-size:
+            clamp(21px, 6vw, 25px) !important;
+
+        line-height: 1.3 !important;
+
+        font-weight: 700 !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                #ff3f81,
+                #8a5cf6,
+                #4d8cff
+            ) !important;
+
+        -webkit-background-clip: text !important;
+
+        background-clip: text !important;
+
+        -webkit-text-fill-color: transparent !important;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+    }
+
+
+    /* =====================================================
+       FEATURED DESCRIPTION
+    ===================================================== */
+
+    .featured-decorators .section-title p {
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        width: 100% !important;
+
+        max-width: 520px !important;
+
+        margin: 0 auto !important;
+
+        font-size:
+            clamp(12px, 3.5vw, 14px) !important;
+
+        line-height: 1.55 !important;
+
+        color: #625b72 !important;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+    }
+
+
+    /* =====================================================
+       FEATURED CARD HOVER OFF
+    ===================================================== */
+
+  /* =========================================================
+   FEATURED DECORATORS
+   SMOOTH SLIDER MOVEMENT
+   Hover = No Effect
+   Button Click = Smooth Movement
+========================================================= */
+
+
+/* Slider viewport */
+
+.featured-decorators .decorator-slider {
+    overflow: hidden !important;
+}
+
+
+/* Track moves smoothly when JS changes transform */
+
+.featured-decorators .decorator-track {
+    display: flex !important;
+
+    transition:
+        transform 0.5s ease-in-out !important;
+
+    will-change: transform;
+}
+
+
+/* Card itself does NOT move on hover */
+
+.featured-decorators .decorator-card {
+    transition: none !important;
+
+    transform: none !important;
+}
+
+
+/* Hover completely disabled */
+
+.featured-decorators .decorator-card:hover {
+    transform: none !important;
+
+    box-shadow:
+        0 3px 12px
+        rgba(15, 23, 42, 0.07) !important;
+
+    transition: none !important;
+}
+
+
+/* Image doesn't zoom on hover */
+
+.featured-decorators .decorator-image,
+.featured-decorators .decorator-photo {
+
+    transform: none !important;
+
+    transition: none !important;
+}
+
+
+.featured-decorators .decorator-image:hover,
+.featured-decorators .decorator-photo:hover {
+
+    transform: none !important;
+
+    transition: none !important;
+
+    filter: none !important;
+}
+
+
+/* Content doesn't move on hover */
+
+.featured-decorators .decorator-content {
+
+    transform: none !important;
+
+    transition: none !important;
+}
+
+
+.featured-decorators .decorator-content:hover {
+
+    transform: none !important;
+
+    transition: none !important;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTON
+   Button itself can have a tiny press effect
+========================================================= */
+
+/* =========================================================
+   DECORATOR NAVIGATION ARROWS
+   ARROW FIXED - CARD SLIDES SMOOTHLY
+========================================================= */
+
+.featured-decorators .decorator-nav {
+
+    transform: translateY(-50%) !important;
+
+    transition: none !important;
+
+    cursor: pointer;
+}
+
+
+/* Arrow hover করলে নড়বে না */
+
+.featured-decorators .decorator-nav:hover {
+
+    transform: translateY(-50%) !important;
+
+    transition: none !important;
+}
+
+
+/* Arrow click করলেও নড়বে না */
+
+.featured-decorators .decorator-nav:active {
+
+    transform: translateY(-50%) !important;
+
+    transition: none !important;
+}
+
+
+/* =========================================================
+   ONLY CARD TRACK MOVES
+========================================================= */
+
+.featured-decorators .decorator-track {
+
+    transition:
+        transform 0.5s ease-in-out !important;
+
+    will-change: transform;
+}
+
+
+/* Card নিজে hover করলে নড়বে না */
+
+.featured-decorators .decorator-card {
+
+    transition: none !important;
+
+    transform: none !important;
+}
+
+
+.featured-decorators .decorator-card:hover {
+
+    transition: none !important;
+
+    transform: none !important;
+}
+
+}
+
+/* =========================================================
+   WHY CHOOSE STYLEDECOR
+   MOBILE RESPONSIVE
+   381px → 767px
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 767px) {
+
+
+    /* =====================================================
+       MAIN SECTION
+    ===================================================== */
+
+    .sd-why-section {
+
+        width: 100% !important;
+
+        height: 100vh !important;
+
+        min-height: 0 !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        background:
+            linear-gradient(
+                135deg,
+                #fff3f7 0%,
+                #f5f1ff 48%,
+                #eef8ff 100%
+            ) !important;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
+    .sd-why-section > .container {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        max-width: none !important;
+
+        padding: 0 12px !important;
+
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       TITLE AREA
+       35%
+    ===================================================== */
+
+    .sd-why-section .section-title {
+
+        width: 100% !important;
+
+        height: 35% !important;
+
+        min-height: 0 !important;
+
+        padding: 20px 14px !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        position: relative !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 18px !important;
+
+        background:
+            radial-gradient(
+                circle at 0% 100%,
+                rgba(255, 92, 141, 0.28),
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 100% 0%,
+                rgba(113, 88, 255, 0.28),
+                transparent 35%
+            ),
+            linear-gradient(
+                135deg,
+                #fff0f5 0%,
+                #f5efff 45%,
+                #eef8ff 100%
+            ) !important;
+
+        box-shadow:
+            0 8px 25px
+            rgba(255, 92, 141, 0.10),
+            0 4px 18px
+            rgba(113, 88, 255, 0.09) !important;
+    }
+
+
+    /* =====================================================
+       TITLE DECORATIVE LEFT
+    ===================================================== */
+
+    .sd-why-section .section-title::before {
+
+        content: "" !important;
+
+        position: absolute !important;
+
+        width: 130px !important;
+
+        height: 130px !important;
+
+        left: -75px !important;
+
+        bottom: -75px !important;
+
+        background:
+            rgba(255, 71, 126, 0.18) !important;
+
+        border-radius: 50% !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       TITLE DECORATIVE RIGHT
+    ===================================================== */
+
+    .sd-why-section .section-title::after {
+
+        content: "" !important;
+
+        position: absolute !important;
+
+        width: 120px !important;
+
+        height: 120px !important;
+
+        right: -65px !important;
+
+        top: -65px !important;
+
+        background:
+            rgba(105, 82, 255, 0.18) !important;
+
+        border-radius: 50% !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       HEADING
+    ===================================================== */
+
+    .sd-why-section .section-title h2 {
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        margin: 0 0 8px !important;
+
+        padding: 0 !important;
+
+        font-size:
+            clamp(21px, 6vw, 25px) !important;
+
+        line-height: 1.3 !important;
+
+        font-weight: 700 !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                #ff3f81,
+                #8a5cf6,
+                #4d8cff
+            ) !important;
+
+        -webkit-background-clip: text !important;
+
+        background-clip: text !important;
+
+        -webkit-text-fill-color: transparent !important;
+    }
+
+
+    /* =====================================================
+       TITLE DESCRIPTION
+    ===================================================== */
+
+    .sd-why-section .section-title p {
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        width: 100% !important;
+
+        max-width: 520px !important;
+
+        margin: 0 auto !important;
+
+        padding: 0 !important;
+
+        font-size:
+            clamp(12px, 3.5vw, 14px) !important;
+
+        line-height: 1.55 !important;
+
+        color: #625b72 !important;
+    }
+
+
+    /* =====================================================
+       WHY GRID
+       65%
+    ===================================================== */
+
+    .sd-why-section .sd-why-grid {
+
+        width: 100% !important;
+
+        height: 65% !important;
+
+        padding: 10px 0 !important;
+
+        margin: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        grid-template-rows:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 10px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       WHY CARD
+    ===================================================== */
+
+    .sd-why-section .sd-why-card {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        min-width: 0 !important;
+
+        min-height: 0 !important;
+
+        padding: 14px 10px !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        border-radius: 15px !important;
+
+        background: #ffffff !important;
+
+        border:
+            1px solid
+            rgba(108, 99, 255, 0.08) !important;
+
+        box-shadow:
+            0 4px 14px
+            rgba(15, 23, 42, 0.07) !important;
+
+        transition: none !important;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       CARD HOVER COMPLETELY OFF
+    ===================================================== */
+
+    .sd-why-section .sd-why-card:hover {
+
+        transform: none !important;
+
+        background: #ffffff !important;
+
+        box-shadow:
+            0 4px 14px
+            rgba(15, 23, 42, 0.07) !important;
+
+        border-color:
+            rgba(108, 99, 255, 0.08) !important;
+
+        transition: none !important;
+
+        cursor: default !important;
+    }
+
+
+    /* =====================================================
+       ICON
+    ===================================================== */
+
+    .sd-why-section .sd-why-card i {
+
+        width: 42px !important;
+
+        height: 42px !important;
+
+        margin: 0 0 8px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        border-radius: 50% !important;
+
+        background:
+            linear-gradient(
+                135deg,
+                #ffe8f0,
+                #eee9ff
+            ) !important;
+
+        color: #6c63ff !important;
+
+        font-size: 19px !important;
+
+        flex-shrink: 0 !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* Icon hover OFF */
+
+    .sd-why-section .sd-why-card:hover i {
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       CARD TITLE
+    ===================================================== */
+
+    .sd-why-section .sd-why-card h3 {
+
+        margin: 0 0 5px !important;
+
+        padding: 0 !important;
+
+        font-size:
+            clamp(12px, 3.5vw, 15px) !important;
+
+        line-height: 1.25 !important;
+
+        font-weight: 700 !important;
+
+        color: #1e293b !important;
+    }
+
+
+    /* =====================================================
+       CARD DESCRIPTION
+    ===================================================== */
+
+    .sd-why-section .sd-why-card p {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        font-size:
+            clamp(9px, 2.7vw, 11px) !important;
+
+        line-height: 1.45 !important;
+
+        color: #64748b !important;
+
+        max-width: 95% !important;
+    }
+
+}
+/* =========================================================
+   HOW IT WORKS
+   MOBILE RESPONSIVE
+   381px → 767px
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 767px) {
+
+
+    /* =====================================================
+       MAIN SECTION
+    ===================================================== */
+
+    .how-it-works {
+
+        width: 100% !important;
+
+        height: 100vh !important;
+
+        min-height: 0 !important;
+
+        padding: 0 !important;
+
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        background:
+            linear-gradient(
+                135deg,
+                #fff3f7 0%,
+                #f5f1ff 48%,
+                #eef8ff 100%
+            ) !important;
+
+        position: relative !important;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
+    .how-it-works > .container {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        max-width: none !important;
+
+        padding: 0 12px !important;
+
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       TITLE AREA
+       35%
+    ===================================================== */
+
+    .how-it-works .section-title {
+
+        width: 100% !important;
+
+        height: 35% !important;
+
+        min-height: 0 !important;
+
+        padding: 20px 14px !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        position: relative !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 18px !important;
+
+        background:
+            radial-gradient(
+                circle at 0% 100%,
+                rgba(255, 92, 141, 0.28),
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 100% 0%,
+                rgba(113, 88, 255, 0.28),
+                transparent 35%
+            ),
+            linear-gradient(
+                135deg,
+                #fff0f5 0%,
+                #f5efff 45%,
+                #eef8ff 100%
+            ) !important;
+
+        box-shadow:
+            0 8px 25px
+            rgba(255, 92, 141, 0.10),
+            0 4px 18px
+            rgba(113, 88, 255, 0.09) !important;
+    }
+
+
+    /* =====================================================
+       COLORFUL DECORATIVE CIRCLE - LEFT
+    ===================================================== */
+
+    .how-it-works .section-title::before {
+
+        content: "" !important;
+
+        position: absolute !important;
+
+        width: 130px !important;
+
+        height: 130px !important;
+
+        left: -75px !important;
+
+        bottom: -75px !important;
+
+        background:
+            rgba(255, 71, 126, 0.18) !important;
+
+        border-radius: 50% !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       COLORFUL DECORATIVE CIRCLE - RIGHT
+    ===================================================== */
+
+    .how-it-works .section-title::after {
+
+        content: "" !important;
+
+        position: absolute !important;
+
+        width: 120px !important;
+
+        height: 120px !important;
+
+        right: -65px !important;
+
+        top: -65px !important;
+
+        background:
+            rgba(105, 82, 255, 0.18) !important;
+
+        border-radius: 50% !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       HEADING
+    ===================================================== */
+
+    .how-it-works .section-title h2 {
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        margin: 0 0 8px !important;
+
+        padding: 0 !important;
+
+        font-size:
+            clamp(21px, 6vw, 25px) !important;
+
+        line-height: 1.3 !important;
+
+        font-weight: 700 !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                #ff3f81,
+                #8a5cf6,
+                #4d8cff
+            ) !important;
+
+        -webkit-background-clip: text !important;
+
+        background-clip: text !important;
+
+        -webkit-text-fill-color: transparent !important;
+
+        white-space: normal !important;
+    }
+
+
+    /* =====================================================
+       DESCRIPTION
+    ===================================================== */
+
+    .how-it-works .section-title p {
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        width: 100% !important;
+
+        max-width: 520px !important;
+
+        margin: 0 auto !important;
+
+        padding: 0 !important;
+
+        font-size:
+            clamp(12px, 3.5vw, 14px) !important;
+
+        line-height: 1.55 !important;
+
+        color: #625b72 !important;
+    }
+
+
+    /* =====================================================
+       STEPS GRID
+       65%
+    ===================================================== */
+
+    .how-it-works .steps {
+
+        width: 100% !important;
+
+        height: 65% !important;
+
+        padding: 10px 0 !important;
+
+        margin: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        grid-template-rows:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 10px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       STEP CARD
+    ===================================================== */
+
+    .how-it-works .step-card {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        min-width: 0 !important;
+
+        min-height: 0 !important;
+
+        padding: 14px 10px !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        border-radius: 15px !important;
+
+        background: #ffffff !important;
+
+        border:
+            1px solid
+            rgba(108, 99, 255, 0.08) !important;
+
+        box-shadow:
+            0 4px 14px
+            rgba(15, 23, 42, 0.07) !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       HOVER COMPLETELY OFF
+    ===================================================== */
+
+    .how-it-works .step-card:hover {
+
+        transform: none !important;
+
+        background: #ffffff !important;
+
+        box-shadow:
+            0 4px 14px
+            rgba(15, 23, 42, 0.07) !important;
+
+        border-color:
+            rgba(108, 99, 255, 0.08) !important;
+
+        transition: none !important;
+
+        cursor: default !important;
+    }
+
+
+    /* =====================================================
+       STEP NUMBER
+    ===================================================== */
+
+    .how-it-works .step-number {
+
+        width: 28px !important;
+
+        height: 28px !important;
+
+        min-width: 28px !important;
+
+        margin: 0 0 7px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        border-radius: 50% !important;
+
+        background:
+            linear-gradient(
+                135deg,
+                #ff4f8b,
+                #7c5cff
+            ) !important;
+
+        color: #ffffff !important;
+
+        font-size: 12px !important;
+
+        font-weight: 700 !important;
+
+        line-height: 1 !important;
+
+        box-shadow:
+            0 3px 8px
+            rgba(108, 99, 255, 0.20) !important;
+
+        flex-shrink: 0 !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       ICON
+    ===================================================== */
+
+    .how-it-works .step-card > i {
+
+        width: 42px !important;
+
+        height: 42px !important;
+
+        margin: 0 0 8px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        border-radius: 50% !important;
+
+        background:
+            linear-gradient(
+                135deg,
+                #ffe8f0,
+                #eee9ff
+            ) !important;
+
+        color: #6c63ff !important;
+
+        font-size: 18px !important;
+
+        flex-shrink: 0 !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       STEP TITLE
+    ===================================================== */
+
+    .how-it-works .step-card h3 {
+
+        margin: 0 0 5px !important;
+
+        padding: 0 !important;
+
+        font-size:
+            clamp(12px, 3.5vw, 15px) !important;
+
+        line-height: 1.25 !important;
+
+        font-weight: 700 !important;
+
+        color: #1e293b !important;
+    }
+
+
+    /* =====================================================
+       STEP DESCRIPTION
+    ===================================================== */
+
+    .how-it-works .step-card p {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        max-width: 95% !important;
+
+        font-size:
+            clamp(9px, 2.7vw, 11px) !important;
+
+        line-height: 1.45 !important;
+
+        color: #64748b !important;
+    }
+
+
+    /* =====================================================
+       ICON HOVER OFF
+    ===================================================== */
+
+    .how-it-works .step-card:hover > i {
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+
+    /* =====================================================
+       NUMBER HOVER OFF
+    ===================================================== */
+
+    .how-it-works .step-card:hover .step-number {
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+}
+
+/* =========================================================
+   REVIEWS
+   MOBILE RESPONSIVE
+   381px → 767px
+
+   TITLE      = 35%
+   REVIEW     = 65%
+   ONE CARD   = CENTER
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 767px) {
+
+    /* =====================================================
+       MAIN SECTION
+    ===================================================== */
+    .reviews {
+        width: 100% !important;
+        height: 100vh !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        background: linear-gradient(135deg, #fff3f7 0%, #f5f1ff 48%, #eef8ff 100%) !important;
+        position: relative !important;
+        margin-top: 70px;
+    }
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+    .reviews > .container {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        padding: 0 12px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* =====================================================
+       TITLE (35%)
+    ===================================================== */
+    .reviews .section-title {
+        width: 100% !important;
+        height: 35% !important;
+        min-height: 0 !important;
+        padding: 15px 14px !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        position: relative !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+        border-radius: 18px !important;
+        background: radial-gradient(circle at 0% 100%, rgba(255, 92, 141, 0.28), transparent 35%),
+                    radial-gradient(circle at 100% 0%, rgba(113, 88, 255, 0.28), transparent 35%),
+                    linear-gradient(135deg, #fff0f5 0%, #f5efff 45%, #eef8ff 100%) !important;
+        box-shadow: 0 8px 25px rgba(255, 92, 141, 0.10), 0 4px 18px rgba(113, 88, 255, 0.09) !important;
+    }
+
+    .reviews .section-title::before {
+        content: "" !important;
+        position: absolute !important;
+        width: 130px !important;
+        height: 130px !important;
+        left: -75px !important;
+        bottom: -75px !important;
+        background: rgba(255, 71, 126, 0.18) !important;
+        border-radius: 50% !important;
+        pointer-events: none !important;
+    }
+
+    .reviews .section-title::after {
+        content: "" !important;
+        position: absolute !important;
+        width: 120px !important;
+        height: 120px !important;
+        right: -65px !important;
+        top: -65px !important;
+        background: rgba(105, 82, 255, 0.18) !important;
+        border-radius: 50% !important;
+        pointer-events: none !important;
+    }
+
+    .reviews .section-title h2 {
+        position: relative !important;
+        z-index: 2 !important;
+        margin: 0 0 8px !important;
+        padding: 0 !important;
+        font-size: clamp(21px, 6vw, 25px) !important;
+        line-height: 1.3 !important;
+        font-weight: 700 !important;
+        background: linear-gradient(90deg, #ff3f81, #8a5cf6, #4d8cff) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        white-space: normal !important;
+    }
+
+    .reviews .section-title p {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        max-width: 520px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        font-size: clamp(12px, 3.5vw, 14px) !important;
+        line-height: 1.55 !important;
+        color: #625b72 !important;
+    }
+
+    /* =====================================================
+       REVIEW SLIDER AREA (65%)
+    ===================================================== */
+    .reviews .review-slider-wrapper {
+        width: 100% !important;
+        height: 65% !important;
+        padding: 10px 35px !important; /* বাটনগুলোর জন্য দুই পাশে জায়গা রাখা হয়েছে */
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+    }
+
+    .reviews .review-slider {
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .reviews .review-track {
+        display: flex !important;
+        width: 100% !important;
+        height: 100% !important;
+        align-items: center !important;
+        transition: transform 0.5s ease-in-out !important;
+        will-change: transform !important;
+    }
+
+    /* =====================================================
+       REVIEW CARD (FIXED HEIGHT & MARGIN)
+    ===================================================== */
+    .reviews .review-card {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 90% !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        padding: 20px 16px !important;
+        margin: 0 !important; /* ১০০px মার্জিন সরিয়ে ফেলা হয়েছে */
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        border-radius: 18px !important;
+        background: #ffffff !important;
+        border: 1px solid rgba(108, 99, 255, 0.08) !important;
+        box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08) !important;
+        transform: none !important;
+        transition: none !important;
+        overflow: hidden !important;
+    }
+
+    .reviews .review-card:hover {
+        transform: none !important;
+        background: #ffffff !important;
+        box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08) !important;
+        transition: none !important;
+    }
+
+    /* =====================================================
+       PROFILE IMAGE, NAME, STARS, TEXT
+    ===================================================== */
+    .reviews .review-card img {
+        width: clamp(55px, 16vw, 72px) !important;
+        height: clamp(55px, 16vw, 72px) !important;
+        min-width: clamp(55px, 16vw, 72px) !important;
+        min-height: clamp(55px, 16vw, 72px) !important;
+        margin: 0 0 10px !important;
+        padding: 3px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        border: 3px solid #eee9ff !important;
+        box-shadow: 0 4px 12px rgba(108, 99, 255, 0.12) !important;
+    }
+
+    .reviews .review-card h3 {
+        margin: 0 0 6px !important;
+        padding: 0 !important;
+        font-size: clamp(14px, 4vw, 17px) !important;
+        line-height: 1.25 !important;
+        font-weight: 700 !important;
+        color: #1e293b !important;
+    }
+
+    .reviews .stars {
+        margin: 0 0 9px !important;
+        padding: 0 !important;
+        font-size: clamp(14px, 4vw, 17px) !important;
+        line-height: 1 !important;
+        color: #f59e0b !important;
+        letter-spacing: 1px !important;
+    }
+
+    .reviews .review-card p {
+        width: 100% !important;
+        max-width: 430px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        line-height: 1.55 !important;
+        color: #64748b !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* =====================================================
+       NAVIGATION ARROWS (FIXED POSITIONING)
+    ===================================================== */
+    .reviews .review-nav {
+        position: absolute !important;
+        top: 50% !important;
+        z-index: 100 !important;
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        min-height: 36px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: none !important;
+        border-radius: 50% !important;
+        background: linear-gradient(135deg, #ff4f8b, #765cff) !important;
+        color: #ffffff !important;
+        font-size: 20px !important;
+        line-height: 1 !important;
+        cursor: pointer !important;
+        transform: translateY(-50%) !important;
+        transition: none !important;
+        box-shadow: 0 4px 12px rgba(108, 99, 255, 0.30) !important;
+    }
+
+    /* বামের বাটন (Left Arrow) */
+    .reviews .review-prev {
+        left: 0px !important;
+    }
+
+    /* ডানের বাটন (Right Arrow) */
+    .reviews .review-next {
+        right: 0px !important;
+    }
+
+    .reviews .review-nav:hover,
+    .reviews .review-nav:active {
+        transform: translateY(-50%) !important;
+        transition: none !important;
+    }
+
+    /* =====================================================
+       NO REVIEWS
+    ===================================================== */
+    .reviews .no-reviews {
+        width: 100% !important;
+        margin: 0 !important;
+        text-align: center !important;
+        font-size: 12px !important;
+        color: #64748b !important;
+    }
+}
+/* =====================================================
+   CTA SECTION (MOBILE RESPONSIVE WITH HOVER & TRANSITION)
+===================================================== */
+@media (min-width: 381px) and (max-width: 767px) {
+
+    .cta {
+        width: 100% !important;
+        height: 50vh !important; /* স্ক্রিনের ৫০% হাইট */
+        min-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        background: linear-gradient(
+            135deg,
+            #fff3f7 0%,
+            #f5f1ff 48%,
+            #eef8ff 100%
+        ) !important;
+    }
+
+    .cta > .container {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        padding: 20px 16px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* Heading */
+    .cta h2 {
+        position: relative !important;
+        z-index: 2 !important;
+        margin: 0 0 10px 0 !important;
+        padding: 0 !important;
+        font-size: clamp(20px, 5.5vw, 24px) !important;
+        line-height: 1.3 !important;
+        font-weight: 700 !important;
+        background: linear-gradient(
+            90deg,
+            #ff3f81,
+            #8a5cf6,
+            #4d8cff
+        ) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+    }
+
+    /* Description Paragraph */
+    .cta p {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        max-width: 450px !important;
+        margin: 0 0 20px 0 !important;
+        padding: 0 !important;
+        font-size: clamp(12px, 3.5vw, 14px) !important;
+        line-height: 1.5 !important;
+        color: #625b72 !important;
+    }
+
+    /* Button Wrapper */
+    .cta .cta-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 12px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    /* Solid Button (Book Now) */
+    .cta .cta-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 20px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        border-radius: 25px !important;
+        background: linear-gradient(
+            135deg,
+            #ff4f8b,
+            #765cff
+        ) !important;
+        box-shadow: 0 4px 15px rgba(118, 92, 255, 0.25) !important;
+        /* স্মুথ ট্রানজিশন যোগ করা হয়েছে */
+        transition: all 0.3s ease-in-out !important;
+    }
+
+    /* Outline Button (Join as Decorator) */
+    .cta .cta-btn-outline {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 9px 18px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: #765cff !important;
+        text-decoration: none !important;
+        border-radius: 25px !important;
+        background: #ffffff !important;
+        border: 1.5px solid #765cff !important;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05) !important;
+        /* স্মুথ ট্রানজিশন যোগ করা হয়েছে */
+        transition: all 0.3s ease-in-out !important;
+    }
+
+    /* =====================================================
+       HOVER EFFECTS
+    ===================================================== */
+    
+    /* Book Now Hover Effect */
+    .cta .cta-btn:hover {
+        transform: translateY(-3px) !important; /* হালকা উপরে উঠবে */
+        box-shadow: 0 8px 22px rgba(118, 92, 255, 0.4) !important; /* শ্যাডো বাড়বে */
+        opacity: 0.95 !important;
+    }
+
+    /* Join as Decorator Hover Effect */
+    .cta .cta-btn-outline:hover {
+        background: #765cff !important; /* ব্যাকগ্রাউন্ড কালার চেঞ্জ হবে */
+        color: #ffffff !important; /* টেক্সট সাদা হবে */
+        transform: translateY(-3px) !important;
+        box-shadow: 0 8px 20px rgba(118, 92, 255, 0.3) !important;
+    }
+
+    /* Click Active Effect */
+    .cta .cta-btn:active,
+    .cta .cta-btn-outline:active {
+        transform: translateY(-1px) !important;
+    }
 }

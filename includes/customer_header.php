@@ -5,6 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,23 +18,29 @@ if (session_status() === PHP_SESSION_NONE) {
     <title>Customer Dashboard | StyleDecor</title>
 
     <!-- Google Font -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Customer Navbar CSS -->
+    <link rel="stylesheet" href="../css/customer_navbar.css?v=3">
 
     <!-- Dashboard CSS -->
-
- <!-- Dashboard CSS -->
-<link rel="stylesheet" href="../css/customer_dashboard.css?v=5">
+    <link rel="stylesheet" href="../css/customer_dashboard.css?v=10">
 
 </head>
 
 <body>
+
+<?php include("customer_navbar.php"); ?>

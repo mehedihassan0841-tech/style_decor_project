@@ -1,169 +1,266 @@
 /* ===========================
-        NAVBAR
+   NAVBAR (DESKTOP)
 =========================== */
-
-.navbar{
-
-    width:100%;
-
-    background:#ffffff;
-
-    position:sticky;
-
-    top:0;
-
-    left:0;
-
-    z-index:1000;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-.navbar .container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    height:90px;
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
 }
 
 /* Logo */
-
-.logo{
-
-    font-size:34px;
-
-    font-weight:700;
+.logo {
+    font-size: 34px;
+    font-weight: 700;
 }
 
-.logo-style{
-
-    color:#6C63FF;
-}
-
-.logo-decor{
-
-    color:#00BFA6;
-}
+.logo-style { color: #6C63FF; }
+.logo-decor { color: #00BFA6; }
 
 /* Menu */
-
-.nav-menu{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:35px;
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
 }
 
-.nav-menu li{
-
-    list-style:none;
+.nav-menu li a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none;
 }
 
-.nav-menu li a{
-
-    color:#333;
-
-    font-size:16px;
-
-    font-weight:500;
-
-    transition:.3s;
-
-    position:relative;
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: #6C63FF;
 }
 
-.nav-menu li a:hover{
-
-    color:#6C63FF;
+.nav-menu li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -8px;
+    background: #6C63FF;
+    transition: 0.3s;
 }
 
-.nav-menu li a.active{
-
-    color:#6C63FF;
-}
-
-.nav-menu li a::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:0;
-
-    height:2px;
-
-    left:0;
-
-    bottom:-8px;
-
-    background:#6C63FF;
-
-    transition:.3s;
-}
-
-.nav-menu li a:hover::after{
-
-    width:100%;
-}
-
-.nav-menu li a.active::after{
-
-    width:100%;
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+    width: 100%;
 }
 
 /* Buttons */
-
-.nav-buttons{
-
-    display:flex;
-
-    gap:15px;
+.nav-buttons {
+    display: flex;
+    gap: 15px;
 }
 
-.login-btn{
-
-    padding:12px 28px;
-
-    border:2px solid #6C63FF;
-
-    color:#6C63FF;
-
-    border-radius:35px;
-
-    font-weight:600;
-
-    transition:.3s;
+.login-btn,
+.register-btn {
+    padding: 12px 28px;
+    border-radius: 35px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.login-btn:hover{
-
-    background:#6C63FF;
-
-    color:#fff;
+.login-btn {
+    border: 2px solid #6C63FF;
+    color: #6C63FF;
 }
 
-.register-btn{
-
-    padding:12px 28px;
-
-    background:#6C63FF;
-
-    color:#fff;
-
-    border-radius:35px;
-
-    font-weight:600;
-
-    transition:.3s;
+.login-btn:hover {
+    background: #6C63FF;
+    color: #fff;
 }
 
-.register-btn:hover{
+.register-btn {
+    background: #6C63FF;
+    color: #fff;
+    border: 2px solid #6C63FF;
+}
 
-    background:#00BFA6;
+.register-btn:hover {
+    background: #00BFA6;
+    border-color: #00BFA6;
+}
+
+/* =========================================
+   MOBILE BOTTOM NAVIGATION (DEFAULT HIDDEN)
+========================================= */
+.mobile-bottom-nav {
+    display: none;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE NAVBAR (Up to 767px)
+========================================= */
+@media screen and (max-width: 767px) {
+
+    /* TOP NAVBAR */
+    .navbar {
+        height: 70px;
+        z-index: 1000;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar .container {
+        width: 100%;
+        max-width: none;
+        height: 70px;
+        padding: 0 15px;
+        margin: 0;
+    }
+
+    /* LOGO */
+    .navbar .logo {
+        font-size: 23px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* HIDE DESKTOP MENU */
+    .navbar .nav-menu {
+        display: none;
+    }
+
+    /* BUTTONS */
+    .navbar .nav-buttons {
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .navbar .login-btn,
+    .navbar .register-btn {
+        height: 34px;
+        padding: 0 11px;
+        font-size: 11px;
+        border-radius: 20px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* MOBILE BOTTOM NAVBAR */
+    .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        height: 68px;
+        padding: 4px 3px;
+        z-index: 9999;
+        align-items: center;
+        justify-content: space-between;
+
+        /* GLASS EFFECT */
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+    }
+
+    .mobile-bottom-nav .mobile-nav-item {
+        width: 20%;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        text-decoration: none;
+        color: #64748b;
+        font-size: 10px;
+        font-weight: 500;
+        transition: 0.2s;
+    }
+
+    .mobile-bottom-nav .mobile-nav-item i {
+        font-size: 19px;
+        line-height: 1;
+    }
+
+    .mobile-bottom-nav .mobile-nav-item span {
+        font-size: 9px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .mobile-bottom-nav .mobile-nav-item.active {
+        color: #6C63FF;
+        font-weight: 600;
+    }
+
+    .mobile-bottom-nav .mobile-nav-item.active i {
+        transform: translateY(-1px);
+    }
+
+    body {
+        padding-bottom: 90px;
+    }
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE (Below 380px)
+===================================================== */
+@media screen and (max-width: 380px) {
+
+    .navbar .container {
+        padding: 0 10px;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .navbar .nav-buttons {
+        gap: 4px;
+    }
+
+    .navbar .login-btn,
+    .navbar .register-btn {
+        height: 32px;
+        padding: 0 8px;
+        font-size: 10px;
+    }
+
+    .mobile-bottom-nav {
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        height: 64px;
+        border-radius: 16px;
+    }
+
+    .mobile-bottom-nav .mobile-nav-item i {
+        font-size: 17px;
+    }
+
+    .mobile-bottom-nav .mobile-nav-item span {
+        font-size: 8px;
+    }
 }

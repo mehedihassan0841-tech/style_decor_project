@@ -1,6 +1,32 @@
 <!-- ================= FOOTER ================= -->
 
-<footer class="footer">
+<?php
+
+require_once(__DIR__ . "/../config/database.php");
+
+$footer_query = mysqli_query(
+    $conn,
+    "SELECT
+        footer_description,
+        footer_address,
+        footer_phone,
+        footer_email,
+        copyright_text,
+        facebook_url,
+        instagram_url,
+        linkedin_url,
+        youtube_url
+     FROM settings
+     ORDER BY id ASC
+     LIMIT 1"
+);
+
+$footer = mysqli_fetch_assoc($footer_query);
+
+?>
+
+
+<footer class="footer" id="contact">
 
     <div class="container">
 
@@ -14,11 +40,17 @@
                     <span class="logo-style">Style</span><span class="logo-decor">Decor</span>
                 </h2>
 
-                <p>
-                    StyleDecor is a trusted platform where clients can easily find
-                    professional decorators for weddings, birthdays, home decoration,
-                    interior design and special events.
-                </p>
+               
+<p>
+    <?php
+    echo htmlspecialchars(
+        $footer["footer_description"]
+        ?? "StyleDecor is a trusted platform where clients can easily find professional decorators."
+    );
+    ?>
+</p>
+
+
 
             </div>
 
@@ -70,21 +102,38 @@
 
                 <h3>Contact</h3>
 
-                <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+                <p>
+    <i class="fas fa-map-marker-alt"></i>
+    <?php echo htmlspecialchars($footer["footer_address"] ?? "Dhaka, Bangladesh"); ?>
+</p>
 
-                <p><i class="fas fa-phone"></i> +880 1700-000000</p>
+                <p>
+    <i class="fas fa-phone"></i>
+    <?php echo htmlspecialchars($footer["footer_phone"] ?? "+880 1700-000000"); ?>
+</p>
 
-                <p><i class="fas fa-envelope"></i> info@styledecor.com</p>
+                <p>
+    <i class="fas fa-envelope"></i>
+    <?php echo htmlspecialchars($footer["footer_email"] ?? "info@styledecor.com"); ?>
+</p>
 
                 <div class="social-icons">
 
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="<?php echo htmlspecialchars($footer["facebook_url"] ?? "#"); ?>">
+    <i class="fab fa-facebook-f"></i>
+</a>
 
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="<?php echo htmlspecialchars($footer["instagram_url"] ?? "#"); ?>">
+    <i class="fab fa-instagram"></i>
+</a>
 
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="<?php echo htmlspecialchars($footer["linkedin_url"] ?? "#"); ?>">
+    <i class="fab fa-linkedin-in"></i>
+</a>
 
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="<?php echo htmlspecialchars($footer["youtube_url"] ?? "#"); ?>">
+    <i class="fab fa-youtube"></i>
+</a>
 
                 </div>
 
@@ -93,12 +142,14 @@
         </div>
 
         <div class="footer-bottom">
-
-            <p>
-
-                © 2026 StyleDecor. All Rights Reserved.
-
-            </p>
+<p>
+    <?php
+    echo htmlspecialchars(
+        $footer["copyright_text"]
+        ?? "© 2026 StyleDecor. All Rights Reserved."
+    );
+    ?>
+</p>
 
         </div>
 

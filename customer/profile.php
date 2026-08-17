@@ -38,6 +38,15 @@ include("../includes/customer_header.php");
 include("../includes/customer_sidebar.php");
 
 ?>
+<!-- 3D Floating Animated Background Cubes -->
+<div class="cube-background-wrapper">
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+    <div class="cube-item"></div>
+</div>
 
 <div class="dashboard-content">
 

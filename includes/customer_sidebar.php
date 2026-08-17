@@ -10,18 +10,11 @@
 
         <!-- Logo -->
 
-        <div class="sidebar-logo">
-
-            <h2>StyleDecor</h2>
-
-            <span>Customer Panel</span>
-
-        </div>
-
+       
         <!-- User Info -->
 <div class="sidebar-user">
 
-    <img src="../uploads/profile/<?php echo $_SESSION["profile_image"]; ?>" alt="Profile">
+    
 
     <h3><?php echo $_SESSION["user_name"]; ?></h3>
 
