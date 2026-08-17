@@ -96,7 +96,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </a>
 
 
-            <a href="index.php" class="customer-logout">
+            <a href="../login.php" class="customer-logout">
                 <i class="fas fa-right-from-bracket"></i>
                 Logout
             </a>

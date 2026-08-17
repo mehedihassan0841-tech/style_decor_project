@@ -4091,3 +4091,428 @@ html, body {
     100% { transform: translateY(-30px) rotate(-180deg); }
 }
 
+/* =========================================================
+   2 ROW x 3 COLUMN MOBILE GRID (All 6 Cards Visible at Once)
+   - Preserves Cyan Neon Transparency & Smooth Aesthetics
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Base Layout Container */
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 6px 4px !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: 6px 8px !important;
+        margin-bottom: 2px !important;
+        border-radius: 8px !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border-left: 3px solid #00f2fe !important;
+    }
+
+    .page-header h1 {
+        font-size: 13px !important;
+        margin: 0 !important;
+        color: #ffffff !important;
+        text-shadow: 0 0 6px rgba(0, 242, 254, 0.5) !important;
+    }
+
+    .page-header p {
+        font-size: 9.5px !important;
+        margin-top: 1px !important;
+        color: #b0c4de !important;
+    }
+
+    /* 3 Columns Grid Layout (Upore 3, Niche 3) */
+ /* =========================================================
+   2 ROW x 3 COLUMN MOBILE GRID WITH GAP & HOVER SAFETY
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* 3 Columns Grid Layout with Vertical & Horizontal Gap */
+    .settings-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        row-gap: 16px !important;    /* উপরের ও নিচের সারির মধ্যে পর্যাপ্ত গ্যাপ */
+        column-gap: 8px !important; /* পাশাপাশি কার্ডগুলোর মধ্যে গ্যাপ */
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+    }
+
+    /* Compact Transparent Card */
+    .setting-card {
+        width: 100% !important;
+        padding: 8px 5px !important;
+        border-radius: 10px !important;
+        box-sizing: border-box !important;
+        background: rgba(15, 23, 42, 0.65) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(0, 242, 254, 0.2) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+
+    /* Hover State without Overlapping */
+    .setting-card:hover,
+    .setting-card:active {
+        transform: translateY(-3px) scale(1.02) !important; /* স্মুথ লিফট ইফেক্ট */
+        border-color: rgba(0, 242, 254, 0.6) !important;
+        box-shadow: 0 6px 15px rgba(0, 242, 254, 0.25) !important;
+        z-index: 5 !important; /* হোভার করলে কার্ডটি উপরে ভেসে উঠবে কিন্তু অন্য কার্ডে চাপ খাবে না */
+    }
+
+    /* Small Icon Box */
+    .setting-icon {
+        width: 24px !important;
+        height: 24px !important;
+        margin-bottom: 4px !important;
+        border-radius: 6px !important;
+        background: rgba(0, 242, 254, 0.12) !important;
+        border: 1px solid rgba(0, 242, 254, 0.4) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .setting-icon i {
+        font-size: 10px !important;
+        color: #00f2fe !important;
+    }
+
+    /* Card Title */
+    .setting-card h3 {
+        font-size: 10.5px !important;
+        margin: 0 0 2px 0 !important;
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Paragraph Text */
+    .setting-card p {
+        font-size: 8.5px !important;
+        margin: 0 0 5px 0 !important;
+        line-height: 1.15 !important;
+        color: #94a3b8 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+
+    /* Compact Button */
+    .setting-btn {
+        width: 100% !important;
+        padding: 4px 2px !important;
+        font-size: 9px !important;
+        font-weight: 600 !important;
+        border-radius: 5px !important;
+        text-align: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+        color: #00f2fe !important;
+        background: rgba(0, 242, 254, 0.08) !important;
+        border: 1px solid rgba(0, 242, 254, 0.4) !important;
+    }
+}
+}
+
+/* =========================================================
+   CHANGE PASSWORD PAGE - ULTRA ANIMATED MOBILE RESPONSIVE
+   - Responsive for Redmi 6 & all mobile devices
+   - High-intensity Neon Glassmorphism & Animations
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Layout & Page Container */
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 8px !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Animated Background Floating Shapes */
+    .dashboard-content::before {
+        content: '' !important;
+        position: fixed !important;
+        top: 6% !important;
+        left: 3% !important;
+        width: 0 !important;
+        height: 0 !important;
+        border-left: 14px solid transparent !important;
+        border-right: 14px solid transparent !important;
+        border-bottom: 22px solid rgba(0, 242, 254, 0.35) !important;
+        filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.7)) !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+        animation: floatMobileTriangle 6s ease-in-out infinite alternate !important;
+    }
+
+    .dashboard-content::after {
+        content: '' !important;
+        position: fixed !important;
+        bottom: 5% !important;
+        right: 4% !important;
+        width: 22px !important;
+        height: 22px !important;
+        background: transparent !important;
+        border: 2px solid rgba(79, 172, 254, 0.45) !important;
+        border-radius: 6px !important;
+        box-shadow: 0 0 12px rgba(79, 172, 254, 0.6) !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+        animation: floatMobileSquare 7s ease-in-out infinite alternate !important;
+    }
+
+    /* Header Styling */
+    .page-header {
+        padding: 10px 12px !important;
+        margin-bottom: 12px !important;
+        border-radius: 12px !important;
+        background: rgba(15, 23, 42, 0.7) !important;
+        border-left: 4px solid #00f2fe !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+        animation: pulseGlowHeader 3s infinite alternate !important;
+    }
+
+    .page-header h1 {
+        font-size: 16px !important;
+        margin: 0 !important;
+        color: #ffffff !important;
+        text-shadow: 0 0 8px rgba(0, 242, 254, 0.6) !important;
+    }
+
+    .page-header p {
+        font-size: 11px !important;
+        margin-top: 2px !important;
+        color: #94a3b8 !important;
+    }
+
+    /* Animated Alerts */
+    .alert-success, .alert-error {
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+        border-radius: 8px !important;
+        margin-bottom: 10px !important;
+        animation: slideInDown 0.5s ease-out forwards !important;
+    }
+
+    .alert-success {
+        background: rgba(16, 185, 129, 0.15) !important;
+        border: 1px solid #10b981 !important;
+        color: #34d399 !important;
+        box-shadow: 0 0 10px rgba(16, 185, 129, 0.3) !important;
+    }
+
+    .alert-error {
+        background: rgba(239, 68, 68, 0.15) !important;
+        border: 1px solid #ef4444 !important;
+        color: #f87171 !important;
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.3) !important;
+    }
+
+    /* Form Glass Panel Container */
+    .customer-password-panel {
+        width: 100% !important;
+        padding: 16px 14px !important;
+        border-radius: 14px !important;
+        box-sizing: border-box !important;
+        background: rgba(15, 23, 42, 0.65) !important;
+        backdrop-filter: blur(14px) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
+        border: 1px solid rgba(0, 242, 254, 0.25) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5) !important;
+        animation: panelFadeIn 0.8s ease-out !important;
+    }
+
+    /* Password Input Fields & Labels */
+    .customer-password-field {
+        margin-bottom: 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .customer-password-field label {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        color: #00f2fe !important;
+        margin-bottom: 4px !important;
+        text-shadow: 0 0 5px rgba(0, 242, 254, 0.4) !important;
+    }
+
+    .customer-password-input-wrapper {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    /* Left Icon Styling */
+    .customer-password-input-wrapper > i.fa-lock {
+        position: absolute !important;
+        left: 10px !important;
+        font-size: 12px !important;
+        color: #00f2fe !important;
+        z-index: 2 !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Input Field Styling & Focus Animation */
+    .customer-password-input-wrapper input {
+        width: 100% !important;
+        padding: 8px 32px 8px 30px !important;
+        font-size: 11.5px !important;
+        color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(0, 242, 254, 0.25) !important;
+        border-radius: 8px !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .customer-password-input-wrapper input:focus {
+        background: rgba(0, 242, 254, 0.08) !important;
+        border-color: #00f2fe !important;
+        box-shadow: 0 0 12px rgba(0, 242, 254, 0.5) !important;
+    }
+
+    .customer-password-input-wrapper input:focus + .toggle-password i,
+    .customer-password-input-wrapper input:focus ~ i.fa-lock {
+        transform: scale(1.15) !important;
+        color: #ffffff !important;
+        text-shadow: 0 0 8px #00f2fe !important;
+    }
+
+    /* Eye Toggle Icon Styling */
+    .toggle-password {
+        position: absolute !important;
+        right: 10px !important;
+        cursor: pointer !important;
+        z-index: 2 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .toggle-password i {
+        font-size: 12px !important;
+        color: #94a3b8 !important;
+        transition: all 0.25s ease !important;
+    }
+
+    .toggle-password:active i {
+        color: #00f2fe !important;
+        transform: scale(1.2) !important;
+    }
+
+    /* Animated High-Glow Submit Button */
+    .customer-password-submit {
+        width: 100% !important;
+        padding: 9px 12px !important;
+        margin-top: 6px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%) !important;
+        border: none !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        box-shadow: 0 0 15px rgba(0, 242, 254, 0.4) !important;
+        transition: all 0.3s ease !important;
+        position: relative !important;
+        overflow: hidden !important;
+        animation: pulseButtonGlow 2.5s infinite alternate !important;
+    }
+
+    /* Light Ripple Effect on Button */
+    .customer-password-submit::after {
+        content: '' !important;
+        position: absolute !important;
+        top: -50% !important;
+        left: -50% !important;
+        width: 200% !important;
+        height: 200% !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        transform: rotate(30deg) translateY(-100%) !important;
+        transition: transform 0.6s ease !important;
+    }
+
+    .customer-password-submit:active::after {
+        transform: rotate(30deg) translateY(100%) !important;
+    }
+
+    .customer-password-submit:active {
+        transform: scale(0.98) !important;
+        box-shadow: 0 0 22px rgba(0, 242, 254, 0.8) !important;
+    }
+}
+
+/* =========================================================
+   KEYFRAME ANIMATIONS
+========================================================= */
+
+@keyframes floatMobileTriangle {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(14px) rotate(180deg); }
+    100% { transform: translateY(-8px) rotate(360deg); }
+}
+
+@keyframes floatMobileSquare {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(-180deg); }
+    100% { transform: translateY(8px) rotate(-360deg); }
+}
+
+@keyframes pulseGlowHeader {
+    0% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); }
+    100% { box-shadow: 0 4px 18px rgba(0, 242, 254, 0.3); }
+}
+
+@keyframes pulseButtonGlow {
+    0% { box-shadow: 0 0 12px rgba(0, 242, 254, 0.4); }
+    100% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.75); }
+}
+
+@keyframes panelFadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
