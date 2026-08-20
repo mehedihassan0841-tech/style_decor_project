@@ -208,7 +208,7 @@ $banner_settings = mysqli_fetch_assoc($banner_query) ?? [];
                                         </p>
                                     <?php endif; ?>
 
-                                    <a href="decorator_profile.php?id=<?php echo (int)$decorator["id"]; ?>" class="profile-btn">
+                                    <a href="decorator/profile.php?id=<?php echo (int)$decorator["id"]; ?>" class="profile-btn">
                                         View Profile
                                     </a>
                                 </div>

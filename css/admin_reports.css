@@ -1033,3 +1033,204 @@
     font-weight:650;
 }
 
+/* ==========================================================================
+   REPORTS PAGE — MOBILE CARD COLOR FIX (navbar-matched, blue accent theme)
+   Correct target classes: .reports-chart-card / .reports-data-card / .reports-insights-card
+   Spacing/height untouched — শুধু color ও font-size override
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+    :root {
+        --nav-bg: #0f172a;
+        --card-border: rgba(255, 255, 255, 0.08);
+        --accent: #38bdf8;
+        --accent-soft: rgba(56, 189, 248, 0.15);
+        --value-color: #e0f2fe;
+        --text-soft: #cbd5e1;
+    }
+
+    /* ১. Chart cards (Revenue Overview, Booking Status, Booking Performance, Category) */
+    .reports-chart-card {
+        background: linear-gradient(180deg, var(--nav-bg) 0%, #111c33 100%) !important;
+        border: 1px solid var(--card-border) !important;
+        border-left: 3px solid var(--accent) !important;
+    }
+
+    /* ২. Bottom data cards (Top Decorators, Customer Ratings) */
+    .reports-data-card {
+        background: linear-gradient(180deg, var(--nav-bg) 0%, #111c33 100%) !important;
+        border: 1px solid var(--card-border) !important;
+        border-left: 3px solid var(--accent) !important;
+    }
+
+    /* ৩. Insights card (নিচের bulb card) */
+    .reports-insights-card {
+        background: linear-gradient(180deg, var(--nav-bg) 0%, #111c33 100%) !important;
+        border: 1px solid var(--card-border) !important;
+        border-left: 3px solid var(--accent) !important;
+    }
+
+    /* ৪. এই তিন কার্ডের ভিতরের সব টেক্সট — visible + ছোট */
+    .reports-chart-card *,
+    .reports-data-card *,
+    .reports-insights-card * {
+        color: var(--text-soft) !important;
+    }
+
+    /* Headings (h2) ছোট + হাইলাইট */
+    .reports-chart-header h2,
+    .reports-data-header h2,
+    .reports-insights-card h3 {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: var(--accent) !important;
+    }
+
+    /* Sub-text (p, span) আরো ছোট */
+    .reports-chart-header p,
+    .reports-data-header p,
+    .reports-insights-card p {
+        font-size: 11px !important;
+        color: #94a3b8 !important;
+    }
+
+    /* Menu (তিন ডট আইকন) */
+    .reports-chart-menu {
+        color: #94a3b8 !important;
+    }
+
+    /* ৫. Top Decorators list — নাম, বুকিং সংখ্যা, রেভিনিউ */
+    .reports-decorator-row {
+        font-size: 11px !important;
+    }
+
+    .reports-decorator-info strong {
+        color: var(--value-color) !important;
+        font-size: 12px !important;
+    }
+
+    .reports-decorator-info span {
+        color: #94a3b8 !important;
+        font-size: 10px !important;
+    }
+
+    .reports-decorator-revenue {
+        color: var(--accent) !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+    }
+
+    .reports-decorator-performance-track {
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .reports-decorator-performance-fill {
+        background: var(--accent) !important;
+    }
+
+    .reports-rank {
+        background: var(--accent-soft) !important;
+        color: var(--accent) !important;
+    }
+
+    /* ৬. Rating rows */
+    .reports-rating-row {
+        font-size: 11px !important;
+    }
+
+    .reports-rating-row strong {
+        color: var(--value-color) !important;
+    }
+
+    .reports-rating-bar {
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .reports-rating-bar div {
+        background: var(--accent) !important;
+    }
+
+    .reports-rating-summary strong {
+        color: var(--value-color) !important;
+        font-size: 16px !important;
+    }
+
+    /* ৭. Insights icon */
+    .reports-insights-icon {
+        background: var(--accent-soft) !important;
+        color: var(--accent) !important;
+    }
+
+    /* ৮. উপরের ৪টি KPI কার্ড (Total Revenue, Total Bookings, Completed, Rating) */
+    .reports-kpi-card {
+        background: linear-gradient(180deg, var(--nav-bg) 0%, #111c33 100%) !important;
+        border: 1px solid var(--card-border) !important;
+        border-left: 3px solid var(--accent) !important;
+    }
+
+    .reports-kpi-card * {
+        color: var(--text-soft) !important;
+    }
+
+    .reports-kpi-label {
+        font-size: 11px !important;
+        color: #94a3b8 !important;
+    }
+
+    .reports-kpi-value {
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        color: var(--value-color) !important;
+    }
+
+    .reports-kpi-value small {
+        font-size: 11px !important;
+        color: #94a3b8 !important;
+    }
+
+    .reports-kpi-footer {
+        font-size: 10px !important;
+    }
+
+    .reports-kpi-footer span {
+        color: #94a3b8 !important;
+    }
+
+    .reports-kpi-trend.positive {
+        color: var(--accent) !important;
+    }
+
+    .reports-kpi-icon {
+        background: var(--accent-soft) !important;
+        color: var(--accent) !important;
+    }
+
+    /* ৯. Export বাটনের লেখা visible করা */
+    .reports-header-right {
+        flex-wrap: wrap !important;
+    }
+
+    .reports-export-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        font-size: 11px !important;
+        color: var(--value-color) !important;
+        background: var(--accent-soft) !important;
+        width: auto !important;
+    }
+
+    .reports-export-btn i {
+        font-size: 11px !important;
+    }
+
+    .reports-refresh-btn {
+        color: var(--accent) !important;
+    }
+
+    .reports-period-form select {
+        font-size: 11px !important;
+    }
+}

@@ -645,6 +645,470 @@
         background: #ef4444;
     }
 
-  
+  /* =========================================================
+   MOBILE SETTINGS NAVIGATION
+   ALL 7 ITEMS VISIBLE
+   ICON TOP + TEXT BOTTOM
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .settings-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .settings-navigation {
+        width: 100%;
+        position: relative;
+        top: auto;
+        background: #0f172a;
+        border: 1px solid #1e293b;
+        box-shadow: 0 5px 15px rgba(15, 23, 42, 0.18);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 5px 3px;
+
+        overflow: hidden;
+
+        border-radius: 10px;
+
+        white-space: nowrap;
+    }
+
+    /* Hide Settings heading */
+    .settings-nav-header {
+        display: none;
+    }
+
+    /* ===============================
+       7 ITEMS - ALL FIT IN ONE ROW
+    =============================== */
+
+    .settings-nav-item {
+        width: calc(14.285% - 3px);
+        min-width: 0;
+        max-width: none;
+
+        height: 62px;
+        min-height: 62px;
+
+        flex: 1 1 14.285%;
+
+        margin: 0 1.5px;
+        padding: 5px 2px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        font-size: 9px;
+        font-weight: 600;
+
+        line-height: 1;
+
+        text-align: center;
+        white-space: nowrap;
+
+        border-radius: 7px;
+
+        flex-shrink: 1;
+        color: #cbd5e1;
+        background: transparent;
+    }
+
+    /* ===============================
+       ICON
+    =============================== */
+
+    .settings-nav-icon {
+        width: 24px;
+        height: 24px;
+
+        min-width: 24px;
+        min-height: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 6px;
+
+        font-size: 10px;
+        background: #1e293b;
+        color: #94a3b8;
+    }
+    .settings-nav-item.active {
+        background: #1e293b;
+        color: #ffffff;
+        box-shadow: none;
+    }
+    .settings-nav-item.active .settings-nav-icon {
+        background: #334155;
+        color: #94a3b8;
+    }
+
+    .settings-nav-item:active {
+        transform: scale(0.97);
+    }
+    /* ===============================
+       TEXT
+    =============================== */
+
+    .settings-nav-item > span:last-child {
+        display: block;
+
+        width: 100%;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+    }
+}
 
 
+/* =========================================================
+   APPEARANCE - MOBILE ONLY
+   Desktop CSS untouched
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ===============================
+       SECTION
+       DO NOT CHANGE WIDTH / PADDING
+    =============================== */
+
+    .settings-section {
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+
+    /* ===============================
+       HEADER
+    =============================== */
+
+    .settings-section-header {
+        margin-bottom: 18px;
+    }
+
+    .settings-section-header h2 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        font-size: 18px;
+        color: #0f172a;
+    }
+
+    .settings-section-header h2 i {
+        color: #94a3b8;
+        font-size: 16px;
+    }
+
+    .settings-section-header p {
+        color: #64748b;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 5px;
+    }
+
+
+    /* ===============================
+       FORM GRID
+    =============================== */
+
+    .settings-form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ===============================
+       INPUT GROUP
+    =============================== */
+
+    .settings-input-group {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .settings-input-group.full-width {
+        grid-column: auto;
+    }
+
+
+    /* ===============================
+       LABEL
+    =============================== */
+
+    .settings-input-group label {
+        color: #334155;
+        font-size: 12px;
+        font-weight: 600;
+
+        margin-bottom: 6px;
+    }
+
+
+    /* ===============================
+       INPUT
+    =============================== */
+
+    .settings-input-group input[type="text"],
+    .settings-input-group textarea {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        color: #0f172a;
+        background: #ffffff;
+
+        border: 1px solid #cbd5e1;
+
+        border-radius: 8px;
+
+        font-size: 12px;
+    }
+
+
+    /* ===============================
+       INPUT FOCUS
+    =============================== */
+
+    .settings-input-group input[type="text"]:focus,
+    .settings-input-group textarea:focus {
+        outline: none;
+
+        border-color: #0f172a;
+
+        box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.08);
+    }
+
+
+    /* ===============================
+       PLACEHOLDER
+    =============================== */
+
+    .settings-input-group input::placeholder,
+    .settings-input-group textarea::placeholder {
+        color: #94a3b8;
+    }
+
+
+    /* ===============================
+       TEXTAREA
+    =============================== */
+
+    .settings-input-group textarea {
+        min-height: 90px;
+        line-height: 1.5;
+
+        resize: vertical;
+    }
+
+
+    /* ===============================
+       FILE BOX
+    =============================== */
+
+    .settings-file-box {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        background: #f8fafc;
+
+        border: 1px solid #cbd5e1;
+
+        border-radius: 8px;
+
+        padding: 10px;
+    }
+
+    .settings-file-box input[type="file"] {
+        width: 100%;
+        max-width: 100%;
+
+        color: #475569;
+
+        font-size: 11px;
+    }
+
+    .settings-file-box span {
+        display: block;
+
+        margin-top: 6px;
+
+        color: #94a3b8;
+
+        font-size: 10px;
+    }
+
+
+    /* ===============================
+       SAVE BUTTON
+    =============================== */
+
+    .settings-form-actions {
+        width: 100%;
+        margin-top: 16px;
+
+        display: flex;
+        justify-content: flex-end;
+
+        box-sizing: border-box;
+    }
+
+    .settings-save-btn {
+        background: #0f172a;
+        color: #ffffff;
+
+        border: none;
+
+        min-height: 40px;
+
+        padding: 9px 15px;
+
+        border-radius: 8px;
+
+        font-size: 12px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+    }
+
+    .settings-save-btn i {
+        color: #94a3b8;
+    }
+}
+/* =========================================================
+   APPEARANCE SECTION - MOBILE DARK / TRANSPARENT
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Section transparent */
+    .settings-section {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Section Header */
+    .settings-section-header {
+        background: transparent;
+    }
+
+    .settings-section-header h2 {
+        color: #ffffff;
+    }
+
+    .settings-section-header h2 i {
+        color: #94a3b8;
+    }
+
+    .settings-section-header p {
+        color: #94a3b8;
+    }
+
+
+    /* Labels */
+    .settings-input-group label {
+        color: #cbd5e1;
+    }
+
+
+    /* Inputs */
+    .settings-input-group input[type="text"],
+    .settings-input-group textarea {
+        background: #1e293b !important;
+
+        color: #ffffff !important;
+
+        border: 1px solid #334155 !important;
+
+        box-shadow: none;
+    }
+
+
+    /* Placeholder */
+    .settings-input-group input::placeholder,
+    .settings-input-group textarea::placeholder {
+        color: #94a3b8 !important;
+    }
+
+
+    /* Focus */
+    .settings-input-group input[type="text"]:focus,
+    .settings-input-group textarea:focus {
+        background: #1e293b !important;
+
+        border-color: #475569 !important;
+
+        box-shadow: 0 0 0 2px rgba(148, 163, 184, 0.08) !important;
+
+        outline: none;
+    }
+
+
+    /* File Upload */
+    .settings-file-box {
+        background: #1e293b !important;
+
+        border: 1px solid #334155 !important;
+
+        color: #94a3b8;
+    }
+
+    .settings-file-box input[type="file"] {
+        color: #cbd5e1;
+    }
+
+    .settings-file-box span {
+        color: #94a3b8;
+    }
+
+
+    /* Save Button */
+    .settings-save-btn {
+        background: #1e293b !important;
+
+        color: #ffffff !important;
+
+        border: 1px solid #334155 !important;
+
+        box-shadow: none;
+    }
+
+    .settings-save-btn i {
+        color: #94a3b8 !important;
+    }
+
+}

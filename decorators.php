@@ -354,7 +354,7 @@ if (!$result) {
 
                                 <!-- PROFILE BUTTON -->
                                 <a
-                                    href="decorator_profile.php?id=<?php echo (int)$decorator["id"]; ?>"
+                                    href="decorator/portfolio.php?id=<?php echo (int)$decorator["id"]; ?>"
                                     class="decorator-profile-btn"
                                 >
                                     View Profile

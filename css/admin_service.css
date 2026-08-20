@@ -1371,3 +1371,524 @@ background:#15803d;
 transform:translateY(-3px);
 
 }
+/* =========================================================
+   1. BACKGROUND FALLING SHAPES ANIMATION (SQUARE, TRIANGLE, CIRCLE)
+========================================================= */
+.admin-content {
+    position: relative;
+    overflow: hidden;
+    background: #0b1329; /* গভীর ডার্ক প্রিমিয়াম ব্যাকগ্রাউন্ড */
+    min-height: 100vh;
+}
+
+/* অ্যানিমেটেড শেপ কন্টেইনার */
+.admin-content::before,
+.admin-content::after,
+.service-page-wrapper::before,
+.service-page-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    z-index: 0;
+    opacity: 0.2;
+    pointer-events: none;
+    animation: floatDown 12s linear infinite;
+}
+
+/* ১. ঘূর্ণায়মান স্কয়ার (Square Shape) */
+.admin-content::before {
+    left: 8%;
+    width: 50px;
+    height: 50px;
+    background: #0284c7;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(2, 132, 199, 0.7);
+    animation-duration: 10s;
+}
+
+/* ২. লুমিনাস সার্কেল (Circle Shape) */
+.admin-content::after {
+    left: 78%;
+    width: 70px;
+    height: 70px;
+    background: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.7);
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+/* ৩. নিয়ন ট্রায়াঙ্গেল (Triangle Shape) */
+.service-page-wrapper::before {
+    left: 48%;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid #6366f1;
+    filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.7));
+    animation-duration: 11s;
+    animation-delay: 4s;
+}
+
+/* ৪. ছোট গ্লোয়িং স্কয়ার (Small Square) */
+.service-page-wrapper::after {
+    left: 88%;
+    width: 30px;
+    height: 30px;
+    background: #818cf8;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(129, 140, 248, 0.7);
+    animation-duration: 8s;
+    animation-delay: 1s;
+}
+
+/* উপর থেকে নিচে পড়ার স্মুথ অ্যানিমেশন */
+@keyframes floatDown {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.3;
+    }
+    80% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   2. SERVICES PAGE GLASSMORPHISM & MOBILE RESPONSIVE
+========================================================= */
+@media screen and (max-width: 768px) {
+
+    /* ড্যাশবোর্ড ও লেফট স্পেস রিসেট */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    .admin-content,
+    .main-content,
+    .service-page-wrapper {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative;
+        left: 0 !important;
+        z-index: 1;
+    }
+
+    /* টপ নেভবারের সাথে পেজ হেডলাইনের সামঞ্জস্যপূর্ণ মার্জিন/প্যাডিং */
+    .service-page-wrapper {
+        padding-top: 85px !important; /* Topbar Safe Distance */
+        padding-bottom: 80px !important;
+        min-height: 100vh;
+    }
+
+    .service-page-content {
+        padding: 0 14px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* স্মুথ কার্ড অ্যানিমেশন */
+    @keyframes glassFadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(15px) scale(0.98);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    /* পেজ হেডার সামঞ্জস্য ও নিয়ন ব্লু আইকন */
+    .service-page-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 5px !important;
+        margin-bottom: 18px !important;
+        animation: glassFadeUp 0.4s ease-out forwards;
+    }
+
+    .service-page-title h1 {
+        font-size: 22px !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+    }
+
+    /* হেডলাইন ও ড্যাশবোর্ডের সমস্ত আইকন ব্লু গ্লো */
+    .service-page-title h1 i,
+    .service-summary-icon i,
+    .service-search-box i {
+        color: #38bdf8 !important;
+        text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+    }
+
+    .service-page-title p {
+        color: #94a3b8 !important;
+        font-size: 12px !important;
+        margin-top: 4px !important;
+    }
+
+    /* Add Service বাটন (প্রিমিয়াম রয়্যাল ব্লু) */
+    .service-add-btn {
+        background: linear-gradient(135deg, rgba(14, 165, 233, 0.3) 0%, rgba(3, 105, 161, 0.4) 100%) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(56, 189, 248, 0.5) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 15px rgba(14, 165, 233, 0.25) !important;
+        border-radius: 12px;
+        font-weight: 600;
+        padding: 10px 14px !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-add-btn i {
+        color: #38bdf8 !important;
+    }
+
+    .service-add-btn:active {
+        transform: scale(0.97);
+        background: linear-gradient(135deg, rgba(14, 165, 233, 0.5) 0%, rgba(3, 105, 161, 0.6) 100%) !important;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.4) !important;
+    }
+
+    /* স্ট্যাটিস্টিকস গ্রিড (২ কলাম) */
+    .service-summary-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 18px !important;
+        width: 100% !important;
+    }
+
+    .service-summary-card {
+        background: rgba(255, 255, 255, 0.04) !important;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-radius: 14px !important;
+        padding: 10px 12px !important;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        animation: glassFadeUp 0.5s ease-out forwards;
+    }
+
+    .service-summary-icon {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 15px !important;
+        background: rgba(56, 189, 248, 0.12) !important;
+        border: 1px solid rgba(56, 189, 248, 0.3) !important;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-summary-text h2 {
+        font-size: 17px !important;
+        color: #ffffff !important;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-summary-text p {
+        font-size: 10px !important;
+        color: #94a3b8 !important;
+        margin: 0;
+    }
+
+    /* কম্প্যাক্ট সার্চ ও ফিল্টার এরিয়া (সাইজ ছোট ও স্লিম করা হলো) */
+    .service-toolbar {
+        background: rgba(15, 23, 42, 0.75) !important;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(56, 189, 248, 0.2) !important;
+        border-radius: 14px !important;
+        padding: 10px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 16px;
+        animation: glassFadeUp 0.6s ease-out forwards;
+    }
+
+    .service-search-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px; /* গ্যাপ কমানো হয়েছে */
+        width: 100%;
+    }
+
+    /* ছোট ও শার্প ইনপুট ফিল্ড */
+    .service-search-box {
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 8px !important;
+        padding: 6px 10px !important; /* সাইজ কম্প্যাক্ট */
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 38px !important;
+        box-sizing: border-box;
+    }
+
+    .service-search-box:focus-within {
+        border-color: rgba(56, 189, 248, 0.6) !important;
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    }
+
+    .service-search-box input {
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        color: #ffffff !important;
+        font-size: 12px !important;
+        width: 100%;
+    }
+
+    .service-search-box input::placeholder {
+        color: #64748b !important;
+    }
+
+    /* ফিল্টার ড্রপডাউন */
+    .service-filter {
+        background: #0f172a !important;
+        color: #e2e8f0 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 8px !important;
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+        outline: none;
+        height: 38px !important;
+        width: 100% !important;
+    }
+
+    .service-filter:focus {
+        border-color: rgba(56, 189, 248, 0.5) !important;
+    }
+
+    /* সার্চ বাটন (স্লিম নিয়ন ব্লু) */
+    .service-search-btn {
+        background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(56, 189, 248, 0.5) !important;
+        border-radius: 8px !important;
+        height: 38px !important;
+        font-weight: 600;
+        font-size: 12px !important;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        box-shadow: 0 3px 12px rgba(2, 132, 199, 0.3) !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .service-search-btn i {
+        color: #ffffff !important;
+    }
+
+    .service-search-btn:active {
+        transform: scale(0.97);
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.5) !important;
+    }
+
+    /* প্রিমিয়াম টেবিল কন্টেইনার */
+    .service-table-wrapper {
+        background: rgba(15, 23, 42, 0.6) !important;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 14px !important;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
+        animation: glassFadeUp 0.7s ease-out forwards;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        width: 100% !important;
+    }
+
+    .service-table {
+        width: 100% !important;
+        min-width: 680px;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+    }
+
+    /* টেবিল হেডলাইন (প্রিমিয়াম নিয়ন ব্লু) */
+    .service-table th {
+        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
+        color: #38bdf8 !important; /* ব্রাইট নিয়ন ব্লু */
+        border-bottom: 2px solid rgba(56, 189, 248, 0.3) !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        padding: 12px 14px !important;
+        text-transform: uppercase;
+        letter-spacing: 1px !important;
+        white-space: nowrap;
+        text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    }
+
+    /* স্পষ্ট ও উজ্জ্বল টেবিল ডাটা (সহজে পড়ার জন্য হাই-কন্ট্রাস্ট কালার) */
+    .service-table tbody tr {
+        background: transparent !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .service-table tbody tr:hover,
+    .service-table tbody tr:active {
+        background: rgba(56, 189, 248, 0.08) !important; /* হালকা গ্লোয়িং হোভার */
+    }
+
+    .service-table td {
+        padding: 12px 14px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+        color: #f8fafc !important; /* উজ্জ্বল সাদা কালার টেক্সট */
+        font-size: 13px !important;
+        font-weight: 500;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+    /* টেবিলের টেক্সটের সাব-হিম অ্যান্ড নেম হাইলাইট */
+    .service-table td strong {
+        color: #ffffff !important;
+        font-weight: 600;
+    }
+
+    .service-table-image {
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: 8px !important;
+        object-fit: cover;
+        border: 1.5px solid rgba(56, 189, 248, 0.4);
+    }
+
+    /* স্ট্যাটাস ব্যাজ হাইলাইট */
+    .service-status.available {
+        background: rgba(34, 197, 94, 0.15) !important;
+        color: #4ade80 !important;
+        border: 1px solid rgba(34, 197, 94, 0.3) !important;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .service-status.unavailable {
+        background: rgba(239, 68, 68, 0.15) !important;
+        color: #f87171 !important;
+        border: 1px solid rgba(239, 68, 68, 0.3) !important;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    /* টেবিল অ্যাকশন বাটন গ্রুপ (View, Edit, Delete) */
+    .service-action-group {
+        display: flex !important;
+        align-items: center;
+        gap: 6px !important;
+    }
+
+    .service-view-btn,
+    .service-edit-btn,
+    .service-delete-btn {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 8px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px !important;
+        text-decoration: none;
+        backdrop-filter: blur(8px);
+        transition: all 0.2s ease !important;
+    }
+
+    /* View Button (Blue) */
+    .service-view-btn {
+        background: rgba(56, 189, 248, 0.15) !important;
+        color: #38bdf8 !important;
+        border: 1px solid rgba(56, 189, 248, 0.35) !important;
+    }
+
+    /* Edit Button (Yellow) */
+    .service-edit-btn {
+        background: rgba(250, 204, 21, 0.15) !important;
+        color: #facc15 !important;
+        border: 1px solid rgba(250, 204, 21, 0.35) !important;
+    }
+
+    /* Delete Button (Red) */
+    .service-delete-btn {
+        background: rgba(239, 68, 68, 0.15) !important;
+        color: #f87171 !important;
+        border: 1px solid rgba(239, 68, 68, 0.35) !important;
+    }
+
+    .service-view-btn:active,
+    .service-edit-btn:active,
+    .service-delete-btn:active {
+        transform: scale(0.88);
+    }
+
+    /* See More Services বাটন (ব্লু থিম) */
+    .see-more-wrapper {
+        margin-top: 14px;
+        text-align: center;
+    }
+
+    .see-more-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100% !important;
+        padding: 10px !important;
+        background: rgba(14, 165, 233, 0.15) !important;
+        border: 1px solid rgba(56, 189, 248, 0.35) !important;
+        color: #38bdf8 !important;
+        font-size: 12px !important;
+        font-weight: 600;
+        border-radius: 10px !important;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
+        transition: all 0.2s ease !important;
+    }
+
+    .see-more-btn i {
+        color: #38bdf8 !important;
+    }
+
+    .see-more-btn:active {
+        transform: scale(0.97);
+        background: rgba(14, 165, 233, 0.35) !important;
+        color: #ffffff !important;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+    }
+}

@@ -864,29 +864,7 @@ body{
 
 /* Responsive */
 
-@media(max-width:768px){
 
-.profile-form-card{
-
-    padding:25px;
-
-}
-
-.profile-form-card form{
-
-    grid-template-columns:1fr;
-
-}
-
-.form-group:nth-child(5),
-.form-group:nth-child(10),
-.save-btn{
-
-    grid-column:auto;
-
-}
-
-}
 /* ==========================================
    PREMIUM HEADER
 ========================================== */
@@ -1367,77 +1345,6 @@ input[type=file]:hover{
 
 }
 
-@media(max-width:768px){
-
-.profile-banner{
-
-    flex-direction:column;
-
-    text-align:center;
-
-}
-
-.profile-details h2{
-
-    font-size:28px;
-
-}
-
-.profile-image img{
-
-    width:120px;
-
-    height:120px;
-
-}
-
-.profile-card strong{
-
-    width:100%;
-
-    margin-bottom:6px;
-
-}
-
-.profile-actions{
-
-    flex-direction:column;
-
-}
-
-.edit-btn{
-
-    justify-content:center;
-
-}
-
-}
-
-/* ===========================
-   Responsive
-=========================== */
-
-@media(max-width:992px){
-
-.dashboard-content{
-
-    margin-left:0;
-
-    padding:20px;
-
-}
-
-.welcome-card{
-
-    flex-direction:column;
-
-    text-align:center;
-
-    gap:25px;
-
-}
-
-}
 /*=========================
 PREMIUM SELECT DESIGN
 =========================*/
@@ -1966,4 +1873,1929 @@ width:18px;
 height:18px;
 cursor:pointer;
 
+}
+/* =========================================================
+   STYLEDECOR MOBILE NAVBAR (UNIFIED FOR ALL MOBILE SCREENS)
+   TOP BAR + BOTTOM FIXED MENU
+   Desktop CSS untouched
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* ===============================
+       MAIN SIDEBAR CONTAINER
+       (Full overlay backdrop removed to fix blur effect)
+       =============================== */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0; /* Content overlay blur fix */
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    /* Ambient glowing background circles disabled to stop content blurring */
+    .sidebar::before,
+    .sidebar::after {
+        display: none;
+    }
+
+    /* =================================
+       TOP NAVBAR (Fixed Header)
+       ================================= */
+    .sidebar-logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 56px;
+        box-sizing: border-box;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        background: rgba(20, 20, 35, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        z-index: 10000;
+        pointer-events: auto;
+    }
+
+    .sidebar-logo h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        white-space: nowrap;
+        color: #ffffff;
+    }
+
+    .sidebar-logo span {
+        display: none;
+    }
+
+    /* Hide Desktop Elements */
+    .sidebar-user,
+    .account-status {
+        display: none;
+    }
+
+    /* =================================
+       LOGOUT BUTTON (Top Right)
+       ================================= */
+    .logout-btn {
+        position: fixed;
+        top: 9px;
+        right: 14px;
+        margin: 0;
+        height: 38px;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        border-radius: 8px;
+        font-size: 12px;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        z-index: 10001;
+        pointer-events: auto;
+    }
+
+    .logout-btn i {
+        font-size: 14px;
+    }
+
+    /* =================================
+       BOTTOM FIXED NAVIGATION BAR
+       ================================= */
+    .sidebar-menu {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 64px;
+        box-sizing: border-box;
+        padding: 4px 6px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around; /* Distribute items evenly */
+        gap: 4px;
+        background: rgba(20, 20, 35, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        z-index: 10000;
+        pointer-events: auto;
+    }
+
+    .sidebar-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Navigation Items */
+    .sidebar-menu li {
+        flex: 1 0 auto;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar-menu li a {
+        min-width: 60px;
+        height: 100%;
+        margin: 0;
+        padding: 4px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+    }
+
+    /* Icon */
+    .sidebar-menu li a i {
+        font-size: 18px;
+        line-height: 1;
+        margin: 0;
+    }
+
+    /* Text Label */
+    .sidebar-menu li a span {
+        display: block;
+        font-size: 10px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    /* Hover State */
+    .sidebar-menu li a:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #ffffff;
+    }
+
+    /* Active State */
+    .sidebar-menu li a.active {
+        color: #ffffff;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 79, 129, 0.25),
+            rgba(139, 92, 246, 0.25)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* =================================
+       MAIN CONTENT PADDING ADJUSTMENT
+       ================================= */
+    .main-content {
+        margin-left: 0 !important;
+        padding-top: 68px !important;    /* Clears Header */
+        padding-bottom: 76px !important; /* Clears Bottom Nav */
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+}
+/* =========================================================
+   VIBRANT & COLORFUL GLASSMOBILITY MOBILE DASHBOARD
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Main Container with Vibrant Gradient Base */
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        padding-top: 75px !important; 
+        padding-bottom: 80px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        /* Rich Glowing Dark Background */
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+    }
+
+    /* Glowing Animated Orbs in Background */
+    .dashboard-content::before,
+    .dashboard-content::after {
+        content: '';
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.6;
+        z-index: -1;
+        pointer-events: none;
+        animation: flowTopToBottomMobile 8s infinite ease-in-out alternative;
+    }
+
+    .dashboard-content::before {
+        top: 20px;
+        left: -10px;
+        background: #ff2a85; /* Vibrant Magenta Glow */
+    }
+
+    .dashboard-content::after {
+        top: 200px;
+        right: -10px;
+        background: #00f2fe; /* Neon Cyan Glow */
+    }
+
+    /* 1. Welcome Card (Neon Pink & Purple Glass) */
+    .dashboard-content .welcome-card {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.18), rgba(138, 43, 226, 0.18)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.35) !important;
+        border-radius: 16px;
+        padding: 16px 14px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 8px 25px rgba(255, 42, 133, 0.15) !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-content .welcome-text h1 {
+        font-size: clamp(18px, 5vw, 22px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+    }
+
+    .dashboard-content .welcome-text h2 {
+        font-size: clamp(15px, 4.2vw, 18px) !important;
+        font-weight: 700 !important;
+        margin: 0 0 6px 0 !important;
+        background: linear-gradient(90deg, #ff75ac, #00f2fe) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+    }
+
+    .dashboard-content .welcome-text p {
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        line-height: 1.4 !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        margin: 0 !important;
+    }
+
+    .dashboard-content .status-badge {
+        padding: 5px 12px !important;
+        border-radius: 20px !important;
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        background: rgba(0, 242, 254, 0.15) !important;
+        color: #00f2fe !important;
+        -webkit-text-fill-color: #00f2fe !important;
+        border: 1px solid rgba(0, 242, 254, 0.4) !important;
+    }
+
+    /* 2. Stats Grid & Cards (Electric Violet Glass) */
+    .dashboard-content .stats-grid {
+        position: relative;
+        z-index: 2;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-content .stat-card {
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.6), rgba(91, 33, 182, 0.35)) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 14px;
+        padding: 14px 10px !important;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        box-sizing: border-box !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .dashboard-content .stat-card i {
+        font-size: 18px !important;
+        width: 36px !important;
+        height: 36px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #ff2a85, #8a2be2) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(255, 42, 133, 0.4) !important;
+    }
+
+    .dashboard-content .stat-card h3 {
+        font-size: clamp(10px, 3vw, 12px) !important;
+        font-weight: 600 !important;
+        color: #c4b5fd !important;
+        -webkit-text-fill-color: #c4b5fd !important;
+        margin: 0 !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .dashboard-content .stat-card h2 {
+        font-size: clamp(18px, 5.5vw, 22px) !important;
+        font-weight: 700 !important;
+        margin: 0 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
+
+    /* 3. Quick Actions (Deep Cyan & Indigo Glass) */
+    .dashboard-content .dashboard-section {
+        position: relative;
+        z-index: 2;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(13, 148, 136, 0.2)) !important;
+        border: 1px solid rgba(45, 212, 191, 0.3) !important;
+        border-radius: 16px;
+        padding: 16px 12px !important;
+        box-sizing: border-box !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .dashboard-content .section-header h2 {
+        font-size: clamp(14px, 4vw, 16px) !important;
+        font-weight: 700 !important;
+        color: #2dd4bf !important;
+        -webkit-text-fill-color: #2dd4bf !important;
+        margin: 0 0 12px 0 !important;
+    }
+
+    .dashboard-content .action-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-content .action-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 12px 4px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 12px;
+        text-decoration: none;
+        box-sizing: border-box !important;
+        transition: transform 0.2s ease;
+    }
+
+    .dashboard-content .action-card i {
+        font-size: 18px !important;
+        color: #00f2fe !important;
+    }
+
+    .dashboard-content .action-card span {
+        font-size: clamp(9px, 2.8vw, 11px) !important;
+        font-weight: 600 !important;
+        color: #f1f5f9 !important;
+        -webkit-text-fill-color: #f1f5f9 !important;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+}
+/* =========================================================
+   VIBRANT & COLORFUL GLASS PROFILE PAGE (MOBILE ONLY)
+   Only active on Mobile Screen (320px - 767px)
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Outer Container Setup */
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        padding-top: 75px !important; 
+        padding-bottom: 80px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+    }
+
+    /* Success Alert Box */
+    .dashboard-main .success-message {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        background: rgba(16, 185, 129, 0.2) !important;
+        border: 1px solid rgba(16, 185, 129, 0.4) !important;
+        color: #34d399 !important;
+        padding: 12px 14px !important;
+        border-radius: 12px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        margin-bottom: 16px !important;
+    }
+
+    /* Profile Banner Header Section */
+    .dashboard-main .profile-banner {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.2), rgba(138, 43, 226, 0.2)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.35) !important;
+        border-radius: 18px !important;
+        padding: 20px 14px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 8px 25px rgba(255, 42, 133, 0.2) !important;
+    }
+
+    /* Glowing Circular Profile Image */
+    .dashboard-main .profile-image {
+        width: 90px !important;
+        height: 90px !important;
+        border-radius: 50% !important;
+        padding: 3px !important;
+        background: linear-gradient(135deg, #ff2a85, #00f2fe) !important;
+        box-shadow: 0 0 20px rgba(0, 242, 254, 0.5) !important;
+    }
+
+    .dashboard-main .profile-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        display: block !important;
+    }
+
+    /* Profile Details Text */
+    .dashboard-main .profile-details h2 {
+        font-size: clamp(18px, 5.5vw, 22px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+    }
+
+    .dashboard-main .profile-details h4 {
+        font-size: clamp(13px, 3.8vw, 15px) !important;
+        font-weight: 600 !important;
+        margin: 0 0 10px 0 !important;
+        background: linear-gradient(90deg, #ff75ac, #00f2fe) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+    }
+
+    /* Status Badge */
+    .dashboard-main .status-badge {
+        display: inline-block !important;
+        padding: 5px 14px !important;
+        border-radius: 20px !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px !important;
+        text-transform: uppercase !important;
+        background: rgba(0, 242, 254, 0.15) !important;
+        color: #00f2fe !important;
+        -webkit-text-fill-color: #00f2fe !important;
+        border: 1px solid rgba(0, 242, 254, 0.4) !important;
+    }
+
+    /* Grid for Contact & Company Info */
+    .dashboard-main .profile-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+        margin-bottom: 14px !important;
+    }
+
+    /* Glass Cards Base Styling (Contact, Company, Bio & Social) */
+    .dashboard-main .profile-card,
+    .dashboard-main .social-card {
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.65), rgba(91, 33, 182, 0.35)) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 16px !important;
+        padding: 16px 14px !important;
+        margin-bottom: 14px !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Card Headings */
+    .dashboard-main .profile-card h3,
+    .dashboard-main .social-card h3 {
+        font-size: clamp(15px, 4.2vw, 17px) !important;
+        font-weight: 700 !important;
+        color: #00f2fe !important;
+        -webkit-text-fill-color: #00f2fe !important;
+        margin: 0 0 12px 0 !important;
+        padding-bottom: 6px !important;
+        border-bottom: 1px solid rgba(0, 242, 254, 0.2) !important;
+    }
+
+    /* Card Text & Label Rows */
+    .dashboard-main .profile-card p,
+    .dashboard-main .social-card p {
+        font-size: clamp(12px, 3.4vw, 14px) !important;
+        line-height: 1.6 !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        margin: 0 0 8px 0 !important;
+        word-break: break-word !important;
+    }
+
+    .dashboard-main .profile-card p strong,
+    .dashboard-main .social-card p strong {
+        color: #ff75ac !important;
+        -webkit-text-fill-color: #ff75ac !important;
+        font-weight: 600 !important;
+    }
+
+    /* Action Buttons Area */
+    .dashboard-main .profile-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-top: 10px !important;
+    }
+
+    /* Glowing Glass Buttons */
+    .dashboard-main .edit-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        padding: 12px !important;
+        border-radius: 12px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.8), rgba(138, 43, 226, 0.8)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.4) !important;
+        box-shadow: 0 4px 15px rgba(255, 42, 133, 0.3) !important;
+        transition: transform 0.2s ease, opacity 0.2s ease !important;
+    }
+
+    .dashboard-main .edit-btn:active {
+        transform: scale(0.97) !important;
+        opacity: 0.9 !important;
+    }
+
+    .dashboard-main .edit-btn i {
+        font-size: 15px !important;
+        color: #00f2fe !important;
+    }
+}
+/* =========================================================
+   FULL SCREEN BACKGROUND FIX (NO WHITE SPACE AT BOTTOM)
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Page Body & HTML Height Fix */
+    html, body {
+        background-color: #0f172a !important; /* Fallback dark color for the whole screen */
+        min-height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Main Dashboard Outer Container Height Fix */
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-height: 100vh !important; /* Covers full mobile screen height */
+        box-sizing: border-box !important;
+        padding-top: 75px !important; 
+        padding-bottom: 90px !important; /* Smooth space above bottom navbar */
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        
+        /* Full Gradient Background Covering Entire Page */
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+        background-attachment: fixed !important; /* Keeps background filled while scrolling */
+    }
+
+    /* Inner Wrapper Height Fix */
+    .dashboard-main {
+        min-height: calc(100vh - 165px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+/* =========================================================
+   UNIVERSAL RESPONSIVE PORTFOLIO GALLERY (VIBRANT NEON GLASS)
+   Supports Redmi 6 to iPhone Pro Max (320px - 767px)
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Base Layout Container */
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        padding-top: 75px !important; 
+        padding-bottom: 85px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+    }
+
+    /* Success & Error Alert Boxes */
+    .dashboard-main .success-message,
+    .dashboard-main .error-message {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 12px 14px !important;
+        border-radius: 12px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .dashboard-main .success-message {
+        background: rgba(16, 185, 129, 0.2) !important;
+        border: 1px solid rgba(16, 185, 129, 0.4) !important;
+        color: #34d399 !important;
+    }
+
+    .dashboard-main .error-message {
+        background: rgba(239, 68, 68, 0.2) !important;
+        border: 1px solid rgba(239, 68, 68, 0.4) !important;
+        color: #f87171 !important;
+    }
+
+    /* Page Header Section */
+    .dashboard-main .edit-profile-header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.2), rgba(138, 43, 226, 0.2)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.35) !important;
+        border-radius: 16px !important;
+        padding: 18px 14px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 8px 25px rgba(255, 42, 133, 0.2) !important;
+    }
+
+    .dashboard-main .edit-profile-header h1 {
+        font-size: clamp(18px, 5.5vw, 22px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+    }
+
+    .dashboard-main .edit-profile-header p {
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        margin: 0 !important;
+    }
+
+    .dashboard-main .header-icon i {
+        font-size: 26px !important;
+        color: #00f2fe !important;
+    }
+
+    /* Add New Work Button */
+    .dashboard-main .save-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        padding: 13px !important;
+        border-radius: 12px !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        background: linear-gradient(135deg, #ff2a85, #8a2be2) !important;
+        border: 1px solid rgba(255, 105, 180, 0.4) !important;
+        box-shadow: 0 6px 20px rgba(255, 42, 133, 0.35) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Responsive Portfolio Cards Grid Layout */
+    .dashboard-main .portfolio-grid {
+        display: grid !important;
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important; /* 1 column for clean viewing */
+        gap: 16px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Portfolio Glass Card */
+    .dashboard-main .portfolio-card {
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.65), rgba(91, 33, 182, 0.35)) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 16px !important;
+        padding: 12px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    /* Portfolio Image Showcase */
+    .dashboard-main .portfolio-card img {
+        width: 100% !important;
+        height: 180px !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+        margin-bottom: 12px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Card Titles & Description */
+    .dashboard-main .portfolio-card h3 {
+        font-size: clamp(15px, 4.2vw, 17px) !important;
+        font-weight: 700 !important;
+        color: #00f2fe !important;
+        -webkit-text-fill-color: #00f2fe !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    .dashboard-main .portfolio-card p {
+        font-size: clamp(12px, 3.4vw, 13px) !important;
+        line-height: 1.5 !important;
+        color: #cbd5e1 !important;
+        -webkit-text-fill-color: #cbd5e1 !important;
+        margin: 0 0 14px 0 !important;
+    }
+
+    /* Edit & Delete Action Buttons Row */
+    .dashboard-main .portfolio-buttons {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .dashboard-main .portfolio-buttons a {
+        flex: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        padding: 10px !important;
+        border-radius: 10px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Edit Button (Cyan Glass) */
+    .dashboard-main .portfolio-buttons .edit-btn {
+        background: rgba(0, 242, 254, 0.15) !important;
+        color: #00f2fe !important;
+        -webkit-text-fill-color: #00f2fe !important;
+        border: 1px solid rgba(0, 242, 254, 0.4) !important;
+    }
+
+    /* Delete Button (Neon Red Glass) */
+    .dashboard-main .portfolio-buttons .delete-btn {
+        background: rgba(239, 68, 68, 0.18) !important;
+        color: #f87171 !important;
+        -webkit-text-fill-color: #f87171 !important;
+        border: 1px solid rgba(239, 68, 68, 0.4) !important;
+    }
+
+    /* Empty Portfolio State Box */
+    .dashboard-main .empty-portfolio {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 35px 20px !important;
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.5), rgba(91, 33, 182, 0.25)) !important;
+        border: 1px dashed rgba(167, 139, 250, 0.4) !important;
+        border-radius: 16px !important;
+    }
+
+    .dashboard-main .empty-portfolio i {
+        font-size: 40px !important;
+        color: #ff2a85 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .dashboard-main .empty-portfolio h2 {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    .dashboard-main .empty-portfolio p {
+        font-size: 12px !important;
+        color: #94a3b8 !important;
+        margin: 0 !important;
+    }
+}
+/* =========================================================
+   UNIVERSAL MOBILE RESPONSIVE BOOKINGS PAGE (NEON GLASS CARDS)
+   Supports Redmi 6 to iPhone Pro Max (320px - 767px)
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Page Base & Background Fix */
+    html, body {
+        background-color: #0f172a !important;
+        min-height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-height: 100vh !important;
+        box-sizing: border-box !important;
+        padding-top: 75px !important; 
+        padding-bottom: 90px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+        background-attachment: fixed !important;
+    }
+
+    .dashboard-main {
+        min-height: calc(100vh - 165px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Page Header */
+    .dashboard-main .page-header {
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.2), rgba(138, 43, 226, 0.2)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.35) !important;
+        border-radius: 16px !important;
+        padding: 18px 14px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 8px 25px rgba(255, 42, 133, 0.2) !important;
+    }
+
+    .dashboard-main .page-header h1 {
+        font-size: clamp(18px, 5.5vw, 22px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+    }
+
+    .dashboard-main .page-header p {
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        margin: 0 !important;
+    }
+
+    /* Message Alerts */
+    .dashboard-main .success-message,
+    .dashboard-main .error-message {
+        padding: 12px 14px !important;
+        border-radius: 12px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .dashboard-main .success-message {
+        background: rgba(16, 185, 129, 0.2) !important;
+        border: 1px solid rgba(16, 185, 129, 0.4) !important;
+        color: #34d399 !important;
+    }
+
+    .dashboard-main .error-message {
+        background: rgba(239, 68, 68, 0.2) !important;
+        border: 1px solid rgba(239, 68, 68, 0.4) !important;
+        color: #f87171 !important;
+    }
+
+    /* Convert HTML Table into Mobile Glass Cards */
+    .dashboard-main .table-responsive {
+        width: 100% !important;
+        overflow: visible !important;
+        border: none !important;
+    }
+
+    .dashboard-main table.booking-table,
+    .dashboard-main table.booking-table tbody {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+        width: 100% !important;
+    }
+
+    /* Hide Table Header on Mobile */
+    .dashboard-main table.booking-table thead {
+        display: none !important;
+    }
+
+    /* Transform Each Row Into an Animated Glass Card */
+    .dashboard-main table.booking-table tr {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.65), rgba(91, 33, 182, 0.35)) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 16px !important;
+        padding: 16px 14px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-main table.booking-table td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0 !important;
+        border: none !important;
+        font-size: 13px !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        text-align: right !important;
+    }
+
+    /* Row Field Labels (Auto-Generated Headers) */
+    .dashboard-main table.booking-table td::before {
+        font-weight: 700 !important;
+        color: #00f2fe !important;
+        -webkit-text-fill-color: #00f2fe !important;
+        font-size: 12px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .dashboard-main table.booking-table td:nth-child(1)::before { content: "Booking:"; }
+    .dashboard-main table.booking-table td:nth-child(2)::before { content: "Customer:"; }
+    .dashboard-main table.booking-table td:nth-child(3)::before { content: "Service:"; }
+    .dashboard-main table.booking-table td:nth-child(4)::before { content: "Date & Time:"; }
+    .dashboard-main table.booking-table td:nth-child(5)::before { content: "Amount:"; }
+    .dashboard-main table.booking-table td:nth-child(6)::before { content: "Status:"; }
+    .dashboard-main table.booking-table td:nth-child(7)::before { content: "Action:"; }
+
+    /* Customizing Text Elements Inside Card */
+    .dashboard-main table.booking-table td strong {
+        color: #ff75ac !important;
+        -webkit-text-fill-color: #ff75ac !important;
+        font-size: 14px !important;
+    }
+
+    .dashboard-main table.booking-table td small {
+        color: #cbd5e1 !important;
+        -webkit-text-fill-color: #cbd5e1 !important;
+        font-size: 11px !important;
+    }
+
+    /* Total Amount Formatting */
+    .dashboard-main table.booking-table td:nth-child(5) {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #34d399 !important;
+        -webkit-text-fill-color: #34d399 !important;
+    }
+
+    /* Action Buttons Area */
+    .dashboard-main table.booking-table td:nth-child(7) {
+        padding-top: 10px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        margin-top: 4px !important;
+        gap: 8px !important;
+    }
+
+    .dashboard-main table.booking-table td:nth-child(7) a {
+        flex: 1 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 9px 12px !important;
+        border-radius: 10px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Accept Button (Glowing Green Glass) */
+    .dashboard-main table.booking-table .accept-btn {
+        background: rgba(16, 185, 129, 0.2) !important;
+        color: #34d399 !important;
+        -webkit-text-fill-color: #34d399 !important;
+        border: 1px solid rgba(16, 185, 129, 0.5) !important;
+    }
+
+    /* Reject Button (Glowing Red Glass) */
+    .dashboard-main table.booking-table .reject-btn {
+        background: rgba(239, 68, 68, 0.2) !important;
+        color: #f87171 !important;
+        -webkit-text-fill-color: #f87171 !important;
+        border: 1px solid rgba(239, 68, 68, 0.5) !important;
+    }
+
+    /* Complete Button (Glowing Blue Glass) */
+    .dashboard-main table.booking-table .complete-btn {
+        background: rgba(59, 130, 246, 0.2) !important;
+        color: #60a5fa !important;
+        -webkit-text-fill-color: #60a5fa !important;
+        border: 1px solid rgba(59, 130, 246, 0.5) !important;
+    }
+
+    /* Empty Booking State */
+    .dashboard-main .empty-booking {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 35px 20px !important;
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.5), rgba(91, 33, 182, 0.25)) !important;
+        border: 1px dashed rgba(167, 139, 250, 0.4) !important;
+        border-radius: 16px !important;
+    }
+
+    .dashboard-main .empty-booking i {
+        font-size: 40px !important;
+        color: #ff2a85 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .dashboard-main .empty-booking h2 {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    .dashboard-main .empty-booking p {
+        font-size: 12px !important;
+        color: #94a3b8 !important;
+        margin: 0 !important;
+    }
+}
+
+/* =========================================================
+   SETTINGS GRID - 3 CARDS PER ROW WITH HOVER GAP
+   Supports Redmi 6 to iPhone Pro Max (320px - 767px)
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Page Base & Full Screen Background Fix */
+    html, body {
+        background-color: #0f172a !important;
+        min-height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-height: 100vh !important;
+        box-sizing: border-box !important;
+        padding-top: 75px !important; 
+        padding-bottom: 90px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+        background-attachment: fixed !important;
+    }
+
+    .dashboard-main {
+        min-height: calc(100vh - 165px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Page Header Section */
+    .dashboard-main .page-header {
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.2), rgba(138, 43, 226, 0.2)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.35) !important;
+        border-radius: 16px !important;
+        padding: 16px 12px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 8px 25px rgba(255, 42, 133, 0.2) !important;
+    }
+
+    .dashboard-main .page-header h1 {
+        font-size: clamp(16px, 5vw, 20px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .dashboard-main .page-header h1 i {
+        color: #00f2fe !important;
+    }
+
+    .dashboard-main .page-header p {
+        font-size: clamp(11px, 3.2vw, 12px) !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        margin: 0 !important;
+    }
+
+    /* 3 Columns Grid Layout with Row & Column Gaps */
+    .dashboard-main .settings-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important; /* 3 Cards per Row */
+        gap: 12px !important; /* Proper spacing between rows and columns */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Settings Compact Glass Card */
+    .dashboard-main .setting-card {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: center !important;
+        padding: 14px 6px !important;
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.65), rgba(91, 33, 182, 0.35)) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 14px !important;
+        text-decoration: none !important;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
+        box-sizing: border-box !important;
+        transition: transform 0.25 ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+    }
+
+    /* Smooth Hover & Active Scale Effect with Safe Spacing */
+    .dashboard-main .setting-card:hover,
+    .dashboard-main .setting-card:active {
+        transform: translateY(-3px) scale(1.02) !important;
+        border-color: rgba(0, 242, 254, 0.6) !important;
+        box-shadow: 0 10px 22px rgba(0, 242, 254, 0.2) !important;
+        z-index: 2 !important;
+    }
+
+    /* Card Icon */
+    .dashboard-main .setting-card > i {
+        font-size: 18px !important;
+        color: #00f2fe !important;
+        margin-bottom: 8px !important;
+        width: 36px !important;
+        height: 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 10px !important;
+        background: rgba(0, 242, 254, 0.12) !important;
+        border: 1px solid rgba(0, 242, 254, 0.3) !important;
+    }
+
+    /* Title Styling (Fitted for 3 Columns) */
+    .dashboard-main .setting-card h3 {
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 3px 0 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        width: 100% !important;
+    }
+
+    /* Subtext Description Hide on Compact Grid to maintain clean design */
+    .dashboard-main .setting-card p {
+        font-size: 9px !important;
+        line-height: 1.2 !important;
+        color: #cbd5e1 !important;
+        -webkit-text-fill-color: #cbd5e1 !important;
+        margin: 0 0 6px 0 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+
+    /* Logout Card Styling */
+    .dashboard-main .logout-card {
+        background: linear-gradient(145deg, rgba(127, 29, 29, 0.4), rgba(239, 68, 68, 0.2)) !important;
+        border: 1px solid rgba(239, 68, 68, 0.4) !important;
+    }
+
+    .dashboard-main .logout-card > i {
+        color: #f87171 !important;
+        background: rgba(239, 68, 68, 0.15) !important;
+        border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    }
+
+    .dashboard-main .logout-card h3 {
+        color: #f87171 !important;
+        -webkit-text-fill-color: #f87171 !important;
+    }
+
+    /* Toggle Switch Alignment for 3-Column Layout */
+    .dashboard-main .setting-card .switch {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 36px !important;
+        height: 18px !important;
+        display: inline-block !important;
+        margin-top: 4px !important;
+    }
+
+    .dashboard-main .setting-card .switch input {
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    /* Toggle Slider */
+    .dashboard-main .setting-card .slider {
+        position: absolute !important;
+        cursor: pointer !important;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(255, 255, 255, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        transition: .3s !important;
+        border-radius: 20px !important;
+    }
+
+    .dashboard-main .setting-card .slider:before {
+        position: absolute !important;
+        content: "" !important;
+        height: 12px !important;
+        width: 12px !important;
+        left: 2px !important;
+        bottom: 2px !important;
+        background-color: #ffffff !important;
+        transition: .3s !important;
+        border-radius: 50% !important;
+    }
+
+    .dashboard-main .setting-card input:checked + .slider {
+        background: linear-gradient(135deg, #ff2a85, #8a2be2) !important;
+        border-color: rgba(255, 105, 180, 0.6) !important;
+        box-shadow: 0 0 8px rgba(255, 42, 133, 0.5) !important;
+    }
+
+    .dashboard-main .setting-card input:checked + .slider:before {
+        transform: translateX(16px) !important;
+        background-color: #ffffff !important;
+    }
+}
+/* =========================================================
+   ADD SERVICE FORM - VIBRANT NEON GLASSMORPHIC MOBILE DESIGN
+   Supports Redmi 6 to iPhone Pro Max (320px - 767px)
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Base Layout & Dark Glass Background */
+    html, body {
+        background-color: #0f172a !important;
+        min-height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-height: 100vh !important;
+        box-sizing: border-box !important;
+        padding-top: 75px !important;
+        padding-bottom: 90px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+        background-attachment: fixed !important;
+    }
+
+    .dashboard-main {
+        min-height: calc(100vh - 165px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Header Section */
+    .dashboard-main .edit-profile-header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.2), rgba(138, 43, 226, 0.2)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.35) !important;
+        border-radius: 16px !important;
+        padding: 16px 14px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 8px 25px rgba(255, 42, 133, 0.2) !important;
+    }
+
+    .dashboard-main .edit-profile-header h1 {
+        font-size: clamp(18px, 5.5vw, 22px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+    }
+
+    .dashboard-main .edit-profile-header p {
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        margin: 0 !important;
+    }
+
+    .dashboard-main .edit-profile-header .header-icon i {
+        font-size: 22px !important;
+        color: #00f2fe !important;
+        width: 42px !important;
+        height: 42px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 12px !important;
+        background: rgba(0, 242, 254, 0.12) !important;
+        border: 1px solid rgba(0, 242, 254, 0.3) !important;
+    }
+
+    /* Form Glass Container */
+    .dashboard-main .profile-form-card {
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.65), rgba(91, 33, 182, 0.35)) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 16px !important;
+        padding: 18px 14px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Form Group & Labels */
+    .dashboard-main .form-group {
+        margin-bottom: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .dashboard-main .form-group label {
+        font-size: clamp(12px, 3.5vw, 14px) !important;
+        font-weight: 600 !important;
+        color: #a78bfa !important;
+        margin-bottom: 6px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+    }
+
+    .dashboard-main .form-group label i {
+        color: #00f2fe !important;
+    }
+
+    /* Inputs, Selects & Textarea */
+    .dashboard-main .form-group input[type="text"],
+    .dashboard-main .form-group input[type="number"],
+    .dashboard-main .form-group textarea,
+    .dashboard-main .custom-select select {
+        width: 100% !important;
+        background: rgba(15, 23, 42, 0.6) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 10px !important;
+        padding: 12px 12px !important;
+        font-size: 13px !important;
+        color: #ffffff !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
+    }
+
+    .dashboard-main .form-group input:focus,
+    .dashboard-main .form-group textarea:focus,
+    .dashboard-main .custom-select select:focus {
+        border-color: #00f2fe !important;
+        box-shadow: 0 0 10px rgba(0, 242, 254, 0.3) !important;
+    }
+
+    /* File Input Styling */
+    .dashboard-main .form-group input[type="file"] {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border: 1px dashed rgba(167, 139, 250, 0.5) !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+        color: #cbd5e1 !important;
+        font-size: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-main .form-group input[type="file"]::-webkit-file-upload-button {
+        background: linear-gradient(135deg, #ff2a85, #8a2be2) !important;
+        border: none !important;
+        border-radius: 6px !important;
+        color: #ffffff !important;
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        margin-right: 10px !important;
+        cursor: pointer !important;
+    }
+
+    /* Custom Select Dropdown Dark Mode Option Fix */
+    .dashboard-main .custom-select select option {
+        background-color: #0f172a !important;
+        color: #ffffff !important;
+    }
+
+    /* Neon Save Button */
+    .dashboard-main .save-btn {
+        width: 100% !important;
+        background: linear-gradient(135deg, #ff2a85, #8a2be2) !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 14px !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        box-shadow: 0 6px 20px rgba(255, 42, 133, 0.4) !important;
+        cursor: pointer !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        margin-top: 10px !important;
+    }
+
+    .dashboard-main .save-btn:active {
+        transform: scale(0.98) !important;
+        box-shadow: 0 3px 10px rgba(255, 42, 133, 0.3) !important;
+    }
+}
+/* =========================================================
+   CHANGE PHOTO PAGE - VIBRANT NEON GLASSMORPHIC MOBILE DESIGN
+   Supports Redmi 6 to iPhone Pro Max (320px - 767px)
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Page Base & Dynamic Glass Background Fix */
+    html, body {
+        background-color: #0f172a !important;
+        min-height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-height: 100vh !important;
+        box-sizing: border-box !important;
+        padding-top: 75px !important;
+        padding-bottom: 90px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+        background-attachment: fixed !important;
+    }
+
+    .dashboard-main {
+        min-height: calc(100vh - 165px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Page Header Section */
+    .dashboard-main .page-header {
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.2), rgba(138, 43, 226, 0.2)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.35) !important;
+        border-radius: 16px !important;
+        padding: 16px 14px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 8px 25px rgba(255, 42, 133, 0.2) !important;
+    }
+
+    .dashboard-main .page-header h1 {
+        font-size: clamp(18px, 5.5vw, 22px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .dashboard-main .page-header h1 i {
+        color: #00f2fe !important;
+    }
+
+    .dashboard-main .page-header p {
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        margin: 0 !important;
+    }
+
+    /* Main Glass Card Container */
+    .dashboard-main .photo-card {
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.65), rgba(91, 33, 182, 0.35)) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 16px !important;
+        padding: 20px 14px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Success & Error Alert Messages */
+    .dashboard-main .success-message,
+    .dashboard-main .error-message {
+        width: 100% !important;
+        padding: 10px 12px !important;
+        border-radius: 10px !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        margin-bottom: 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-main .success-message {
+        background: rgba(16, 185, 129, 0.15) !important;
+        border: 1px solid rgba(16, 185, 129, 0.4) !important;
+        color: #34d399 !important;
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.2) !important;
+    }
+
+    .dashboard-main .error-message {
+        background: rgba(239, 68, 68, 0.15) !important;
+        border: 1px solid rgba(239, 68, 68, 0.4) !important;
+        color: #f87171 !important;
+        box-shadow: 0 0 12px rgba(239, 68, 68, 0.2) !important;
+    }
+
+    /* Profile Photo Circle with Glowing Neon Ring */
+    .dashboard-main .current-photo {
+        width: 110px !important;
+        height: 110px !important;
+        border-radius: 50% !important;
+        padding: 4px !important;
+        background: linear-gradient(135deg, #00f2fe, #ff2a85) !important;
+        box-shadow: 0 0 20px rgba(0, 242, 254, 0.4) !important;
+        margin-bottom: 20px !important;
+    }
+
+    .dashboard-main .current-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        background: #0f172a !important;
+        display: block !important;
+    }
+
+    /* Form Alignment */
+    .dashboard-main .photo-card form {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .dashboard-main .photo-card label {
+        font-size: clamp(12px, 3.5vw, 14px) !important;
+        font-weight: 600 !important;
+        color: #a78bfa !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Custom File Input Styling */
+    .dashboard-main .photo-card input[type="file"] {
+        width: 100% !important;
+        background: rgba(15, 23, 42, 0.6) !important;
+        border: 1px dashed rgba(167, 139, 250, 0.5) !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+        color: #cbd5e1 !important;
+        font-size: 12px !important;
+        box-sizing: border-box !important;
+        margin-bottom: 18px !important;
+    }
+
+    .dashboard-main .photo-card input[type="file"]::-webkit-file-upload-button {
+        background: linear-gradient(135deg, #ff2a85, #8a2be2) !important;
+        border: none !important;
+        border-radius: 6px !important;
+        color: #ffffff !important;
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        margin-right: 10px !important;
+        cursor: pointer !important;
+    }
+
+    /* Neon Upload Button */
+    .dashboard-main .save-btn {
+        width: 100% !important;
+        background: linear-gradient(135deg, #ff2a85, #8a2be2) !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 14px !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        box-shadow: 0 6px 20px rgba(255, 42, 133, 0.4) !important;
+        cursor: pointer !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    .dashboard-main .save-btn:active {
+        transform: scale(0.98) !important;
+        box-shadow: 0 3px 10px rgba(255, 42, 133, 0.3) !important;
+    }
+}
+/* =========================================================
+   CHANGE PASSWORD PAGE - BALANCED WIDTH WITH SIDE PADDING
+   Supports Redmi 6 to iPhone Pro Max (320px - 767px)
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Page Base & Dynamic Glass Background Fix */
+    html, body {
+        background-color: #0f172a !important;
+        min-height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-content {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        min-height: 100vh !important;
+        box-sizing: border-box !important;
+        padding-top: 70px !important;
+        padding-bottom: 85px !important;
+        /* দুই পাশে হালকা ও সুন্দর প্যাডিং সেট করা হয়েছে */
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        z-index: 1;
+        background: linear-gradient(135deg, #0f172a 0%, #1a103c 50%, #0d1b2a 100%) !important;
+        background-attachment: fixed !important;
+    }
+
+    .dashboard-main {
+        width: 100% !important;
+        min-height: calc(100vh - 155px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Header Section */
+    .dashboard-main .page-header {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        background: linear-gradient(135deg, rgba(255, 42, 133, 0.2), rgba(138, 43, 226, 0.2)) !important;
+        border: 1px solid rgba(255, 105, 180, 0.35) !important;
+        border-radius: 14px !important;
+        padding: 16px 14px !important;
+        margin-bottom: 14px !important;
+        box-shadow: 0 8px 25px rgba(255, 42, 133, 0.2) !important;
+    }
+
+    .dashboard-main .page-header h1 {
+        font-size: clamp(18px, 5.5vw, 22px) !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .dashboard-main .page-header h1 i {
+        color: #00f2fe !important;
+    }
+
+    .dashboard-main .page-header p {
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        margin: 0 !important;
+    }
+
+    /* Alert Messages */
+    .dashboard-main .success-message,
+    .dashboard-main .error-message {
+        width: 100% !important;
+        padding: 12px 14px !important;
+        border-radius: 12px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        margin-bottom: 14px !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-main .success-message {
+        background: rgba(16, 185, 129, 0.15) !important;
+        border: 1px solid rgba(16, 185, 129, 0.4) !important;
+        color: #34d399 !important;
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.2) !important;
+    }
+
+    .dashboard-main .error-message {
+        background: rgba(239, 68, 68, 0.15) !important;
+        border: 1px solid rgba(239, 68, 68, 0.4) !important;
+        color: #f87171 !important;
+        box-shadow: 0 0 12px rgba(239, 68, 68, 0.2) !important;
+    }
+
+    /* Form Glass Card Container */
+    .dashboard-main .photo-card {
+        width: 100% !important;
+        background: linear-gradient(145deg, rgba(30, 27, 75, 0.65), rgba(91, 33, 182, 0.35)) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 14px !important;
+        padding: 18px 14px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-main .photo-card form {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Form Group & Labels */
+    .dashboard-main .form-group {
+        width: 100% !important;
+        margin-bottom: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-main .form-group label {
+        font-size: clamp(12px, 3.5vw, 14px) !important;
+        font-weight: 600 !important;
+        color: #a78bfa !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* Password Input Fields */
+    .dashboard-main .form-group input[type="password"],
+    .dashboard-main .form-group input[type="text"] {
+        width: 100% !important;
+        background: rgba(15, 23, 42, 0.6) !important;
+        border: 1px solid rgba(167, 139, 250, 0.3) !important;
+        border-radius: 10px !important;
+        padding: 12px 14px !important;
+        font-size: 14px !important;
+        color: #ffffff !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
+    }
+
+    .dashboard-main .form-group input:focus {
+        border-color: #00f2fe !important;
+        box-shadow: 0 0 10px rgba(0, 242, 254, 0.3) !important;
+    }
+
+    /* Show Password Checkbox & Text */
+    .dashboard-main .show-password {
+        margin-top: 6px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .dashboard-main .show-password label {
+        font-size: 11px !important;
+        color: #cbd5e1 !important;
+        -webkit-text-fill-color: #cbd5e1 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        cursor: pointer !important;
+        margin: 0 !important;
+    }
+
+    .dashboard-main .show-password input[type="checkbox"] {
+        accent-color: #ff2a85 !important;
+        width: 14px !important;
+        height: 14px !important;
+        cursor: pointer !important;
+    }
+
+    /* Neon Button */
+    .dashboard-main .save-btn {
+        width: 100% !important;
+        background: linear-gradient(135deg, #ff2a85, #8a2be2) !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 14px !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        box-shadow: 0 6px 20px rgba(255, 42, 133, 0.4) !important;
+        cursor: pointer !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        margin-top: 6px !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard-main .save-btn:active {
+        transform: scale(0.98) !important;
+        box-shadow: 0 3px 10px rgba(255, 42, 133, 0.3) !important;
+    }
 }

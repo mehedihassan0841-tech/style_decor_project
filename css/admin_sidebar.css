@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7fb;
+}
+
+/* =========================================================
+   DESKTOP SIDEBAR
+========================================================= */
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #0f172a;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.desktop-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.admin-logo {
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-logo h2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.admin-logo span {
+    color: #94a3b8;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.admin-menu {
+    list-style: none;
+    padding: 15px 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.admin-menu li {
+    margin-bottom: 6px;
+}
+
+.admin-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.admin-menu li a i {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+.admin-menu li a:hover,
+.admin-menu li.active a {
+    background: #22c55e;
+    color: #ffffff;
+}
+
+.admin-menu li a.admin-logout {
+    color: #fca5a5;
+    background: rgba(239, 68, 68, 0.1);
+    margin-top: 15px;
+}
+
+.admin-menu li a.admin-logout:hover {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+/* Hide Mobile Elements on Desktop */
+.mobile-topbar,
+.mobile-bottom-nav {
+    display: none !important;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+@media screen and (max-width: 768px) {
+    /* Hide Desktop Sidebar */
+    .admin-sidebar {
+        display: none !important;
+    }
+
+    /* Mobile Topbar */
+    .mobile-topbar {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: #0f172a;
+        padding: 0 12px;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 9999;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-logo h2 {
+        color: #ffffff;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .mobile-logo span {
+        color: #94a3b8;
+        font-size: 9px;
+        display: block;
+    }
+
+    .mobile-top-links {
+        display: flex;
+        gap: 6px;
+    }
+
+    .mobile-top-links a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #cbd5e1;
+        text-decoration: none;
+        font-size: 9px;
+        padding: 4px 6px;
+        border-radius: 6px;
+    }
+
+    .mobile-top-links a.active {
+        color: #22c55e;
+    }
+
+    .mobile-top-links a i {
+        font-size: 15px;
+    }
+
+    .mobile-top-links a.mobile-logout {
+        color: #fca5a5;
+    }
+
+    /* Mobile Bottom Navbar */
+    .mobile-bottom-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: #0f172a;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 9999;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-bottom-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 10px;
+        gap: 2px;
+    }
+
+    .mobile-bottom-nav a i {
+        font-size: 18px;
+    }
+
+    .mobile-bottom-nav a.active {
+        color: #22c55e;
+    }
+
+    /* Page Content Padding Offset for Mobile Layout */
+    .admin-content,
+    .main-content {
+        margin-left: 0 !important;
+        padding-top: 70px !important;
+        padding-bottom: 70px !important;
+    }
+}

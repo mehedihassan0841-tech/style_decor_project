@@ -11,10 +11,10 @@ if ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1'
 } else {
 
     // InfinityFree Live Database
-    $host = "sql202.infinityfree.com";
-    $dbname = "if0_42337746_styledecor";
-    $username = "if0_42337746";
-    $password = "ourProject";
+    $host = "sql213.infinityfree.com";
+$dbname = "if0_42473841_styledecor";
+$username = "if0_42473841";
+$password = "1234Re4321";
 
 }
 

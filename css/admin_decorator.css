@@ -1629,3 +1629,354 @@ background:#15803d;
 transform:translateY(-3px);
 
 }
+
+/* =========================================================
+   FIXED LEFT SPACING & GLASSMORPHISM (MAX-WIDTH: 768PX)
+========================================================= */
+@media screen and (max-width: 768px) {
+
+    /* ১. বাম পাশের ফাঁকা জায়গা দূর করার মেইন ফিক্স (Margin Offset Reset) */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    .admin-content,
+    .main-content,
+    .decorator-page-wrapper {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative;
+        left: 0 !important;
+    }
+
+    /* ২. মোবাইল লেআউট ও টপ/বটম নেভবার সেফ গ্যাপ */
+    .decorator-page-wrapper {
+        padding-top: 75px !important;    /* Topbar Safe Gap */
+        padding-bottom: 85px !important; /* Bottom Nav Safe Gap */
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        min-height: 100vh;
+    }
+
+    .decorator-page-content {
+        padding: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* ৩. স্মুথ এন্ট্রান্স অ্যানিমেশন */
+    @keyframes glassFadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(18px) scale(0.98);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    /* ৪. পেজ হেডার */
+    .decorator-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        animation: glassFadeUp 0.4s ease-out forwards;
+    }
+
+    .decorator-page-title h1 {
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    .decorator-page-title p {
+        color: #94a3b8;
+        font-size: 12px;
+    }
+
+    .decorator-add-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+        background: rgba(34, 197, 94, 0.25);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        color: #4ade80;
+        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .decorator-add-btn:active {
+        transform: scale(0.98);
+        background: rgba(34, 197, 94, 0.4);
+    }
+
+    /* ৫. ট্রান্সপারেন্ট স্ট্যাট গ্রিড (২ কলামে নিখুঁত ফিট) */
+    .decorator-summary-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .decorator-summary-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 12px;
+        gap: 10px;
+        animation: glassFadeUp 0.5s ease-out forwards;
+        transition: all 0.3s ease;
+    }
+
+    .decorator-summary-card:active {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .decorator-summary-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+        background: rgba(34, 197, 94, 0.15);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        color: #4ade80;
+        border-radius: 10px;
+    }
+
+    .decorator-summary-text h2 {
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    .decorator-summary-text p {
+        font-size: 10px;
+        color: #94a3b8;
+    }
+
+    /* ৬. গ্লাস সার্চ বক্স */
+    .decorator-search-wrapper {
+        width: 100%;
+        animation: glassFadeUp 0.6s ease-out forwards;
+    }
+
+    .decorator-search-box {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 5px 8px 5px 12px;
+        width: 100%;
+    }
+
+    .decorator-search-box input {
+        color: #ffffff;
+        font-size: 13px;
+        background: transparent;
+    }
+
+    .decorator-search-box input::placeholder {
+        color: #64748b;
+    }
+
+    .decorator-search-btn {
+        background: rgba(34, 197, 94, 0.8);
+        border: 1px solid rgba(34, 197, 94, 0.5);
+        color: #ffffff;
+        backdrop-filter: blur(8px);
+        border-radius: 10px;
+        padding: 8px 14px;
+    }
+
+    /* ৭. গ্লাস টেবিল র‍্যাপার (ফুল স্ক্রিন ফিট) */
+    /* =========================================================
+   MOBILE RESPONSIVE TABLE & BUTTONS (GLASSMORPHISM)
+========================================================= */
+@media screen and (max-width: 768px) {
+
+    /* ১. গ্লাস টেবিল কন্টেইনার (ফুল স্ক্রিন ফিট ও স্মুথ হরিজন্টাল স্ক্রোল) */
+    .decorator-table-wrapper {
+        background: rgba(255, 255, 255, 0.03) !important;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+        animation: glassFadeUp 0.7s ease-out forwards;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch; /* iOS-এ স্মুথ স্ক্রোলিংয়ের জন্য */
+        width: 100% !important;
+        margin-top: 10px;
+    }
+
+    /* ২. টেবিল স্ট্রাকচার */
+    .decorator-table {
+        width: 100% !important;
+        min-width: 600px; /* কম পিক্সেলের ফোনে যাতে ডাটা হিজিবিজি না হয় */
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+    }
+
+    /* ১. প্রিমিয়াম টেবিল হেডলাইন (Table Th Header) */
+    .decorator-table th {
+        background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%) !important;
+        color: #38bdf8 !important; /* হালকা নিয়ন ব্লু টেক্সট */
+        border-bottom: 2px solid rgba(56, 189, 248, 0.2) !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        padding: 14px 16px !important;
+        text-transform: uppercase;
+        letter-spacing: 1px !important; /* প্রিমিয়াম টাইপোগ্রাফি স্পেসিং */
+        white-space: nowrap;
+        text-shadow: 0 0 10px rgba(56, 189, 248, 0.3); /* মৃদু নিয়ন গ্লো */
+    }
+    /* প্রথম ও শেষ হেডার সেল-এর কোনা স্মুথ রাউন্ডেড করা */
+    .decorator-table th:first-child {
+        border-top-left-radius: 14px;
+    }
+    .decorator-table th:last-child {
+        border-top-right-radius: 14px;
+    }
+
+  .decorator-table td {
+        padding: 14px 16px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        color: #cbd5e1 !important;
+        font-size: 13px !important;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+/* ২. সাদা ব্যাকগ্রাউন্ড ফিক্স - মাউস রাখলে/টাচ করলে ডার্ক গ্লাস গ্লো হবে */
+    .decorator-table tbody tr {
+        background: transparent !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    /* মাউস হভার বা মোবাইল টাচ স্টেট */
+    .decorator-table tbody tr:hover,
+    .decorator-table tbody tr:active {
+        background: rgba(255, 255, 255, 0.06) !important; /* সাদা রঙের বদলে সাবলীল ট্রানস্প্যারেন্ট ব্যাকগ্রাউন্ড */
+        box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.03);
+    }
+
+    /* রো-তে হোভার করলে ভেতরের টেক্সট সামান্য গ্লো করবে */
+    .decorator-table tbody tr:hover td {
+        color: #ffffff !important;
+    }
+
+    /* প্রোফাইল ফটো ও টেক্সট */
+    .decorator-table-photo {
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: 50%;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .decorator-info h4 {
+        color: #f8fafc !important;
+        font-size: 13px !important;
+        margin: 0;
+    }
+
+    .decorator-info span {
+        color: #64748b !important;
+        font-size: 10px !important;
+    }
+
+    /* ৩. টেবিল অ্যাকশন বাটন গ্রুপ (View & Delete) */
+    .decorator-action-group {
+        display: flex !important;
+        align-items: center;
+        gap: 8px !important;
+    }
+
+    /* ভিউ বাটন (View Button) */
+    .decorator-view-btn {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 10px !important;
+        background: rgba(56, 189, 248, 0.15) !important;
+        color: #38bdf8 !important;
+        border: 1px solid rgba(56, 189, 248, 0.3) !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        text-decoration: none;
+        backdrop-filter: blur(8px);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .decorator-view-btn:active {
+        transform: scale(0.9);
+        background: rgba(56, 189, 248, 0.35) !important;
+        color: #ffffff !important;
+    }
+
+    /* ডিলিট বাটন (Delete Button) */
+    .decorator-delete-btn {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 10px !important;
+        background: rgba(239, 68, 68, 0.15) !important;
+        color: #f87171 !important;
+        border: 1px solid rgba(239, 68, 68, 0.3) !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        cursor: pointer;
+        backdrop-filter: blur(8px);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .decorator-delete-btn:active {
+        transform: scale(0.9);
+        background: rgba(239, 68, 68, 0.35) !important;
+        color: #ffffff !important;
+    }
+
+    /* ৪. See More Decorators (টেবিলের নিচের বাটন) */
+    .see-more-wrapper {
+        background: rgba(0, 0, 0, 0.1) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+        padding: 12px !important;
+        text-align: center;
+    }
+
+    .see-more-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100% !important;
+        padding: 10px 16px !important;
+        background: rgba(34, 197, 94, 0.15) !important;
+        border: 1px solid rgba(34, 197, 94, 0.3) !important;
+        color: #4ade80 !important;
+        font-size: 13px !important;
+        font-weight: 600;
+        border-radius: 12px !important;
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease !important;
+    }
+
+    .see-more-btn:active {
+        transform: scale(0.97);
+        background: rgba(34, 197, 94, 0.3) !important;
+        color: #ffffff !important;
+    }
+}
+ 
+}
