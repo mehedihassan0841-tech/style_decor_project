@@ -37,7 +37,7 @@ if(session_status() === PHP_SESSION_NONE){
    <link rel="stylesheet" href="css/style.css?v=2">
 <link rel="stylesheet" href="css/navbar.css?v=4">
 <link rel="stylesheet" href="css/services.css?v=6">
-<link rel="stylesheet" href="css/home.css?v=12">
+<link rel="stylesheet" href="css/home.css?v=13">
 <link rel="stylesheet" href="css/about.css?v=2">
 <link rel="stylesheet" href="css/forms.css?v=2">
 <link rel="stylesheet" href="css/dashboard.css?v=2">
